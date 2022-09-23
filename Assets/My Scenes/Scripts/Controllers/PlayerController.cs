@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float turnSpeed;
-    [SerializeField] private float minViewAngle;
-    [SerializeField] private float maxViewAngle;
+    #region MOUSE VIEW VARIABLES
+    [SerializeField] private float turnSpeed = 1.2f;
+    [SerializeField] private float minViewAngle = 80f;
+    [SerializeField] private float maxViewAngle = 80f;
 
-    [Tooltip("GameObject Rotation value axis X modificated by Mouse axis Y")] [SerializeField] private float rotationX;
-    [Tooltip("GameObject Rotation value axis Y modificated by Mouse axis X")] [SerializeField] private float rotationY;
+    [Tooltip("GameObject Rotation axis X value modificated by Mouse axis Y")] [SerializeField] private float rotationX;
+    [Tooltip("GameObject Rotation axis Y value modificated by Mouse axis X")] [SerializeField] private float rotationY;
+    #endregion
+
+    [SerializeField] private float movementSpeed = 1;
 
     void MouseAiming()
     {
@@ -26,7 +30,15 @@ public class PlayerController : MonoBehaviour
     }
     void Movement()
     {
-        ////
+        float horizontal = Input.GetAxis("Horizontal") * movementSpeed;
+        float vertical = Input.GetAxis("Vertical") * movementSpeed;
+
+        //transform.position += horizontal * Time.deltaTime * transform.right;
+        //transform.position += vertical * Time.deltaTime * transform.forward;
+
+        // or simplier
+
+        transform.position += (horizontal * transform.right + vertical * transform.forward) * Time.deltaTime;
     }
 
     private void Update()
