@@ -31,20 +31,25 @@ public class CharacterMovement : MonoBehaviour
         controller.Move(speed * Time.deltaTime * move);
         #endregion
 
-        velocity.y += gravity * Time.deltaTime; // strength down
         isGrounded = Physics.CheckSphere(groundCheker.position, groundDistance, groundMask); // ground checker job
 
+        #region J U M P
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity); // formula of jump square root of height * -2 * gravity
+        }
+        #endregion
+
+        #region G R A V I T Y   S T U F F
+        velocity.y += gravity * Time.deltaTime; // strength down
+        
         if(isGrounded && velocity.y < 0)
         {
             velocity.y = -10f;
         }
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
-        {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity); // formula of jump square root of height * -2 * gravity
-        }
-
-        
         controller.Move(2 * Time.deltaTime * velocity); // two times time.deltaTime because the acceleration
+        #endregion
+
     }
 }
