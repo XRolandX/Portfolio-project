@@ -76,7 +76,7 @@ public class ShootingManager : MonoBehaviour
     }
     void LateUpdate()
     {
-        
+#if UNITY_EDITOR
         if (Input.GetMouseButtonDown(0))
         {
             thisIsAShot = true;
@@ -97,6 +97,7 @@ public class ShootingManager : MonoBehaviour
             if (isScoped) StartCoroutine(nameof(OnScoped));
             else UnScoped();
         }
+#endif
 
         if (thisIsAShot)
         {
