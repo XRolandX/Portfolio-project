@@ -16,9 +16,14 @@ public class CharacterMovement : MonoBehaviour
     Vector3 velocity;
     [SerializeField] bool isGrounded;
 
+    private void Awake()
+    {
+        transform.localScale = Vector3.one;
+    }
     // Update is called once per frame
     void Update()
     {
+        
         isGrounded = Physics.CheckSphere(groundCheker.position, groundDistance, groundMask);
         if(isGrounded && velocity.y < 0)
         {
@@ -38,6 +43,5 @@ public class CharacterMovement : MonoBehaviour
 
         velocity.y += gravity * Time.deltaTime; 
         controller.Move(velocity * Time.deltaTime); // two times time.deltaTime because the acceleration
-        
     }
 }

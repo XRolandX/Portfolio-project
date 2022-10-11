@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/My Scenes/Scenes/Falling Apple.unity
+    guid: df8c447ef1d3754488fc45e1e5aac07e
   m_configObjects: {}

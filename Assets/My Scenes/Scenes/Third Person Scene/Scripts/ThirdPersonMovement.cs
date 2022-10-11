@@ -38,7 +38,7 @@ public class ThirdPersonMovement : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
 
         return new Vector3(horizontal, 0f, vertical).normalized; // vectors x y z in format 1 or -1
-    } // return Vector3 direction.normalized
+    } 
     private float CharacterSmoothRotationOnTargetAngle()  // return targetAngle
     {
         //Profiler.BeginSample("My sample");
@@ -49,7 +49,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
         return targetAngle;
         //Profiler.EndSample();
-    }³
+    }
     private void CharacterMoveOnTargetAngleDirection()
     {
         Vector3 moveDirection = Quaternion.Euler(0f, CharacterSmoothRotationOnTargetAngle(), 0f) * Vector3.forward;
