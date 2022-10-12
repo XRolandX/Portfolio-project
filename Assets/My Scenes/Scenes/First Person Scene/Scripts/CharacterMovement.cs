@@ -51,5 +51,6 @@ public class CharacterMovement : MonoBehaviour
         controller.Move(2 * Time.deltaTime * velocity); // two times time.deltaTime because the acceleration
         #endregion
 
+        
     }
 }

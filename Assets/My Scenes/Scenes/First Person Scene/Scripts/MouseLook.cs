@@ -12,7 +12,7 @@ public class MouseLook : MonoBehaviour
 
     private void Start()
     {
-       Cursor.lockState = CursorLockMode.Locked;
+      // Cursor.lockState = CursorLockMode.Locked; // disable for mobile joystick controller
     }
     
     void LateUpdate()
@@ -26,7 +26,6 @@ public class MouseLook : MonoBehaviour
         xRotation = Mathf.Clamp(xRotation, -85f, 85f);
 
         weaponHolder.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-
         //transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
     }
 }
