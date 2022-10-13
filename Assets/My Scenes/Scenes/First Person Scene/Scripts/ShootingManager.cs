@@ -14,8 +14,8 @@ public class ShootingManager : MonoBehaviour
     Vector3 originalPosOfMainCamera;
     Vector3 currentPosOfCamera;
     float shakeFrequency;
-    bool thisIsAShot = false;
-    readonly float shakeTime = .01f;
+    [SerializeField] bool thisIsAShot = false;
+    [SerializeField] float shakeTime = .01f;
     #endregion
 
     #region A P P L E    F A L L    V A R I A B L E S
@@ -25,15 +25,34 @@ public class ShootingManager : MonoBehaviour
     #endregion
 
     #region S C O P E    V A R I A B L E S
+    private MouseLook mouseLookScript;
     [SerializeField] Animator mainCamAnim; // scope animation
     [SerializeField] GameObject weaponCamera;
     [SerializeField] GameObject scopeOverlay;
     [SerializeField] Camera mainCamera;
     bool isScoped = false;
-    readonly float unscopedFieldOfView = 60f;
-    readonly float scopedFieldOfView = 15f;
+    private readonly float unscopedFieldOfView = 60f;
+    private readonly float scopedFieldOfView = 15f;
     #endregion
 
+    #region Buttons control
+    public void Shoot()
+    {
+        thisIsAShot = true;
+        shoot.Play();
+
+        StartCoroutine(ShakeTimeControl()); // camera shake time control
+
+        BlowWave();
+    }
+    public void Scope()
+    {
+        isScoped = !isScoped;
+        mainCamAnim.SetBool("isScoped", isScoped);
+        if (isScoped) StartCoroutine(nameof(OnScoped));
+        else UnScoped();
+    }
+    #endregion
 
     private void BlowWave()
     {
@@ -53,6 +72,8 @@ public class ShootingManager : MonoBehaviour
         yield return new WaitForSeconds(shakeTime);
         thisIsAShot = false;
     }
+
+    #region S C O P E D - U N S C O P E D
     IEnumerator OnScoped()
     {
         yield return new WaitForSeconds(.15f);
@@ -60,6 +81,8 @@ public class ShootingManager : MonoBehaviour
         weaponCamera.SetActive(false);
         shakeFrequency = scopeShakeFrequency;
         mainCamera.fieldOfView = scopedFieldOfView;
+        mouseLookScript.MouseSensitivity = mouseLookScript.scopeSensitivity; // mouse look script variables from main camera game object
+        mouseLookScript.lookJoystick.DeadZone = 0f;
     }
     void UnScoped()
     {
@@ -67,16 +90,20 @@ public class ShootingManager : MonoBehaviour
         weaponCamera.SetActive(true);
         shakeFrequency = unScopeShakeFrequency;
         mainCamera.fieldOfView = unscopedFieldOfView;
+        mouseLookScript.MouseSensitivity = mouseLookScript.unscopeSensitivity; // mouse look script variables from main camera game object
+        mouseLookScript.lookJoystick.DeadZone = 0.05f;
     }
-    
+    #endregion
+
     void Start()
     {
         shakeFrequency = unScopeShakeFrequency; // camera shake
         shoot = GetComponent<AudioSource>(); // audio for shooting
+        mouseLookScript = mainCamera.gameObject.GetComponent<MouseLook>(); // mouse look script from main camera game object
     }
     void LateUpdate()
     {
-#if UNITY_EDITOR
+#if UNITY_STANDALONE_WIN
         if (Input.GetMouseButtonDown(0))
         {
             thisIsAShot = true;
@@ -90,7 +117,7 @@ public class ShootingManager : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetMouseButtonDown(1))
         {
             isScoped = !isScoped;
             mainCamAnim.SetBool("isScoped", isScoped);
@@ -98,14 +125,10 @@ public class ShootingManager : MonoBehaviour
             else UnScoped();
         }
 #endif
-
         if (thisIsAShot)
         {
             CameraShake(); // permanent camera shake if thisIsAShot == true
         }  // camera shake inside
-
-
-
 
     }
 }

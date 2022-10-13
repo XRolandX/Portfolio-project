@@ -4,29 +4,67 @@ using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
+    public Joystick lookJoystick;
     public Transform characterBody;
     public Transform weaponHolder;
 
-    [SerializeField] float mouseSensitivity =  100f;
+    [SerializeField] float mouseSensitivity = 100f;
+    public float MouseSensitivity
+    {
+        get { return mouseSensitivity; }
+        set { mouseSensitivity = value; }
+    }
+
+    public readonly float unscopeSensitivity = 150f;
+    public readonly float scopeSensitivity = 25f;
+
     float xRotation = 0f;
 
     private void Start()
     {
-       Cursor.lockState = CursorLockMode.Locked;
+        // Cursor.lockState = CursorLockMode.Locked; // disable for mobile joystick controller
     }
-    
+
     void LateUpdate()
     {
-        float mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * mouseSensitivity;
-        float mouseY = Input.GetAxis("Mouse Y") * Time.deltaTime * mouseSensitivity;
+#if UNITY_STANDALONE_WIN
+        #region L O O K   W I T H   T H E   M O U S E
+        if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
+        {
+            float mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * MouseSensitivity;
+            float mouseY = Input.GetAxis("Mouse Y") * Time.deltaTime * MouseSensitivity;
 
-        characterBody.Rotate(new Vector3(0f, mouseX, 0f)); // or Vector3.up * mouseX
+            characterBody.Rotate(new Vector3(0f, mouseX, 0f)); // or Vector3.up * mouseX
 
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -85f, 85f);
+            xRotation -= mouseY;
+            xRotation = Mathf.Clamp(xRotation, -85f, 85f);
 
-        weaponHolder.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+            weaponHolder.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        }
+        #endregion
+#endif
 
-        //transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        #region L O O K   W I T H   T H E   J O Y S T I C K
+        if (lookJoystick.Horizontal != 0 || lookJoystick.Vertical != 0)
+        {
+            float mouseX = lookJoystick.Horizontal * Time.deltaTime * MouseSensitivity;
+            float mouseY = lookJoystick.Vertical * Time.deltaTime * MouseSensitivity;
+
+            characterBody.Rotate(new Vector3(0f, mouseX, 0f)); // or Vector3.up * mouseX
+
+            xRotation -= mouseY;
+            xRotation = Mathf.Clamp(xRotation, -85f, 85f);
+
+            weaponHolder.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        }
+        #endregion
+
+        #region Touches checker
+        //for (int i = 0; i < Input.touchCount; i++)
+        //{
+        //    Vector3 touchesPosition = Camera.main.ScreenToWorldPoint(Input.touches[i].position);
+        //    Debug.DrawLine(Vector3.zero, touchesPosition, Color.red);
+        //}
+        #endregion
     }
 }

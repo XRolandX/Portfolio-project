@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
+    public Joystick moveJoystick;
     public CharacterController controller;
     public Transform groundCheker;
     public LayerMask groundMask;
@@ -23,12 +24,26 @@ public class CharacterMovement : MonoBehaviour
     }
     void Update()
     {
+#if UNITY_STANDALONE_WIN
+        #region M O V E   W I T H   K E Y B O A R D
+        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+        {
+            float x = Input.GetAxis("Horizontal");
+            float z = Input.GetAxis("Vertical");
+            Vector3 move = transform.right * x + transform.forward * z;
+            controller.Move(speed * Time.deltaTime * move);
+        }
+        #endregion
+#endif
 
-        #region Global coordinates horizontal mooving
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-        Vector3 move = transform.right * x + transform.forward * z;
-        controller.Move(speed * Time.deltaTime * move);
+        #region M O V E   W I T H   J O Y S T I C K
+        if (moveJoystick.Horizontal != 0 || moveJoystick.Vertical != 0)
+        {
+            float x = moveJoystick.Horizontal;
+            float z = moveJoystick.Vertical;
+            Vector3 move = transform.right * x + transform.forward * z;
+            controller.Move(speed * Time.deltaTime * move);
+        }
         #endregion
 
         isGrounded = Physics.CheckSphere(groundCheker.position, groundDistance, groundMask); // ground checker job
@@ -50,6 +65,8 @@ public class CharacterMovement : MonoBehaviour
 
         controller.Move(2 * Time.deltaTime * velocity); // two times time.deltaTime because the acceleration
         #endregion
+
+        
 
     }
 }
