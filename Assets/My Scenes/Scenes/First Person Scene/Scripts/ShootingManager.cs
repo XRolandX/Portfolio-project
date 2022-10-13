@@ -73,7 +73,7 @@ public class ShootingManager : MonoBehaviour
         thisIsAShot = false;
     }
 
-    #region Scoped - unscoped
+    #region S C O P E D - U N S C O P E D
     IEnumerator OnScoped()
     {
         yield return new WaitForSeconds(.15f);
