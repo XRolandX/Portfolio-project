@@ -24,8 +24,8 @@ public class CharacterMovement : MonoBehaviour
     }
     void Update()
     {
-#if UNITY_EDITOR
-        #region Move with keyboard
+#if UNITY_STANDALONE_WIN
+        #region M O V E   W I T H   K E Y B O A R D
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         {
             float x = Input.GetAxis("Horizontal");
@@ -35,7 +35,8 @@ public class CharacterMovement : MonoBehaviour
         }
         #endregion
 #endif
-        #region Move with joystick
+
+        #region M O V E   W I T H   J O Y S T I C K
         if (moveJoystick.Horizontal != 0 || moveJoystick.Vertical != 0)
         {
             float x = moveJoystick.Horizontal;

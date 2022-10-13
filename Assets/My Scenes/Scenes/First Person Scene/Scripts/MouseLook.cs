@@ -27,8 +27,8 @@ public class MouseLook : MonoBehaviour
 
     void LateUpdate()
     {
-#if UNITY_EDITOR
-        #region Look with the mouse
+#if UNITY_STANDALONE_WIN
+        #region L O O K   W I T H   T H E   M O U S E
         if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
         {
             float mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * MouseSensitivity;
@@ -43,7 +43,8 @@ public class MouseLook : MonoBehaviour
         }
         #endregion
 #endif
-        #region Look with the joystick
+
+        #region L O O K   W I T H   T H E   J O Y S T I C K
         if (lookJoystick.Horizontal != 0 || lookJoystick.Vertical != 0)
         {
             float mouseX = lookJoystick.Horizontal * Time.deltaTime * MouseSensitivity;

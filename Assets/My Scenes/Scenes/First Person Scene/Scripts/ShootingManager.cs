@@ -103,7 +103,7 @@ public class ShootingManager : MonoBehaviour
     }
     void LateUpdate()
     {
-#if UNITY_EDITOR
+#if UNITY_STANDALONE_WIN
         if (Input.GetMouseButtonDown(0))
         {
             thisIsAShot = true;
