@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/My Scenes/Scenes/Falling Apple.unity
+    path: Assets/My Scenes/Scenes/Main Menu Scene/MainMenu.unity
+    guid: 1ccf952c3b3cd68488fc1a6d6c2522b2
+  - enabled: 1
+    path: Assets/My Scenes/Scenes/First Person Scene/Falling Apple.unity
     guid: df8c447ef1d3754488fc45e1e5aac07e
   m_configObjects: {}
