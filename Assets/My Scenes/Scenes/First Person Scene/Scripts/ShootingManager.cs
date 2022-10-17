@@ -11,8 +11,6 @@ public class ShootingManager : MonoBehaviour
     [SerializeField] Transform mainCameraTransform;
     [SerializeField] float scopeShakeFrequency;
     [SerializeField] float unScopeShakeFrequency;
-    Vector3 originalPosOfMainCamera;
-    Vector3 currentPosOfCamera;
     float shakeFrequency;
     [SerializeField] bool thisIsAShot = false;
     [SerializeField] float shakeTime = .01f;
@@ -35,7 +33,9 @@ public class ShootingManager : MonoBehaviour
     private readonly float scopedFieldOfView = 15f;
     #endregion
 
-    #region Buttons control
+
+
+    #region B U T T O N S   C O N T R O L
     public void Shoot()
     {
         thisIsAShot = true;

@@ -8,7 +8,7 @@ public class MenuHandler : MonoBehaviour
     
     public void Scene1()
     {
-        Screen.orientation = ScreenOrientation.LandscapeLeft;
+        Screen.orientation = ScreenOrientation.LandscapeRight;
         SceneManager.LoadScene(1);
     }
     public void Exit()
