@@ -43,7 +43,7 @@ public class ThirdPersonMovement : MonoBehaviour
     {
         //Profiler.BeginSample("My sample");
 
-        float targetAngle = Mathf.Atan2(Vector3DirectionWithInput().x, Vector3DirectionWithInput().z) * Mathf.Rad2Deg + cam.eulerAngles.y;  //  atan2 returns a value beeween x and z in radiance plus camera rotation axis y
+        float targetAngle = Mathf.Atan2(Vector3DirectionWithInput().x, Vector3DirectionWithInput().z) * Mathf.Rad2Deg + cam.eulerAngles.y;  //  atan2 returns a value beeween x and z in radiance. camera rotation axis y plus
         float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime); // smooth damp angle take current transform euler angle axis y, target atan2 betwen x and z angle, ref to change turn_smooth_velocity value and smooth_turn_time to smootly change the angle
         transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
@@ -66,7 +66,6 @@ public class ThirdPersonMovement : MonoBehaviour
             CharacterSmoothRotationOnTargetAngle();
 
             CharacterMoveOnTargetAngleDirection();
-
         }
     }
 }

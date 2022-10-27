@@ -17,17 +17,18 @@ public class MouseLook : MonoBehaviour
 
     public readonly float unscopeSensitivity = 150f;
     public readonly float scopeSensitivity = 25f;
+    public readonly float scope2xSensitivity = 5;
 
     float xRotation = 0f;
 
     private void Start()
     {
-        // Cursor.lockState = CursorLockMode.Locked; // disable for mobile joystick controller
+        //Cursor.lockState = CursorLockMode.Locked; // disable for mobile joystick controller
     }
 
     void LateUpdate()
     {
-#if UNITY_STANDALONE_WIN
+#if UNITY_EDITOR
         #region L O O K   W I T H   T H E   M O U S E
         if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
         {
@@ -44,6 +45,7 @@ public class MouseLook : MonoBehaviour
         #endregion
 #endif
 
+#if PLATFORM_ANDROID
         #region L O O K   W I T H   T H E   J O Y S T I C K
         if (lookJoystick.Horizontal != 0 || lookJoystick.Vertical != 0)
         {
@@ -58,6 +60,7 @@ public class MouseLook : MonoBehaviour
             weaponHolder.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         }
         #endregion
+#endif
 
         #region Touches checker
         //for (int i = 0; i < Input.touchCount; i++)

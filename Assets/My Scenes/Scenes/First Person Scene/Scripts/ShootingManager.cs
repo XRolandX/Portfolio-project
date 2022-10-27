@@ -9,11 +9,21 @@ public class ShootingManager : MonoBehaviour
     
     #region C A M E R A    S H A K E    V A R I A B L E S
     [SerializeField] Transform mainCameraTransform;
-    [SerializeField] float scopeShakeFrequency;
-    [SerializeField] float unScopeShakeFrequency;
-    float shakeFrequency;
+
+
+    [SerializeField] float shakeFrequency;
+    public float ShakeFrequency{ get { return shakeFrequency; } set { shakeFrequency = value; }} // if i need access to shakeFrequency from other classes
+
+    readonly float unScopedShakeFrequency = 0.01f;
+    readonly float scopedShakeFrequency = 0.2f;
+    readonly float scoped2xShakeFrequency = 0.5f;
+
+    [SerializeField] float shakeTime;
+    readonly float unscopedShakeTime = .01f;
+    readonly float scopedShakeTime = .005f;
+    readonly float scoped2xShakeTime = .001f;
+
     [SerializeField] bool thisIsAShot = false;
-    [SerializeField] float shakeTime = .01f;
     #endregion
 
     #region A P P L E    F A L L    V A R I A B L E S
@@ -28,9 +38,11 @@ public class ShootingManager : MonoBehaviour
     [SerializeField] GameObject weaponCamera;
     [SerializeField] GameObject scopeOverlay;
     [SerializeField] Camera mainCamera;
-    bool isScoped = false;
     private readonly float unscopedFieldOfView = 60f;
     private readonly float scopedFieldOfView = 15f;
+    private readonly float scoped2xFieldOfView = 5f;
+
+    private int scopeClick = 0;
     #endregion
 
 
@@ -47,12 +59,69 @@ public class ShootingManager : MonoBehaviour
     }
     public void Scope()
     {
-        isScoped = !isScoped;
-        mainCamAnim.SetBool("isScoped", isScoped);
-        if (isScoped) StartCoroutine(nameof(OnScoped));
-        else UnScoped();
+        scopeClick++;
+
+        switch (scopeClick)
+        {
+            case 1:
+                mainCamAnim.SetBool("isScoped", true);
+                StartCoroutine(nameof(OnScoped));
+                break;
+
+            case 2:
+                mainCamera.fieldOfView = scoped2xFieldOfView;
+                mouseLookScript.MouseSensitivity = mouseLookScript.scope2xSensitivity;
+                ShakeFrequency = scoped2xShakeFrequency; // shakeFrequency property
+                shakeTime = scoped2xShakeTime;
+                break;
+
+            case 3:
+                UnScoped();
+                scopeClick = 0;
+                break;
+        }
+
     }
     #endregion
+
+    #region S C O P E D - U N S C O P E D
+    IEnumerator OnScoped()
+    {
+        yield return new WaitForSeconds(.15f);
+        scopeOverlay.SetActive(true);
+        weaponCamera.SetActive(false);
+        shakeTime = scopedShakeTime;
+        ShakeFrequency = scopedShakeFrequency; // shakeFrequency property
+        mainCamera.fieldOfView = scopedFieldOfView;
+        mouseLookScript.MouseSensitivity = mouseLookScript.scopeSensitivity; // mouse look script variables from main camera game object
+        mouseLookScript.lookJoystick.DeadZone = 0f;
+    }
+    void UnScoped()
+    {
+        scopeOverlay.SetActive(false);
+        weaponCamera.SetActive(true);
+        shakeTime = unscopedShakeTime;
+        ShakeFrequency = unScopedShakeFrequency; // shakeFrequency property
+        mainCamera.fieldOfView = unscopedFieldOfView;
+        mouseLookScript.MouseSensitivity = mouseLookScript.unscopeSensitivity; // mouse look script variables from main camera game object
+        mouseLookScript.lookJoystick.DeadZone = 0.05f;
+        mainCamAnim.SetBool("isScoped", false);
+    }
+    #endregion
+
+    #region C A M E R A   S H A K E
+    private void CameraShake()
+    {
+        mainCameraTransform.localPosition += Random.insideUnitSphere * shakeFrequency;
+    }
+    IEnumerator ShakeTimeControl()
+    {
+        yield return new WaitForSeconds(shakeTime);
+        thisIsAShot = false;
+    }
+    #endregion
+
+
 
     private void BlowWave()
     {
@@ -63,47 +132,16 @@ public class ShootingManager : MonoBehaviour
             apple.GetComponent<Rigidbody>().useGravity = true;
         }
     }
-    private void CameraShake()
-    {
-        mainCameraTransform.localPosition += Random.insideUnitSphere * shakeFrequency;
-    }
-    IEnumerator ShakeTimeControl()
-    {
-        yield return new WaitForSeconds(shakeTime);
-        thisIsAShot = false;
-    }
-
-    #region S C O P E D - U N S C O P E D
-    IEnumerator OnScoped()
-    {
-        yield return new WaitForSeconds(.15f);
-        scopeOverlay.SetActive(true);
-        weaponCamera.SetActive(false);
-        shakeFrequency = scopeShakeFrequency;
-        mainCamera.fieldOfView = scopedFieldOfView;
-        mouseLookScript.MouseSensitivity = mouseLookScript.scopeSensitivity; // mouse look script variables from main camera game object
-        mouseLookScript.lookJoystick.DeadZone = 0f;
-    }
-    void UnScoped()
-    {
-        scopeOverlay.SetActive(false);
-        weaponCamera.SetActive(true);
-        shakeFrequency = unScopeShakeFrequency;
-        mainCamera.fieldOfView = unscopedFieldOfView;
-        mouseLookScript.MouseSensitivity = mouseLookScript.unscopeSensitivity; // mouse look script variables from main camera game object
-        mouseLookScript.lookJoystick.DeadZone = 0.05f;
-    }
-    #endregion
-
     void Start()
     {
-        shakeFrequency = unScopeShakeFrequency; // camera shake
+        shakeTime = unscopedShakeTime; // default shake time
+        shakeFrequency = unScopedShakeFrequency; // default camera shake
         shoot = GetComponent<AudioSource>(); // audio for shooting
         mouseLookScript = mainCamera.gameObject.GetComponent<MouseLook>(); // mouse look script from main camera game object
     }
     void LateUpdate()
     {
-#if UNITY_STANDALONE_WIN
+#if UNITY_EDITOR
         if (Input.GetMouseButtonDown(0))
         {
             thisIsAShot = true;
@@ -119,10 +157,7 @@ public class ShootingManager : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(1))
         {
-            isScoped = !isScoped;
-            mainCamAnim.SetBool("isScoped", isScoped);
-            if (isScoped) StartCoroutine(nameof(OnScoped));
-            else UnScoped();
+            Scope();
         }
 #endif
         if (thisIsAShot)
