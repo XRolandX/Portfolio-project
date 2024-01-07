@@ -890,11 +890,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: 
+  cloudProjectId: 58c5fc43-e222-4bda-bf95-c5b12fec204b
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: Portfolio-project
+  organizationId: treopotr
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 

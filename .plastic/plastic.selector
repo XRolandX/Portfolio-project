@@ -1,0 +1,4 @@
+repository "Portfolio-project@treopotr@cloud"
+  path "/"
+    br "/main"
+    co "/main"

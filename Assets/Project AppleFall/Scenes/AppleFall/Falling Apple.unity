@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589246, b: 0.2978263, a: 1}
+  m_IndirectSpecularColor: {r: 0.17276807, g: 0.21589197, b: 0.29782572, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3830,7 +3830,7 @@ PrefabInstance:
       objectReference: {fileID: 1422214096}
     - target: {fileID: 5791527614052912574, guid: c929439ccb05979498ed042f0c08339e, type: 3}
       propertyPath: m_Name
-      value: Apple FPS
+      value: Character
       objectReference: {fileID: 0}
     - target: {fileID: 5791527614276296120, guid: c929439ccb05979498ed042f0c08339e, type: 3}
       propertyPath: m_Enabled
