@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Project AppleFall/Scenes/AppleFall/Falling Apple.unity
     guid: df8c447ef1d3754488fc45e1e5aac07e
+  - enabled: 1
+    path: Assets/Project AppleFall/Scenes/Scene 2/Scene 2.unity
+    guid: e6a1407d10caf8143a559a74a892056e
   m_configObjects: {}

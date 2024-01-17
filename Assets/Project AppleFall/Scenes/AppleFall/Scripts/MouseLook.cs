@@ -8,16 +8,17 @@ public class MouseLook : MonoBehaviour
     public Transform characterBody;
     public Transform weaponHolder;
 
-    [SerializeField] float mouseSensitivity = 100f;
+    [SerializeField] private float mouseSensitivity = 0f;
+    [SerializeField] public float unscopeSensitivity = 150f;
+    [SerializeField] public float scopeSensitivity = 100f;
+    [SerializeField] public float scope2xSensitivity = 50;
     public float MouseSensitivity
     {
         get { return mouseSensitivity; }
         set { mouseSensitivity = value; }
     }
 
-    public readonly float unscopeSensitivity = 150f;
-    public readonly float scopeSensitivity = 25f;
-    public readonly float scope2xSensitivity = 5;
+    
 
     float xRotation = 0f;
 

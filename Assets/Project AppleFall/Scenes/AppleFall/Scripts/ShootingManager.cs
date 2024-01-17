@@ -1,11 +1,13 @@
 using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ShootingManager : MonoBehaviour
 {
     [SerializeField] AudioSource shoot; // shoot sound
+    [SerializeField] GameObject bulletHolePrefab;
+    [SerializeField] TextMeshProUGUI scopeText;
     
     #region C A M E R A    S H A K E    V A R I A B L E S
     [SerializeField] Transform mainCameraTransform;
@@ -56,6 +58,7 @@ public class ShootingManager : MonoBehaviour
         StartCoroutine(ShakeTimeControl()); // camera shake time control
 
         BlowWave();
+        RaycastShot();
     }
     public void Scope()
     {
@@ -66,6 +69,7 @@ public class ShootingManager : MonoBehaviour
             case 1:
                 mainCamAnim.SetBool("isScoped", true);
                 StartCoroutine(nameof(OnScoped));
+                scopeText.text = "2x";
                 break;
 
             case 2:
@@ -73,6 +77,7 @@ public class ShootingManager : MonoBehaviour
                 mouseLookScript.MouseSensitivity = mouseLookScript.scope2xSensitivity;
                 ShakeFrequency = scoped2xShakeFrequency; // shakeFrequency property
                 shakeTime = scoped2xShakeTime;
+                scopeText.text = "4x";
                 break;
 
             case 3:
@@ -121,17 +126,49 @@ public class ShootingManager : MonoBehaviour
     }
     #endregion
 
+    #region B U L L E T    H O L E S
+    private void RaycastShot()
+    {
+        // Get the center of the screen
+        Vector3 screenCenter = new(Screen.width / 2, Screen.height / 2, 0); 
 
+        // Raycast to detect the hit point
+        if (Physics.Raycast(Camera.main.ScreenPointToRay(screenCenter), out RaycastHit hit, 500f))
+        {
+            // Spawn bullet hole prefab at the hit point
+            SpawnBulletHole(hit.point, hit.normal);
+        }
+    }
+
+    private void SpawnBulletHole(Vector3 position, Vector3 normal)
+    {
+        // Instantiate the bullet hole prefab
+        GameObject bulletHole = Instantiate(bulletHolePrefab, position, Quaternion.identity);
+
+        // Rotate the bullet hole to align with the surface normal
+        bulletHole.transform.LookAt(position - normal);
+
+        // Move the bullet hole slightly away from the surface to avoid z-fighting
+        bulletHole.transform.position += normal * 0.0001f;
+
+        // Destroy the bullet hole after a certain time (optional)
+        Destroy(bulletHole, 60f);
+    }
+    #endregion
+    
 
     private void BlowWave()
     {
+#pragma warning disable UNT0028 // Use non-allocating physics APIs
         apples = Physics.OverlapSphere(transform.position, blowWaveRadius, apple);
+#pragma warning restore UNT0028 // Use non-allocating physics APIs
 
-        foreach(Collider apple in apples)
+        foreach (Collider apple in apples)
         {
             apple.GetComponent<Rigidbody>().useGravity = true;
         }
     }
+
     void Start()
     {
         shakeTime = unscopedShakeTime; // default shake time
@@ -139,17 +176,13 @@ public class ShootingManager : MonoBehaviour
         shoot = GetComponent<AudioSource>(); // audio for shooting
         mouseLookScript = mainCamera.gameObject.GetComponent<MouseLook>(); // mouse look script from main camera game object
     }
+
     void LateUpdate()
     {
 #if UNITY_EDITOR
         if (Input.GetMouseButtonDown(0))
         {
-            thisIsAShot = true;
-            shoot.Play();
-
-            StartCoroutine(ShakeTimeControl()); // camera shake time control
-
-            BlowWave(); // apple fall initiation
+            Shoot();
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -159,11 +192,14 @@ public class ShootingManager : MonoBehaviour
         {
             Scope();
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+        }
 #endif
         if (thisIsAShot)
         {
             CameraShake(); // permanent camera shake if thisIsAShot == true
-        }  // camera shake inside
-
+        }
     }
 }
