@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Project AppleFall/Scenes/Main Menu Scene/MainMenu.unity
+    path: Assets/GAME SCENES/Scenes/Main Menu Scene 0/MainMenu.unity
     guid: 1ccf952c3b3cd68488fc1a6d6c2522b2
   - enabled: 1
-    path: Assets/Project AppleFall/Scenes/AppleFall/Falling Apple.unity
+    path: Assets/GAME SCENES/Scenes/Scene 1/Falling Apple.unity
     guid: df8c447ef1d3754488fc45e1e5aac07e
   - enabled: 1
-    path: Assets/Project AppleFall/Scenes/Scene 2/Scene 2.unity
+    path: Assets/GAME SCENES/Scenes/Scene 2/Resource Transition.unity
     guid: e6a1407d10caf8143a559a74a892056e
   m_configObjects: {}

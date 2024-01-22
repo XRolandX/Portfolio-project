@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController controller;
 
     public Joystick moveJoystick;
+    public Joystick lookJoystick;
 
     void Start()
     {
@@ -22,11 +19,14 @@ public class PlayerMovement : MonoBehaviour
 
     void LateUpdate()
     {
-
-        PlayerMove();
+#if UNITY_STANDALONE_WIN
         PlayerRotation();
+        PlayerMove();
+#endif
+
 #if UNITY_ANDROID
         JoystickMove();
+        JoystickRotation();
 #endif
     }
 
@@ -46,9 +46,7 @@ public class PlayerMovement : MonoBehaviour
     void PlayerRotation()
     {
         float mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * mouseSensitivity;
-
         yRotation += mouseX;
-
         controller.transform.rotation = Quaternion.Euler(0, yRotation, 0);
     }
     
@@ -60,10 +58,14 @@ public class PlayerMovement : MonoBehaviour
             float y = moveJoystick.Vertical;
             Vector3 move = new (x, 0, y);
             move = controller.transform.TransformDirection(move);
-            moveDirection = MoveSpeed* Time.deltaTime * move;
-
-            controller.Move(moveDirection);
+            controller.Move(MoveSpeed * Time.deltaTime * move);
         }
+    }
+    void JoystickRotation()
+    {
+        float joyX = lookJoystick.Horizontal * Time.deltaTime * mouseSensitivity;
+        yRotation += joyX;
+        controller.transform.rotation = Quaternion.Euler(0, yRotation, 0);
     }
 
 

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1054656447127590209}
   - component: {fileID: 727650152799133817}
   m_Layer: 0
-  m_Name: Blue Recource
+  m_Name: Blue Resource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

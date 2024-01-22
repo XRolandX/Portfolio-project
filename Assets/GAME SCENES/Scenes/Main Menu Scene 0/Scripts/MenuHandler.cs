@@ -29,4 +29,9 @@ public class MenuHandler : MonoBehaviour
         }
         else Screen.orientation = ScreenOrientation.LandscapeRight;
     }
+    private void Awake()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+    }
+
 }

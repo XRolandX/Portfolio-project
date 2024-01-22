@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Ground
   - Apple
+  - Red TMP
+  - Green TMP
+  - Blue TMP
   layers:
   - Default
   - TransparentFX
