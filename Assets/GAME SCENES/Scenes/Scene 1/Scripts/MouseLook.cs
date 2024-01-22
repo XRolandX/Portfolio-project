@@ -9,28 +9,42 @@ public class MouseLook : MonoBehaviour
     public Transform weaponHolder;
 
     [SerializeField] private float mouseSensitivity = 0f;
-    [SerializeField] public float unscopeSensitivity = 150f;
-    [SerializeField] public float scopeSensitivity = 100f;
-    [SerializeField] public float scope2xSensitivity = 50;
+    public float unscopeSensitivity = 150f;
+    public float scopeSensitivity = 100f;
+    public float scope2xSensitivity = 50;
     public float MouseSensitivity
     {
         get { return mouseSensitivity; }
         set { mouseSensitivity = value; }
     }
 
-    
-
-    float xRotation = 0f;
+    private float xRotation = 0f;
 
     private void Start()
     {
-        //Cursor.lockState = CursorLockMode.Locked; // disable for mobile joystick controller
+#if UNITY_STANDALONE_WIN
+        Cursor.lockState = CursorLockMode.None;
+#endif
     }
 
     void LateUpdate()
     {
-#if UNITY_EDITOR
+        Look();
+
+        #region Touches checker
+        //for (int i = 0; i < Input.touchCount; i++)
+        //{
+        //    Vector3 touchesPosition = Camera.main.ScreenToWorldPoint(Input.touches[i].position);
+        //    Debug.DrawLine(Vector3.zero, touchesPosition, Color.red);
+        //}
+        #endregion
+    }
+
+    private void Look()
+    {
+#if UNITY_STANDALONE_WIN
         #region L O O K   W I T H   T H E   M O U S E
+
         if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
         {
             float mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * MouseSensitivity;
@@ -43,11 +57,13 @@ public class MouseLook : MonoBehaviour
 
             weaponHolder.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         }
+
         #endregion
 #endif
 
 #if PLATFORM_ANDROID
         #region L O O K   W I T H   T H E   J O Y S T I C K
+
         if (lookJoystick.Horizontal != 0 || lookJoystick.Vertical != 0)
         {
             float mouseX = lookJoystick.Horizontal * Time.deltaTime * MouseSensitivity;
@@ -60,15 +76,8 @@ public class MouseLook : MonoBehaviour
 
             weaponHolder.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         }
+
         #endregion
 #endif
-
-        #region Touches checker
-        //for (int i = 0; i < Input.touchCount; i++)
-        //{
-        //    Vector3 touchesPosition = Camera.main.ScreenToWorldPoint(Input.touches[i].position);
-        //    Debug.DrawLine(Vector3.zero, touchesPosition, Color.red);
-        //}
-        #endregion
     }
 }

@@ -48,8 +48,33 @@ public class ShootingManager : MonoBehaviour
     #endregion
 
 
+    #region P C   C O N T R O L
+    private void PCControl()
+    {
+#if UNITY_STANDALONE_WIN
+        if (Input.GetMouseButtonDown(0))
+        {
+            Shoot();
+        }
+        else if (Input.GetMouseButtonDown(1))
+        {
+            Scope();
+        }
+        else if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+        }
+        
 
-    #region B U T T O N S   C O N T R O L
+#endif
+    }
+    #endregion
+
+    #region U I  B U T T O N S   C O N T R O L
     public void Shoot()
     {
         thisIsAShot = true;
@@ -117,7 +142,11 @@ public class ShootingManager : MonoBehaviour
     #region C A M E R A   S H A K E
     private void CameraShake()
     {
-        mainCameraTransform.localPosition += Random.insideUnitSphere * shakeFrequency;
+        if (thisIsAShot)
+        {
+            mainCameraTransform.localPosition += Random.insideUnitSphere * shakeFrequency;
+        }
+        
     }
     IEnumerator ShakeTimeControl()
     {
@@ -155,8 +184,8 @@ public class ShootingManager : MonoBehaviour
         Destroy(bulletHole, 60f);
     }
     #endregion
-    
 
+    #region A P P L E   F A L L I N G
     private void BlowWave()
     {
 #pragma warning disable UNT0028 // Use non-allocating physics APIs
@@ -168,6 +197,7 @@ public class ShootingManager : MonoBehaviour
             apple.GetComponent<Rigidbody>().useGravity = true;
         }
     }
+    #endregion
 
     void Start()
     {
@@ -179,27 +209,9 @@ public class ShootingManager : MonoBehaviour
 
     void LateUpdate()
     {
-#if UNITY_EDITOR
-        if (Input.GetMouseButtonDown(0))
-        {
-            Shoot();
-        }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-        if (Input.GetMouseButtonDown(1))
-        {
-            Scope();
-        }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene(0);
-        }
-#endif
-        if (thisIsAShot)
-        {
-            CameraShake(); // permanent camera shake if thisIsAShot == true
-        }
+        PCControl();
+
+        CameraShake();
     }
+
 }

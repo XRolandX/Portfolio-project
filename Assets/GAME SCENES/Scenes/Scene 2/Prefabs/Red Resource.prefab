@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2548793477170339985}
   - component: {fileID: 7703131908490943264}
   m_Layer: 0
-  m_Name: Red Recource
+  m_Name: Red Resource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
