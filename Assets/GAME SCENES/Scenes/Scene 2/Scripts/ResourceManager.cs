@@ -6,17 +6,23 @@ public class ResourceManager : MonoBehaviour
 {
     public static ResourceManager Instance { get; private set; }
 
-    public GameObject resourcePrefab;
-    public List<GameObject> redResources;
-    public List<GameObject> greenWarehouse;
-    public Transform spawnPoint;
-    public Transform transitionPoint;
-    public readonly float verticalSpacing = 1f;
-    public readonly int maxResources = 10;
-    private int currentIndex = 0;
+    public List<GameObject> redResources = new();
+    public List<GameObject> greenRedWarehouse = new();
+    public List<GameObject> greenResources = new();
+    public List<GameObject> blueRedWarehouse = new();
+    public List<GameObject> blueResources = new();
+    public List<GameObject> blueGreenWarehouse = new();
 
-public int CurrentIndex { get { return currentIndex; } set { currentIndex = value; }
-}
+    public GameObject redResourcePrefab;
+    public GameObject greenResourcePrefab;
+    public GameObject blueResourcePrefab;
+
+    public readonly float verticalSpacing = 1f;
+    public bool RedGreenTransition;
+    public bool RedBlueTransition;
+    public bool GreenBlueTransition;
+
+
 
     private void Awake()
     {
@@ -29,54 +35,57 @@ public int CurrentIndex { get { return currentIndex; } set { currentIndex = valu
             Destroy(gameObject);
         }
 
-        redResources = new List<GameObject>();
             
     }
-
     
-    public void ResourceInstance()
+    
+    public void ResourceInstance(GameObject resPrefab, Transform spawnPoint, List<GameObject> resources)
     {
-        if (redResources.Count < maxResources)
-        {
-            Vector3 newPosition = spawnPoint.position + new Vector3(0, redResources.Count * verticalSpacing, 0);
-            GameObject newResource = Instantiate(resourcePrefab, newPosition, spawnPoint.rotation);
-            redResources.Add(newResource);
-        }
-    }
-
-    public void GetLatestResource()
-    {
-        if (redResources.Count > 0)
-        {
-            int lastIndex = redResources.Count - 1;
-
-            if (redResources[lastIndex] != null)
-            {
-                greenWarehouse.Add(redResources[lastIndex]);
-                StartCoroutine(TransitionResourceToGreenBuilding(greenWarehouse[^1]));
-                redResources.RemoveAt(lastIndex);
-            }
-            
-
-            
-
-        }
-    }
-
-    private IEnumerator TransitionResourceToGreenBuilding(GameObject resource)
-    {
-        // Implement transition logic here, e.g., moving the resource to the green building
         
+        Vector3 newPosition = spawnPoint.position + new Vector3(0, resources.Count * verticalSpacing, 0);
+        GameObject newResource = Instantiate(resPrefab, newPosition, spawnPoint.rotation);
+        resources.Add(newResource);
+        
+    }
+
+    public void GetLatestResource(Transform storePoint, List<GameObject> spawnResources,
+        List<GameObject> storeResources)
+    {
+        if (spawnResources.Count > 0)
+        {
+            int lastIndex = spawnResources.Count - 1;
+
+            if (spawnResources[lastIndex] != null)
+            {
+                storeResources.Add(spawnResources[lastIndex]);
+                StartCoroutine(TransitionResourceToGreenBuilding(storeResources[^1], storePoint, storeResources));
+                spawnResources.RemoveAt(lastIndex);
+            }
+
+        }
+    }
+
+    private IEnumerator TransitionResourceToGreenBuilding(GameObject resource, Transform storePoint, List<GameObject> storeResources)
+    {
+        
+
         float duration = 1f;
         Vector3 startPosition = resource.transform.position;
-        Vector3 endPosition = transitionPoint.position;
+        Vector3 endPosition = storePoint.position + new Vector3(0, (storeResources.Count-1) * verticalSpacing, 0);
+        Quaternion startRotation = resource.transform.rotation;
+        Quaternion endRotation = storePoint.rotation;
 
         for (float t = 0f; t < duration; t += Time.deltaTime)
         {
             float normalizedTime = t / duration;
-            resource.transform.position = Vector3.Lerp(startPosition, endPosition, normalizedTime);
+            resource.transform.SetPositionAndRotation(Vector3.Lerp(startPosition, endPosition, normalizedTime),
+                Quaternion.Lerp(startRotation, endRotation, normalizedTime));
             yield return null;
         }
+
+        resource.transform.SetPositionAndRotation(endPosition, endRotation);
         
     }
+
+    
 }

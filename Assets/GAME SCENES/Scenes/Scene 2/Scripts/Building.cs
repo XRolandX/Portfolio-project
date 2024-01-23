@@ -1,29 +1,42 @@
 using UnityEngine;
 using TMPro;
+using System.Collections.Generic;
 
 public abstract class Building : MonoBehaviour
 {
     [SerializeField] protected float resourceProductionRate;
-    [SerializeField] protected float currentResourceCount;
-    [SerializeField] protected float timeElapsed;
+    [SerializeField] protected float produceTimeElapsed;
+    [SerializeField] protected float gettingTimeElapsed;
     [SerializeField] protected float productionInterval;
+
+    [SerializeField] protected float currentResourceCount;
+    [SerializeField] protected float currentStorageCount;
+    [SerializeField] protected float currentStorageCount2;
+
     [SerializeField] protected float maxResourceCount;
+    [SerializeField] protected float maxResourceStorage;
 
     [SerializeField] protected RedBuilding redBuilding;
     [SerializeField] protected GreenBuilding greenBuilding;
     [SerializeField] protected BlueBuilding blueBuilding;
-
     [SerializeField] protected TextMeshPro resourceDisplay;
+
     protected string resourceColor;
     protected string resourceType;
 
+    [SerializeField] protected Transform resSpawnPoint;
+    [SerializeField] protected Transform resStorePoint;
+    [SerializeField] protected Transform resStorePoint2;
+
+    
     protected virtual void Update()
     {
-        TimeElapse();
-
+        ProduceTimeElapse();
         ResourceDisplay();
-
+        GetResourceTimeElapse();
     }
+    
+
 
     private void Awake()
     {
@@ -35,35 +48,32 @@ public abstract class Building : MonoBehaviour
 
     
 
-    private void TimeElapse()
+    private void ProduceTimeElapse()
     {
-        timeElapsed += Time.deltaTime;
+        produceTimeElapsed += Time.deltaTime;
 
-        if (timeElapsed >= productionInterval)
+        if (produceTimeElapsed >= productionInterval)
         {
             ProduceResource();
-            timeElapsed = 0f;
+            produceTimeElapsed = 0f;
         }
     }
-    private void ResourceDisplay()
+    private void GetResourceTimeElapse()
     {
-        if (resourceDisplay != null)
+        gettingTimeElapsed += Time.deltaTime;
+
+        if (gettingTimeElapsed >= productionInterval)
         {
-            resourceDisplay.text = "<color="+resourceColor+">"+resourceType+"</color> resource: " 
-                + ResourceManager.Instance.CurrentIndex.ToString("F2")
-                + "\nTime elapsed: " + timeElapsed.ToString("F2");
+            GetResource();
+            gettingTimeElapsed = 0f;
         }
     }
 
 
-    protected virtual void GetResource()
-    {
+    public abstract void ProduceResource();
 
-    }
-    protected virtual void ProduceResource()
-    {
 
-    }
-
+    public abstract void ResourceDisplay();
+    public abstract void GetResource();
     public abstract TextMeshPro FindTMPInScene();
 }

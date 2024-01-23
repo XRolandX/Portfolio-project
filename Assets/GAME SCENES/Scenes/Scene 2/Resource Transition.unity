@@ -171,7 +171,7 @@ GameObject:
   m_Layer: 0
   m_Name: Building Green 2
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -269,14 +269,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceProductionRate: 0
-  currentResourceCount: 0
   timeElapsed: 0
   productionInterval: 0
+  currentResourceCount: 0
+  currentStorageCount: 0
   maxResourceCount: 0
+  maxResourceStorage: 0
   redBuilding: {fileID: 0}
   greenBuilding: {fileID: 0}
   blueBuilding: {fileID: 0}
   resourceDisplay: {fileID: 0}
+  resSpawnPoint: {fileID: 1978853337}
+  resStorePoint: {fileID: 1160844290}
+  resStorePoint2: {fileID: 0}
 --- !u!1 &167570740
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,7 +445,8 @@ Transform:
   m_LocalPosition: {x: 0.36300004, y: -0.39299998, z: 1.3499999}
   m_LocalScale: {x: 0.31608, y: 0.087518, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 470148906}
   m_Father: {fileID: 1640792268}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0.013, y: -0.15, z: -0.303}
@@ -824,6 +830,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 435953379}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &470148905
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 470148906}
+  m_Layer: 0
+  m_Name: Red Res Store Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &470148906
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470148905}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.85, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 190209230}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &552444280
 GameObject:
   m_ObjectHideFlags: 0
@@ -1367,7 +1404,8 @@ Transform:
   m_LocalPosition: {x: -0.349, y: -0.393, z: 1.35}
   m_LocalScale: {x: 0.31608, y: 0.087518, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1345021520}
   m_Father: {fileID: 1640792268}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1544,7 +1582,7 @@ GameObject:
   m_Layer: 0
   m_Name: Building Red 1
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1641,14 +1679,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceProductionRate: 0
-  currentResourceCount: 0
   timeElapsed: 0
   productionInterval: 0
+  currentResourceCount: 0
+  currentStorageCount: 0
   maxResourceCount: 0
+  maxResourceStorage: 0
   redBuilding: {fileID: 0}
   greenBuilding: {fileID: 0}
   blueBuilding: {fileID: 0}
   resourceDisplay: {fileID: 0}
+  resSpawnPoint: {fileID: 755722126}
+  resStorePoint: {fileID: 0}
+  resStorePoint2: {fileID: 0}
 --- !u!1 &1011306822
 GameObject:
   m_ObjectHideFlags: 0
@@ -2075,10 +2118,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28b2f8d6b4d91274bb72f941a2d7252d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourcePrefab: {fileID: 3655704740845861768, guid: 3b8a1fadbcff2ab49af60575b8ab2ce3, type: 3}
   redResources: []
-  spawnPoint: {fileID: 755722126}
-  transitionPoint: {fileID: 1160844290}
+  greenRedWarehouse: []
+  greenResources: []
+  blueRedWarehouse: []
+  blueResources: []
+  blueGreenWarehouse: []
+  redResourcePrefab: {fileID: 3655704740845861768, guid: 3b8a1fadbcff2ab49af60575b8ab2ce3, type: 3}
+  greenResourcePrefab: {fileID: 560529387152768656, guid: 9e4036757c8c2644a99b992581b972e4, type: 3}
+  blueResourcePrefab: {fileID: 1119199411821174077, guid: 31253400875c80146892cd3af9fc0307, type: 3}
+  endTransition: 0
 --- !u!4 &1154529782
 Transform:
   m_ObjectHideFlags: 0
@@ -2104,7 +2153,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1160844290}
   m_Layer: 0
-  m_Name: Red - Green Transition Point
+  m_Name: Red - Green Store Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2410,6 +2459,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269664824}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1345021519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1345021520}
+  m_Layer: 0
+  m_Name: Green Res Store Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1345021520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345021519}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.85, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 854879180}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1436952951
 GameObject:
   m_ObjectHideFlags: 0
@@ -2429,7 +2509,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1436952952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2776,7 +2856,7 @@ GameObject:
   m_Layer: 0
   m_Name: Building Blue 3
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2875,14 +2955,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceProductionRate: 0
-  currentResourceCount: 0
   timeElapsed: 0
   productionInterval: 0
+  currentResourceCount: 0
+  currentStorageCount: 0
   maxResourceCount: 0
+  maxResourceStorage: 0
   redBuilding: {fileID: 0}
   greenBuilding: {fileID: 0}
   blueBuilding: {fileID: 0}
   resourceDisplay: {fileID: 0}
+  resSpawnPoint: {fileID: 1700468148}
+  resStorePoint: {fileID: 1345021520}
+  resStorePoint2: {fileID: 470148906}
 --- !u!1 &1700468147
 GameObject:
   m_ObjectHideFlags: 0
@@ -2893,7 +2978,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1700468148}
   m_Layer: 0
-  m_Name: Spawn Point
+  m_Name: Blue Spawn Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2907,7 +2992,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1700468147}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 1.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3305,7 +3390,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1978853336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 1.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

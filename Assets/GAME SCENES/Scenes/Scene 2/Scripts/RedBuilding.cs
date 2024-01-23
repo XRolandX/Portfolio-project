@@ -1,5 +1,6 @@
 
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -8,25 +9,44 @@ public class RedBuilding : Building
     private void Start()
     {
         resourceProductionRate = 1f;
-        productionInterval = 5f;
+        productionInterval = 1.33f;
+        currentResourceCount = 0f;
+        maxResourceCount = 5f;
         resourceColor = "red";
         resourceType = "Red";
     }
 
-    protected override void ProduceResource()
-    {
 
-        ResourceManager.Instance.ResourceInstance();
+    public override void ProduceResource()
+    {
+        if (ResourceManager.Instance.redResources.Count < maxResourceCount)
+        {
+            ResourceManager.Instance.ResourceInstance(ResourceManager.Instance.redResourcePrefab,
+                resSpawnPoint.transform, ResourceManager.Instance.redResources);
+            currentResourceCount = ResourceManager.Instance.redResources.Count;
+        }
         
     }
+
 
     public override TextMeshPro FindTMPInScene()
     {
         return GameObject.FindGameObjectWithTag("Red TMP").GetComponent<TextMeshPro>();
     }
-
-    protected override void GetResource()
+    public override void ResourceDisplay()
     {
-        
+        if (resourceDisplay != null)
+        {
+            resourceDisplay.text = "<color=" + resourceColor + ">" + resourceType + "</color> resource: "
+                + ResourceManager.Instance.redResources.Count.ToString("F2")
+                + "\nTime elapsed: " + gettingTimeElapsed.ToString("F2");
+        }
     }
+
+
+    public override void GetResource()
+    {
+        // doesn't get any resources
+    }
+
 }
