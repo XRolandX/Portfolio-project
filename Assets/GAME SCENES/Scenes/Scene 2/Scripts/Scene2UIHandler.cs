@@ -3,6 +3,18 @@ using UnityEngine.SceneManagement;
 
 public class Scene2UIHandler : MonoBehaviour
 {
+    [SerializeField] GameObject androidOverlay;
+    private void Awake()
+    {
+#if PLATFORM_STANDALONE_WIN
+        androidOverlay.SetActive(false);
+#endif
+#if UNITY_ANDROID
+        androidOverlay.SetActive(true);
+#endif
+    }
+
+
     public void RestartScene()
     {
         SceneManager.LoadScene(2);
@@ -25,7 +37,9 @@ public class Scene2UIHandler : MonoBehaviour
 
     private void Update()
     {
+#if PLATFORM_STANDALONE_WIN
         KeyControl();
+#endif
     }
 
     private void Start()

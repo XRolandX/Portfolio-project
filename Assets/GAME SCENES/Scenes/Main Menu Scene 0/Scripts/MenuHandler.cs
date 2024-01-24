@@ -13,6 +13,10 @@ public class MenuHandler : MonoBehaviour
     {
         SceneManager.LoadScene(2);
     }
+    public void Scene3()
+    {
+        SceneManager.LoadScene(3);
+    }
     public void Exit()
     {
         Application.Quit();

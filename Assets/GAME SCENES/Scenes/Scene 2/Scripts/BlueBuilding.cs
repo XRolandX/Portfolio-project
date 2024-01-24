@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -19,6 +17,7 @@ public class BlueBuilding : Building
         productionInterval = 4.77f;
         resourceColor = "blue";
         resourceType = "Blue";
+        displayResource = ResourceManager.Instance.blueResources;
     }
 
     
@@ -62,15 +61,7 @@ public class BlueBuilding : Building
         return GameObject.FindGameObjectWithTag("Blue TMP").GetComponent<TextMeshPro>();
     }
 
-    public override void ResourceDisplay()
-    {
-        if (resourceDisplay != null)
-        {
-            resourceDisplay.text = "<color=" + resourceColor + ">" + resourceType + "</color> resource: "
-                + ResourceManager.Instance.blueResources.Count.ToString("F2")
-                + "\nTime elapsed: " + gettingTimeElapsed.ToString("F2");
-        }
-    }
+    
 
     
     

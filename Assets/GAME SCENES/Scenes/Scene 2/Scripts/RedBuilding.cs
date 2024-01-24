@@ -1,6 +1,3 @@
-
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -14,6 +11,7 @@ public class RedBuilding : Building
         maxResourceCount = 5f;
         resourceColor = "red";
         resourceType = "Red";
+        displayResource = ResourceManager.Instance.redResources;
     }
 
 
@@ -33,15 +31,7 @@ public class RedBuilding : Building
     {
         return GameObject.FindGameObjectWithTag("Red TMP").GetComponent<TextMeshPro>();
     }
-    public override void ResourceDisplay()
-    {
-        if (resourceDisplay != null)
-        {
-            resourceDisplay.text = "<color=" + resourceColor + ">" + resourceType + "</color> resource: "
-                + ResourceManager.Instance.redResources.Count.ToString("F2")
-                + "\nTime elapsed: " + gettingTimeElapsed.ToString("F2");
-        }
-    }
+    
 
 
     public override void GetResource()

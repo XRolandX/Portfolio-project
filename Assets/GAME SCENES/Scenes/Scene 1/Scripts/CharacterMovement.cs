@@ -21,22 +21,14 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] bool isGrounded;
 
     
-
-    private void Awake()
-    {
-        transform.localScale = Vector3.one; // set the parent scale to avoid the child scale deformation 
-        if (GameObject.Find("Jump Button").TryGetComponent<Button>(out jumpButton))
-        {
-            jumpButton.onClick.AddListener(JumpUIButton);
-        }
-    }
     void Update()
     {
-        MoveWithKeyboard();
         MoveWithJoystick();
-
         Gravity();
+#if UNITY_STANDALONE_WIN
+        MoveWithKeyboard();
         JumpKeyboardButton();
+#endif
     }
 
     public void Gravity()
@@ -66,15 +58,15 @@ public class CharacterMovement : MonoBehaviour
         }
 
     }
-    private void JumpUIButton()
-    { 
+    public void JumpUIButton()
+    {
         if (isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
         }
-    }
+    }                
 
-#if UNITY_STANDALONE_WIN
+
 
     private void JumpKeyboardButton()
     {
@@ -100,5 +92,5 @@ public class CharacterMovement : MonoBehaviour
 
     }
 
-#endif
-}
+
+    }

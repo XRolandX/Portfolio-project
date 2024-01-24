@@ -181,7 +181,7 @@ public class ShootingManager : MonoBehaviour
         bulletHole.transform.position += normal * 0.0001f;
 
         // Destroy the bullet hole after a certain time (optional)
-        Destroy(bulletHole, 60f);
+        Destroy(bulletHole, 30f);
     }
     #endregion
 

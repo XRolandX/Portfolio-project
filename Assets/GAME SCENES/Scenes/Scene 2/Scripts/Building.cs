@@ -28,6 +28,8 @@ public abstract class Building : MonoBehaviour
     [SerializeField] protected Transform resStorePoint;
     [SerializeField] protected Transform resStorePoint2;
 
+    protected List<GameObject> displayResource;
+
     
     protected virtual void Update()
     {
@@ -73,7 +75,15 @@ public abstract class Building : MonoBehaviour
     public abstract void ProduceResource();
 
 
-    public abstract void ResourceDisplay();
+    private void ResourceDisplay()
+    {
+        if (resourceDisplay != null)
+        {
+            resourceDisplay.text = "<color=" + resourceColor + ">" + resourceType + "</color> resource: "
+                + displayResource.Count.ToString("F2")
+                + "\nTime elapsed: " + gettingTimeElapsed.ToString("F2");
+        }
+    }
     public abstract void GetResource();
     public abstract TextMeshPro FindTMPInScene();
 }

@@ -22,6 +22,8 @@ public class ResourceManager : MonoBehaviour
     public bool RedBlueTransition;
     public bool GreenBlueTransition;
 
+    public Transform parentObjectForResourceInstances;
+
 
 
     private void Awake()
@@ -44,6 +46,7 @@ public class ResourceManager : MonoBehaviour
         
         Vector3 newPosition = spawnPoint.position + new Vector3(0, resources.Count * verticalSpacing, 0);
         GameObject newResource = Instantiate(resPrefab, newPosition, spawnPoint.rotation);
+        newResource.transform.SetParent(parentObjectForResourceInstances, false);
         resources.Add(newResource);
         
     }
