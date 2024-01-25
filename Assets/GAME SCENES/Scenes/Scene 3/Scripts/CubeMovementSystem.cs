@@ -8,10 +8,11 @@ public partial class CubeMovementSystem : SystemBase
     {
         float deltaTime = Time.DeltaTime;
 
-        Entities.ForEach((ref Translation translation) =>
+        Entities.ForEach((ref Translation translation, in MoveSpeed moveSpeed) =>
         {
-            float moveSpeed = 1f;
-            translation.Value.y += moveSpeed * deltaTime;
+            var value = moveSpeed.Value * deltaTime;
+            // Update the position of the entity based on its speed
+            translation.Value += new float3(value, value, value);
         }).ScheduleParallel();
     }
 
