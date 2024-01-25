@@ -15,7 +15,7 @@ public class MenuHandler : MonoBehaviour
     }
     public void Scene3()
     {
-        SceneManager.LoadScene(3);
+        //SceneManager.LoadScene(3);
     }
     public void Exit()
     {
