@@ -1,5 +1,3 @@
-using Unity.Entities;
-using Unity.Transforms;
 using UnityEngine;
 
 public class SpawnEntities : MonoBehaviour
@@ -11,9 +9,9 @@ public class SpawnEntities : MonoBehaviour
         
         for (int i = 0; i < 10000; i++)
         {
-            
-
-            Vector3 position = new(Random.Range(-100f, 100f), Random.Range(-100f, 100f), Random.Range(-100f, 100f));
+            float random = Random.Range(1f, 3f);
+            prefab.transform.localScale = new Vector3(random, random, random);
+            Vector3 position = new(Random.Range(10f, 100f), Random.Range(10f, 100f), Random.Range(10f, 100f));
             Quaternion rotation = Quaternion.identity;
 
             Instantiate(prefab, position, rotation);
