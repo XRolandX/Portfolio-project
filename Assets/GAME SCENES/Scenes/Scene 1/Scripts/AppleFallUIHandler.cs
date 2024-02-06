@@ -2,18 +2,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class AppleFallUIHandler : MonoBehaviour
 {
-    [SerializeField] GameObject buttonsOverlay;
-    [SerializeField] GameObject joystickOverlay;
+    [SerializeField] GameObject canvasOverlay;
 
     private void Awake()
     {
 #if PLATFORM_STANDALONE_WIN
-        buttonsOverlay.SetActive(false);
-        joystickOverlay.SetActive(false);
+        canvasOverlay.SetActive(false);
 #endif
 #if UNITY_ANDROID
-        buttonsOverlay.SetActive(true);
-        joystickOverlay.SetActive(true);
+        canvasOverlay.SetActive(true);
 #endif
     }
 

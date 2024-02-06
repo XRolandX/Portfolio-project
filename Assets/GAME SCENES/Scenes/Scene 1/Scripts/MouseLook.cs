@@ -23,7 +23,7 @@ public class MouseLook : MonoBehaviour
     private void Start()
     {
 #if UNITY_STANDALONE_WIN
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.None;
 #endif
     }
 
