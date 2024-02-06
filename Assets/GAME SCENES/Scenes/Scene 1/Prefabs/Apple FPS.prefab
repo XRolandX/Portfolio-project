@@ -224,10 +224,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 213f829c959d66f4085630052884bf00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveJoystick: {fileID: 0}
   controller: {fileID: 5791527614052912572}
   groundCheker: {fileID: 5791527615347953468}
-  jumpButton: {fileID: 0}
   groundMask:
     serializedVersion: 2
     m_Bits: 200
@@ -427,12 +425,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shoot: {fileID: 5791527614276296135}
-  bulletHolePrefab: {fileID: 0}
-  scopeText: {fileID: 0}
   mainCameraTransform: {fileID: 5791527615609895799}
-  shakeFrequency: 0
-  shakeTime: 0
-  thisIsAShot: 0
+  scopeShakeFrequency: 0.2
+  unScopeShakeFrequency: 0.0085
   blowWaveRadius: 50
   apple:
     serializedVersion: 2
@@ -518,7 +513,6 @@ GameObject:
   - component: {fileID: 5791527615609895797}
   - component: {fileID: 5791527615609895798}
   - component: {fileID: 5791527615609895784}
-  - component: {fileID: 8455643539075384769}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Untagged
@@ -605,13 +599,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35b1dfc8729c2d4488d7e4b6739a24c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookJoystick: {fileID: 0}
   characterBody: {fileID: 5791527614718822522}
   weaponHolder: {fileID: 5791527614697260774}
   mouseSensitivity: 150
-  unscopeSensitivity: 150
-  scopeSensitivity: 100
-  scope2xSensitivity: 50
 --- !u!95 &5791527615609895784
 Animator:
   serializedVersion: 4
@@ -632,36 +622,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8455643539075384769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5791527615609895786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_Cameras: []
-  m_RendererIndex: -1
-  m_VolumeLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
-  m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
-  m_ClearDepth: 1
-  m_AllowXRRendering: 1
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_Version: 2

@@ -194,17 +194,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shoot: {fileID: 2708165527406429798}
-  bulletHolePrefab: {fileID: 0}
-  scopeText: {fileID: 0}
-  mainCameraTransform: {fileID: 0}
-  shakeFrequency: 0.15
-  shakeTime: 0
-  thisIsAShot: 0
   blowWaveRadius: 50
+  shakeFrequency: 0.15
   apple:
     serializedVersion: 2
     m_Bits: 64
-  mainCamAnim: {fileID: 0}
-  weaponCamera: {fileID: 0}
-  scopeOverlay: {fileID: 0}
-  mainCamera: {fileID: 0}
