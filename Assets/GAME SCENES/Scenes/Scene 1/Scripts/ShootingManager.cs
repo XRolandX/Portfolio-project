@@ -156,41 +156,37 @@ public class ShootingManager : MonoBehaviour
     #endregion
 
     #region B U L L E T    H O L E S
-    private void RaycastShot()
+    private void RaycastShot()     //      ------->     in Shoot() in UI BUTTONS CONTROL
     {
-        // Get the center of the screen
         Vector3 screenCenter = new(Screen.width / 2, Screen.height / 2, 0); 
 
-        // Raycast to detect the hit point
         if (Physics.Raycast(Camera.main.ScreenPointToRay(screenCenter), out RaycastHit hit, 500f))
         {
-            // Spawn bullet hole prefab at the hit point
             SpawnBulletHole(hit.point, hit.normal);
         }
     }
 
-    private void SpawnBulletHole(Vector3 position, Vector3 normal)
+    private void SpawnBulletHole(Vector3 hitPoint, Vector3 hitNormal)     //         ---------> in RaycastShot() in BULLET HOLES
     {
-        // Instantiate the bullet hole prefab
-        GameObject bulletHole = Instantiate(bulletHolePrefab, position, Quaternion.identity);
+        Quaternion randomRotation = Quaternion.LookRotation(hitNormal) * Quaternion.Euler(0, 0, Random.Range(0f, 360f));
 
-        // Rotate the bullet hole to align with the surface normal
-        bulletHole.transform.LookAt(position - normal);
 
-        // Move the bullet hole slightly away from the surface to avoid z-fighting
-        bulletHole.transform.position += normal * 0.0001f;
+        GameObject bulletHole = Instantiate(bulletHolePrefab, hitPoint, randomRotation);
 
-        // Destroy the bullet hole after a certain time (optional)
+        bulletHole.transform.LookAt(hitPoint - hitNormal);
+
+        bulletHole.transform.position += hitNormal * 0.00001f;
+
         Destroy(bulletHole, 30f);
     }
     #endregion
 
     #region A P P L E   F A L L I N G
-    private void BlowWave()
+    private void BlowWave()  // -----> in Shoot() in UI BUTTONS CONTROL
     {
-#pragma warning disable UNT0028 // Use non-allocating physics APIs
+#pragma warning disable UNT0028 
         apples = Physics.OverlapSphere(transform.position, blowWaveRadius, apple);
-#pragma warning restore UNT0028 // Use non-allocating physics APIs
+#pragma warning restore UNT0028 
 
         foreach (Collider apple in apples)
         {
@@ -201,10 +197,10 @@ public class ShootingManager : MonoBehaviour
 
     void Start()
     {
-        shakeTime = unscopedShakeTime; // default shake time
-        shakeFrequency = unScopedShakeFrequency; // default camera shake
-        shoot = GetComponent<AudioSource>(); // audio for shooting
-        mouseLookScript = mainCamera.gameObject.GetComponent<MouseLook>(); // mouse look script from main camera game object
+        shakeTime = unscopedShakeTime; 
+        shakeFrequency = unScopedShakeFrequency;
+        shoot = GetComponent<AudioSource>();
+        mouseLookScript = mainCamera.gameObject.GetComponent<MouseLook>();
     }
 
     void LateUpdate()
