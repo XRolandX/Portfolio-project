@@ -19,7 +19,7 @@ public class SpawnEntities : MonoBehaviour
 
         var entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
 
-        for (int i = 0; i < 10000; i++)
+        for (int i = 0; i < 50000; i++)
         {
             Entity entity = entityManager.Instantiate(prefabEntity);
             Vector3 position = new(Random.Range(-100f, 100f), Random.Range(10f, 100f), Random.Range(-100f, 100f));

@@ -6,9 +6,9 @@ public partial class CubeMovementSystem : SystemBase
 {
     protected override void OnUpdate()
     {
-        float deltaTime = Time.DeltaTime;
+        //float deltaTime = Time.DeltaTime;
 
-        Entities.ForEach((ref Translation translation) => {})
-            .ScheduleParallel();
+       // Entities.ForEach((ref Translation translation) => {})
+            //.ScheduleParallel();
     }
 }
