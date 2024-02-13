@@ -24,7 +24,7 @@ public partial class AddComponentSystem : SystemBase
                 uint uniqueSeed = seed + frameCount + (uint)entityInQueryIndex;
                 var random = new Unity.Mathematics.Random(uniqueSeed);
 
-                float speedValue = random.NextFloat(1f, 10f);
+                float speedValue = random.NextFloat(1f, 2f);
                 ecb.AddComponent(entityInQueryIndex, entity, new MoveSpeed(speedValue));
             })
             .ScheduleParallel();
