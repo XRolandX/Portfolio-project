@@ -2,6 +2,7 @@ using Unity.Entities;
 using Unity.Transforms;
 using Unity.Mathematics;
 
+
 public partial class CubeMovementSystem : SystemBase
 {
     protected override void OnUpdate()
@@ -10,11 +11,7 @@ public partial class CubeMovementSystem : SystemBase
 
         Entities.ForEach((ref Translation translation, in MoveSpeed moveSpeed) =>
         {
-            var value = moveSpeed.Value * deltaTime;
-            // Update the position of the entity based on its speed
-            translation.Value += new float3(0, value, 0);
+            translation.Value += new float3(0, moveSpeed.Value * deltaTime, 0);
         }).ScheduleParallel();
     }
-
-    
 }
