@@ -11,13 +11,11 @@ public partial class SpawnEntities : SystemBase
     private Entity _prefabEntity;
     private GameObject cubePrefab;
     public PlayerControls controls;
-    private float spawnTimer;
+    private float spawnTimer = 0f;
     private readonly float entityForce = 100f;
 
     protected override void OnCreate()
     {
-        spawnTimer = 0f;
-
         controls = new PlayerControls();
         controls.Enable();
 
@@ -25,12 +23,11 @@ public partial class SpawnEntities : SystemBase
 
         _ecbSystem = World
             .GetOrCreateSystem<EndSimulationEntityCommandBufferSystem>();
-        _blobAssetStore = new BlobAssetStore();
 
+        _blobAssetStore = new BlobAssetStore();
 
         var settings = GameObjectConversionSettings
             .FromWorld(World.DefaultGameObjectInjectionWorld, _blobAssetStore);
-
         _prefabEntity = GameObjectConversionUtility
             .ConvertGameObjectHierarchy(cubePrefab, settings);
 
@@ -51,9 +48,9 @@ public partial class SpawnEntities : SystemBase
 
             float3 forwardDirection = math.mul(spawnRotation, new float3(0, 0, 1));
 
-            Debug.Log("Entity is instantiated");
             Entity instance = ecb.Instantiate(_prefabEntity);
             ecb.SetComponent(instance, new Translation { Value = spawnPosition });
+            ecb.SetComponent(instance, new Rotation {  Value = spawnRotation });
             ecb.AddComponent(instance, new PhysicsVelocity
             {
                 Linear = forwardDirection * entityForce,

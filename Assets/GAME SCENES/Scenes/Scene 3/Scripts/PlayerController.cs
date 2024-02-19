@@ -92,7 +92,6 @@ public class PlayerController : MonoBehaviour
         Vector3 move = moveSpeed * Time.deltaTime * new Vector3(moveInput.x, 0f, moveInput.y);
         transform.Translate(move, Space.Self);
 
-
         Vector2 look = sensitivity * Time.deltaTime * lookInput;
         transform.Rotate(0, look.x, 0, Space.World);
         cameraPitch -= look.y;

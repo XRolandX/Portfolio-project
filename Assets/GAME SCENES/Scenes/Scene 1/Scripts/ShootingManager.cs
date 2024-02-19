@@ -1,5 +1,6 @@
 using System.Collections;
 using TMPro;
+using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,10 +9,10 @@ public class ShootingManager : MonoBehaviour
     [SerializeField] AudioSource shoot; // shoot sound
     [SerializeField] GameObject bulletHolePrefab;
     [SerializeField] TextMeshProUGUI scopeText;
-    
+    private PlayerControls playerControls;
+
     #region C A M E R A    S H A K E    V A R I A B L E S
     [SerializeField] Transform mainCameraTransform;
-
 
     [SerializeField] float shakeFrequency;
     public float ShakeFrequency{ get { return shakeFrequency; } set { shakeFrequency = value; }} // if i need access to shakeFrequency from other classes
@@ -51,37 +52,34 @@ public class ShootingManager : MonoBehaviour
     #region P C   C O N T R O L
     private void PCControl()
     {
-#if UNITY_STANDALONE_WIN
-        if (Input.GetMouseButtonDown(0))
+        #if UNITY_STANDALONE_WIN
+        if (playerControls.Player.MouseClick.triggered)
         {
             Shoot();
         }
-        else if (Input.GetMouseButtonDown(1))
+        else if (playerControls.Player.RightMouseClick.triggered)
         {
             Scope();
         }
-        else if (Input.GetKeyDown(KeyCode.R))
+        else if (playerControls.Player.RestartScene.triggered)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
         }
-        else if (Input.GetKeyDown(KeyCode.Escape))
+        else if (playerControls.Player.ToMainMenu.triggered)
         {
             SceneManager.LoadScene(0);
         }
-        
-
-#endif
+        #endif
     }
     #endregion
 
-    #region U I  B U T T O N S   C O N T R O L
+    #region U I   B U T T O N S   C O N T R O L   (A N D R O I D)
     public void Shoot()
     {
         thisIsAShot = true;
-        shoot.Play();
-
         StartCoroutine(ShakeTimeControl()); // camera shake time control
 
+        shoot.Play();
         BlowWave();
         RaycastShot();
     }
@@ -140,6 +138,11 @@ public class ShootingManager : MonoBehaviour
     #endregion
 
     #region C A M E R A   S H A K E
+    IEnumerator ShakeTimeControl()
+    {
+        yield return new WaitForSeconds(shakeTime);
+        thisIsAShot = false;
+    }
     private void CameraShake()
     {
         if (thisIsAShot)
@@ -147,11 +150,6 @@ public class ShootingManager : MonoBehaviour
             mainCameraTransform.localPosition += Random.insideUnitSphere * shakeFrequency;
         }
         
-    }
-    IEnumerator ShakeTimeControl()
-    {
-        yield return new WaitForSeconds(shakeTime);
-        thisIsAShot = false;
     }
     #endregion
 
@@ -195,19 +193,28 @@ public class ShootingManager : MonoBehaviour
     }
     #endregion
 
-    void Start()
+    void Awake()
     {
         shakeTime = unscopedShakeTime; 
         shakeFrequency = unScopedShakeFrequency;
         shoot = GetComponent<AudioSource>();
         mouseLookScript = mainCamera.gameObject.GetComponent<MouseLook>();
+
+        playerControls = new PlayerControls();
     }
 
     void LateUpdate()
     {
         PCControl();
-
         CameraShake();
     }
 
+    private void OnEnable()
+    {
+        playerControls.Player.Enable();
+    }
+    private void OnDisable()
+    {
+        playerControls.Player.Disable();
+    }
 }
