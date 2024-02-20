@@ -8,11 +8,10 @@ public class MouseLook : MonoBehaviour
     private PlayerControls playerControls;
     private Vector2 lookInput;
     private float cameraPitch = 0;
-
+    public Transform weaponHolderTransform;
 
     public Joystick lookJoystick;
     public Transform characterBody;
-    public Transform weaponHolder;
 
     [SerializeField] private float mouseSensitivity = 0f;
     public float unscopeSensitivity = 150f;
@@ -23,8 +22,6 @@ public class MouseLook : MonoBehaviour
         get { return mouseSensitivity; }
         set { mouseSensitivity = value; }
     }
-
-    private float xRotation = 0f;
 
     private void PlayerControlsInstantiation()
     {
@@ -37,11 +34,11 @@ public class MouseLook : MonoBehaviour
         PlayerControlsInstantiation();
 
 #if UNITY_STANDALONE_WIN
-        Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.Locked;
 #endif
     }
 
-    void LateUpdate()
+    void Update()
     {
         Look();
 
@@ -60,10 +57,10 @@ public class MouseLook : MonoBehaviour
         #region L O O K   W I T H   T H E   M O U S E
 
         Vector3 look = mouseSensitivity * Time.deltaTime * lookInput;
-        transform.Rotate(0f, look.x, 0f, Space.World);
+        characterBody.Rotate(0f, look.x, 0f, Space.World);
         cameraPitch -= look.y;
         cameraPitch = Mathf.Clamp(cameraPitch, -85f, 85f);
-        weaponHolder.transform.localEulerAngles = new Vector3(cameraPitch, transform.localEulerAngles.y, 0f);
+        weaponHolderTransform.localEulerAngles = new Vector3(cameraPitch, transform.localEulerAngles.y, 0f);
 
         #endregion
 #endif

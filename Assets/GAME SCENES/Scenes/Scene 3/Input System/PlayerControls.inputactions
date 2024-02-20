@@ -67,6 +67,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Stop Play Mode",
+                    "type": "Button",
+                    "id": "37b1f81a-327c-4b08-896d-6ce8ae055dda",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Cursor Unlock",
+                    "type": "Button",
+                    "id": "bb00ef9c-df92-4f83-a4dc-f41abae81099",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -172,7 +190,7 @@
                 {
                     "name": "",
                     "id": "b5c52dbf-ecec-4bb3-9684-14109f6252a6",
-                    "path": "<Keyboard>/escape",
+                    "path": "<Keyboard>/tab",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -188,6 +206,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2434227e-676d-4add-8ea7-a046c8e33713",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Stop Play Mode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "331c3855-2727-4b5a-af4f-693f64d61017",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cursor Unlock",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

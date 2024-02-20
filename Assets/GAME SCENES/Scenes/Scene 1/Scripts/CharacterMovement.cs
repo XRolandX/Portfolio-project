@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -32,6 +29,7 @@ public class CharacterMovement : MonoBehaviour
     }
     private void Awake()
     {
+
         PlayerControlsInitialisation();
     }
     void Update()
@@ -83,8 +81,8 @@ public class CharacterMovement : MonoBehaviour
     }
     private void MoveWithKeyboard()
     {
-        Vector3 move = transform.TransformDirection(new Vector3(moveInput.x, 0f, moveInput.y));
-        controller.Move(speed * Time.deltaTime * move);
+        Vector3 move = new(moveInput.x, 0f, moveInput.y);
+        controller.transform.Translate(speed * Time.deltaTime * move);
     }
     private void OnEnable()
     {

@@ -89,6 +89,24 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Stop Play Mode"",
+                    ""type"": ""Button"",
+                    ""id"": ""37b1f81a-327c-4b08-896d-6ce8ae055dda"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Cursor Unlock"",
+                    ""type"": ""Button"",
+                    ""id"": ""bb00ef9c-df92-4f83-a4dc-f41abae81099"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -194,7 +212,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""b5c52dbf-ecec-4bb3-9684-14109f6252a6"",
-                    ""path"": ""<Keyboard>/escape"",
+                    ""path"": ""<Keyboard>/tab"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -212,6 +230,28 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2434227e-676d-4add-8ea7-a046c8e33713"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Stop Play Mode"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""331c3855-2727-4b5a-af4f-693f64d61017"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Cursor Unlock"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -227,6 +267,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Player_RestartScene = m_Player.FindAction("Restart Scene", throwIfNotFound: true);
         m_Player_ToMainMenu = m_Player.FindAction("To Main Menu", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
+        m_Player_StopPlayMode = m_Player.FindAction("Stop Play Mode", throwIfNotFound: true);
+        m_Player_CursorUnlock = m_Player.FindAction("Cursor Unlock", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -293,6 +335,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_RestartScene;
     private readonly InputAction m_Player_ToMainMenu;
     private readonly InputAction m_Player_Jump;
+    private readonly InputAction m_Player_StopPlayMode;
+    private readonly InputAction m_Player_CursorUnlock;
     public struct PlayerActions
     {
         private @PlayerControls m_Wrapper;
@@ -304,6 +348,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @RestartScene => m_Wrapper.m_Player_RestartScene;
         public InputAction @ToMainMenu => m_Wrapper.m_Player_ToMainMenu;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
+        public InputAction @StopPlayMode => m_Wrapper.m_Player_StopPlayMode;
+        public InputAction @CursorUnlock => m_Wrapper.m_Player_CursorUnlock;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -334,6 +380,12 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Jump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
+                @StopPlayMode.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStopPlayMode;
+                @StopPlayMode.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStopPlayMode;
+                @StopPlayMode.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStopPlayMode;
+                @CursorUnlock.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCursorUnlock;
+                @CursorUnlock.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCursorUnlock;
+                @CursorUnlock.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCursorUnlock;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -359,6 +411,12 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
+                @StopPlayMode.started += instance.OnStopPlayMode;
+                @StopPlayMode.performed += instance.OnStopPlayMode;
+                @StopPlayMode.canceled += instance.OnStopPlayMode;
+                @CursorUnlock.started += instance.OnCursorUnlock;
+                @CursorUnlock.performed += instance.OnCursorUnlock;
+                @CursorUnlock.canceled += instance.OnCursorUnlock;
             }
         }
     }
@@ -372,5 +430,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnRestartScene(InputAction.CallbackContext context);
         void OnToMainMenu(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnStopPlayMode(InputAction.CallbackContext context);
+        void OnCursorUnlock(InputAction.CallbackContext context);
     }
 }

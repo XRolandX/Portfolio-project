@@ -9,9 +9,8 @@ public class SoundHandler : MonoBehaviour
 
     void Awake()
     {
-        AudioSource audioSource = GetComponent<AudioSource>();
-
-        if (audioSource != null)
+        
+        if (TryGetComponent<AudioSource>(out var audioSource))
         {
             audioSource.clip = sceneAmbientSound;
             audioSource.Play();

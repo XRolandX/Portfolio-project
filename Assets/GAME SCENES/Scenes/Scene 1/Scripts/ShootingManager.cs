@@ -1,6 +1,6 @@
 using System.Collections;
 using TMPro;
-using UnityEditor.ShaderGraph;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -52,7 +52,7 @@ public class ShootingManager : MonoBehaviour
     #region P C   C O N T R O L
     private void PCControl()
     {
-        #if UNITY_STANDALONE_WIN
+#if UNITY_STANDALONE_WIN
         if (playerControls.Player.MouseClick.triggered)
         {
             Shoot();
@@ -63,13 +63,24 @@ public class ShootingManager : MonoBehaviour
         }
         else if (playerControls.Player.RestartScene.triggered)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         else if (playerControls.Player.ToMainMenu.triggered)
         {
             SceneManager.LoadScene(0);
         }
-        #endif
+        else if (playerControls.Player.StopPlayMode.triggered)
+        {
+            #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+            
+        }
+        else if (playerControls.Player.CursorUnlock.triggered)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            #endif
+        }
+#endif
     }
     #endregion
 

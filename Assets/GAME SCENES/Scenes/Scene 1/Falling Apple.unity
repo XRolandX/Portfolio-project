@@ -461,6 +461,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 423691116517498819, guid: eaf27298257511a419ce39ddfa7aa0fa, type: 3}
   m_PrefabInstance: {fileID: 1702261007}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &176201311 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5791527614697260774, guid: c929439ccb05979498ed042f0c08339e, type: 3}
+  m_PrefabInstance: {fileID: 5791527614910968967}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &260198173
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4495,20 +4500,24 @@ PrefabInstance:
       objectReference: {fileID: 583406825}
     - target: {fileID: 5791527615609895798, guid: c929439ccb05979498ed042f0c08339e, type: 3}
       propertyPath: mouseSensitivity
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 5791527615609895798, guid: c929439ccb05979498ed042f0c08339e, type: 3}
-      propertyPath: scopeSensitivity
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 5791527615609895798, guid: c929439ccb05979498ed042f0c08339e, type: 3}
-      propertyPath: scope2xSensitivity
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5791527615609895798, guid: c929439ccb05979498ed042f0c08339e, type: 3}
-      propertyPath: unscopeSensitivity
-      value: 150
+      propertyPath: scopeSensitivity
+      value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5791527615609895798, guid: c929439ccb05979498ed042f0c08339e, type: 3}
+      propertyPath: scope2xSensitivity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5791527615609895798, guid: c929439ccb05979498ed042f0c08339e, type: 3}
+      propertyPath: unscopeSensitivity
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5791527615609895798, guid: c929439ccb05979498ed042f0c08339e, type: 3}
+      propertyPath: weaponHolderTransform
+      value: 
+      objectReference: {fileID: 176201311}
     - target: {fileID: 5791527615609895799, guid: c929439ccb05979498ed042f0c08339e, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
