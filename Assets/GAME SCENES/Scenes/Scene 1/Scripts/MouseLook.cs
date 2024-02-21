@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.ShaderGraph;
 using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
+    private PlayerControls playerControls;
+    private Vector2 lookInput;
+    private float cameraPitch = 0;
+    public Transform weaponHolderTransform;
+
     public Joystick lookJoystick;
     public Transform characterBody;
-    public Transform weaponHolder;
 
     [SerializeField] private float mouseSensitivity = 0f;
     public float unscopeSensitivity = 150f;
@@ -18,16 +23,22 @@ public class MouseLook : MonoBehaviour
         set { mouseSensitivity = value; }
     }
 
-    private float xRotation = 0f;
-
-    private void Start()
+    private void PlayerControlsInstantiation()
     {
+        playerControls = new PlayerControls();
+        playerControls.Player.Look.performed += ctx => lookInput = ctx.ReadValue<Vector2>();
+        playerControls.Player.Look.canceled += ctx => lookInput = Vector2.zero;
+    }
+    private void Awake()
+    {
+        PlayerControlsInstantiation();
+
 #if UNITY_STANDALONE_WIN
-        Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.Locked;
 #endif
     }
 
-    void LateUpdate()
+    void Update()
     {
         Look();
 
@@ -45,18 +56,11 @@ public class MouseLook : MonoBehaviour
 #if UNITY_STANDALONE_WIN
         #region L O O K   W I T H   T H E   M O U S E
 
-        if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
-        {
-            float mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * MouseSensitivity;
-            float mouseY = Input.GetAxis("Mouse Y") * Time.deltaTime * MouseSensitivity;
-
-            characterBody.Rotate(new Vector3(0f, mouseX, 0f)); // or Vector3.up * mouseX
-
-            xRotation -= mouseY;
-            xRotation = Mathf.Clamp(xRotation, -85f, 85f);
-
-            weaponHolder.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        }
+        Vector3 look = mouseSensitivity * Time.deltaTime * lookInput;
+        characterBody.Rotate(0f, look.x, 0f, Space.World);
+        cameraPitch -= look.y;
+        cameraPitch = Mathf.Clamp(cameraPitch, -85f, 85f);
+        weaponHolderTransform.localEulerAngles = new Vector3(cameraPitch, transform.localEulerAngles.y, 0f);
 
         #endregion
 #endif
@@ -80,4 +84,13 @@ public class MouseLook : MonoBehaviour
         #endregion
 #endif
     }
+    private void OnEnable()
+    {
+        playerControls.Player.Enable();
+    }
+    private void OnDisable()
+    {
+        playerControls.Player.Disable();
+    }
+
 }

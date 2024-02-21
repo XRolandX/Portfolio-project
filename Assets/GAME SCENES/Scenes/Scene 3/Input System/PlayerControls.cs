@@ -44,6 +44,69 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Mouse Click"",
+                    ""type"": ""Button"",
+                    ""id"": ""9550681e-28f8-4611-b0ad-4a75c2f907b5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Right Mouse Click"",
+                    ""type"": ""Button"",
+                    ""id"": ""b4c6c70d-5239-4fc7-8a3b-617ab16b9272"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Restart Scene"",
+                    ""type"": ""Button"",
+                    ""id"": ""57911bdd-a0ce-47f1-9ef3-2b49037ea28a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""To Main Menu"",
+                    ""type"": ""Button"",
+                    ""id"": ""9a0df188-d76d-4165-8882-304225663c37"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""da6ab380-340d-4749-a5e4-c0b749dc7b63"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Stop Play Mode"",
+                    ""type"": ""Button"",
+                    ""id"": ""37b1f81a-327c-4b08-896d-6ce8ae055dda"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Cursor Unlock"",
+                    ""type"": ""Button"",
+                    ""id"": ""bb00ef9c-df92-4f83-a4dc-f41abae81099"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -112,6 +175,83 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""014f39c1-ab8c-4d00-8d24-646b674bf898"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Mouse Click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""301439fc-d893-4c85-954c-4f01522c613e"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Right Mouse Click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4e535db9-8f31-42ac-817b-4b7b6bd271e1"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Restart Scene"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b5c52dbf-ecec-4bb3-9684-14109f6252a6"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""To Main Menu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""89da3bcb-0793-4057-9a59-595bc56ff741"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2434227e-676d-4add-8ea7-a046c8e33713"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Stop Play Mode"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""331c3855-2727-4b5a-af4f-693f64d61017"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Cursor Unlock"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -122,6 +262,13 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
+        m_Player_MouseClick = m_Player.FindAction("Mouse Click", throwIfNotFound: true);
+        m_Player_RightMouseClick = m_Player.FindAction("Right Mouse Click", throwIfNotFound: true);
+        m_Player_RestartScene = m_Player.FindAction("Restart Scene", throwIfNotFound: true);
+        m_Player_ToMainMenu = m_Player.FindAction("To Main Menu", throwIfNotFound: true);
+        m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
+        m_Player_StopPlayMode = m_Player.FindAction("Stop Play Mode", throwIfNotFound: true);
+        m_Player_CursorUnlock = m_Player.FindAction("Cursor Unlock", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -183,12 +330,26 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Look;
+    private readonly InputAction m_Player_MouseClick;
+    private readonly InputAction m_Player_RightMouseClick;
+    private readonly InputAction m_Player_RestartScene;
+    private readonly InputAction m_Player_ToMainMenu;
+    private readonly InputAction m_Player_Jump;
+    private readonly InputAction m_Player_StopPlayMode;
+    private readonly InputAction m_Player_CursorUnlock;
     public struct PlayerActions
     {
         private @PlayerControls m_Wrapper;
         public PlayerActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Look => m_Wrapper.m_Player_Look;
+        public InputAction @MouseClick => m_Wrapper.m_Player_MouseClick;
+        public InputAction @RightMouseClick => m_Wrapper.m_Player_RightMouseClick;
+        public InputAction @RestartScene => m_Wrapper.m_Player_RestartScene;
+        public InputAction @ToMainMenu => m_Wrapper.m_Player_ToMainMenu;
+        public InputAction @Jump => m_Wrapper.m_Player_Jump;
+        public InputAction @StopPlayMode => m_Wrapper.m_Player_StopPlayMode;
+        public InputAction @CursorUnlock => m_Wrapper.m_Player_CursorUnlock;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -204,6 +365,27 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Look.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
                 @Look.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
                 @Look.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
+                @MouseClick.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseClick;
+                @MouseClick.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseClick;
+                @MouseClick.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseClick;
+                @RightMouseClick.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRightMouseClick;
+                @RightMouseClick.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRightMouseClick;
+                @RightMouseClick.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRightMouseClick;
+                @RestartScene.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRestartScene;
+                @RestartScene.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRestartScene;
+                @RestartScene.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRestartScene;
+                @ToMainMenu.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnToMainMenu;
+                @ToMainMenu.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnToMainMenu;
+                @ToMainMenu.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnToMainMenu;
+                @Jump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
+                @Jump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
+                @Jump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
+                @StopPlayMode.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStopPlayMode;
+                @StopPlayMode.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStopPlayMode;
+                @StopPlayMode.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStopPlayMode;
+                @CursorUnlock.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCursorUnlock;
+                @CursorUnlock.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCursorUnlock;
+                @CursorUnlock.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCursorUnlock;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -214,6 +396,27 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Look.started += instance.OnLook;
                 @Look.performed += instance.OnLook;
                 @Look.canceled += instance.OnLook;
+                @MouseClick.started += instance.OnMouseClick;
+                @MouseClick.performed += instance.OnMouseClick;
+                @MouseClick.canceled += instance.OnMouseClick;
+                @RightMouseClick.started += instance.OnRightMouseClick;
+                @RightMouseClick.performed += instance.OnRightMouseClick;
+                @RightMouseClick.canceled += instance.OnRightMouseClick;
+                @RestartScene.started += instance.OnRestartScene;
+                @RestartScene.performed += instance.OnRestartScene;
+                @RestartScene.canceled += instance.OnRestartScene;
+                @ToMainMenu.started += instance.OnToMainMenu;
+                @ToMainMenu.performed += instance.OnToMainMenu;
+                @ToMainMenu.canceled += instance.OnToMainMenu;
+                @Jump.started += instance.OnJump;
+                @Jump.performed += instance.OnJump;
+                @Jump.canceled += instance.OnJump;
+                @StopPlayMode.started += instance.OnStopPlayMode;
+                @StopPlayMode.performed += instance.OnStopPlayMode;
+                @StopPlayMode.canceled += instance.OnStopPlayMode;
+                @CursorUnlock.started += instance.OnCursorUnlock;
+                @CursorUnlock.performed += instance.OnCursorUnlock;
+                @CursorUnlock.canceled += instance.OnCursorUnlock;
             }
         }
     }
@@ -222,5 +425,12 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
+        void OnMouseClick(InputAction.CallbackContext context);
+        void OnRightMouseClick(InputAction.CallbackContext context);
+        void OnRestartScene(InputAction.CallbackContext context);
+        void OnToMainMenu(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
+        void OnStopPlayMode(InputAction.CallbackContext context);
+        void OnCursorUnlock(InputAction.CallbackContext context);
     }
 }
