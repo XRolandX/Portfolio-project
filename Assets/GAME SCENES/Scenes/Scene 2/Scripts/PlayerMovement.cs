@@ -1,20 +1,30 @@
+using UnityEditor.ShaderGraph;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     public float MoveSpeed { get; set; } = 25f;
-    [SerializeField] private float mouseSensitivity = 100f;
+    [SerializeField] private float mouseSensitivity = 20f;
     private float yRotation = 0;
-    private Vector3 moveDirection = Vector3.zero;
 
     private CharacterController controller;
+    private PlayerControls playerControls;
+
+    private Vector2 moveInput;
+    private Vector2 lookInput;
 
     public Joystick moveJoystick;
     public Joystick lookJoystick;
 
-    void Start()
+    void Awake()
     {
+        playerControls = new PlayerControls();
         controller = GetComponent<CharacterController>();
+
+        playerControls.Player.Move.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
+        playerControls.Player.Move.canceled += ctx => moveInput = Vector2.zero;
+        playerControls.Player.Look.performed += ctx => lookInput = ctx.ReadValue<Vector2>();
+        playerControls.Player.Look.canceled += ctx => lookInput = Vector2.zero;
     }
 
     void LateUpdate()
@@ -32,22 +42,14 @@ public class PlayerMovement : MonoBehaviour
 
     void PlayerMove()
     {
-        float moveX = Input.GetAxis("Horizontal");
-        float moveZ = Input.GetAxis("Vertical");
-
-        Vector3 move = new(moveX, 0, moveZ);
-        move = controller.transform.TransformDirection(move);
-        moveDirection = MoveSpeed * Time.deltaTime * move;
-
-        controller.Move(moveDirection);
-
+        Vector3 move = MoveSpeed * Time.deltaTime * new Vector3(moveInput.x, 0f, moveInput.y);
+        controller.transform.Translate(move);
     }
 
     void PlayerRotation()
     {
-        float mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * mouseSensitivity;
-        yRotation += mouseX;
-        controller.transform.rotation = Quaternion.Euler(0, yRotation, 0);
+        Vector3 look = Time.deltaTime * mouseSensitivity * lookInput;
+        transform.Rotate(0f, look.x, 0f, Space.World);
     }
     
     void JoystickMove()
@@ -67,6 +69,12 @@ public class PlayerMovement : MonoBehaviour
         yRotation += joyX;
         controller.transform.rotation = Quaternion.Euler(0, yRotation, 0);
     }
-
-
+    private void OnEnable()
+    {
+        playerControls.Player.Enable();
+    }
+    private void OnDisable()
+    {
+        playerControls.Player.Disable();
+    }
 }

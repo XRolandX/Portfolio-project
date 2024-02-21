@@ -2,14 +2,22 @@ using UnityEngine;
 
 public class PlayerLook : MonoBehaviour
 {
-
+    private PlayerControls playerControls;
     public Joystick rotationYJoystick;
-    public float MouseSensitivity { get; set; } = 300f;
+    private Camera playerCamera;
+
+    private Vector2 lookInput;
+    public float MouseSensitivity { get; set; } = 25f;
 
     private float pitch = 0f;
 
-    // Update is called once per frame
-    void LateUpdate()
+    private void Awake()
+    {
+        playerControls = new PlayerControls();
+        playerControls.Player.Look.performed += ctx => lookInput = ctx.ReadValue<Vector2>();
+        playerControls.Player.Look.canceled += ctx => lookInput = Vector2.zero;
+    }
+    void Update()
     {
 #if UNITY_STANDALONE_WIN
         MouseRotationY();
@@ -20,23 +28,12 @@ public class PlayerLook : MonoBehaviour
 #endif
     }
 
-    
-
-
     void MouseRotationY()
     {
-
-        if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
-        {
-            // Get the mouse input
-            float mouseY = Input.GetAxis("Mouse Y") * Time.deltaTime * MouseSensitivity;
-
-            pitch -= mouseY;
-            pitch = Mathf.Clamp(pitch, -85f, 85f);
-            transform.localRotation = Quaternion.Euler(pitch, 0f, 0f);
-
-        }
-
+        Vector2 look = MouseSensitivity * Time.deltaTime * lookInput;
+        pitch -= look.y;
+        pitch = Mathf.Clamp(pitch, -85f, 85f);
+        transform.localEulerAngles = new Vector3(pitch, transform.localEulerAngles.y, 0f);
     }
     void JoystickRotationY()
     {
@@ -50,4 +47,12 @@ public class PlayerLook : MonoBehaviour
 
     }
 
+    private void OnEnable()
+    {
+        playerControls.Player.Enable();
+    }
+    private void OnDisable()
+    {
+        playerControls.Player.Disable();
+    }
 }

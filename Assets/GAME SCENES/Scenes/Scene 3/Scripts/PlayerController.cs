@@ -1,7 +1,6 @@
 using Unity.Entities;
 using UnityEngine;
 
-
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 50f;
@@ -138,4 +137,5 @@ public class PlayerController : MonoBehaviour
         SpawnPositionUpdate();
         SpawnRotationUpdate();
     }
+    
 }
