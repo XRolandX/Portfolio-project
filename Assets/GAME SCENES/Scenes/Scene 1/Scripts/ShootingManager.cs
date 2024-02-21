@@ -69,17 +69,17 @@ public class ShootingManager : MonoBehaviour
         {
             SceneManager.LoadScene(0);
         }
+        #if UNITY_EDITOR
         else if (playerControls.Player.StopPlayMode.triggered)
         {
-            #if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
             
+            UnityEditor.EditorApplication.isPlaying = false;
         }
         else if (playerControls.Player.CursorUnlock.triggered)
         {
             Cursor.lockState = CursorLockMode.None;
-            #endif
         }
+        #endif
 #endif
     }
     #endregion

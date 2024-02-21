@@ -1,19 +1,19 @@
-using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Unity.Entities;
 
-public class Scene2UIHandler : MonoBehaviour
+public class UIHandler : MonoBehaviour
 {
-    [SerializeField] GameObject androidOverlay;
+    //[SerializeField] GameObject androidOverlay;
     private PlayerControls playerControls;
     private void Awake()
     {
-        
+
 #if PLATFORM_STANDALONE_WIN
-        androidOverlay.SetActive(false);
+        //androidOverlay.SetActive(false);
 #endif
 #if UNITY_ANDROID
-        androidOverlay.SetActive(true);
+        //androidOverlay.SetActive(true);
 #endif
         Cursor.lockState = CursorLockMode.Locked;
         playerControls = new PlayerControls();
@@ -26,7 +26,9 @@ public class Scene2UIHandler : MonoBehaviour
 
     public void SceneReloading()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        EntityManager entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
+        //entityManager.DestroyAndResetAllEntities();
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void MainSceneLoading()
     {
