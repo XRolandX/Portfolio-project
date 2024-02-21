@@ -6,6 +6,7 @@ public class UIHandler : MonoBehaviour
 {
     //[SerializeField] GameObject androidOverlay;
     private PlayerControls playerControls;
+    private EntityManager entityManager;
     private void Awake()
     {
 
@@ -17,21 +18,23 @@ public class UIHandler : MonoBehaviour
 #endif
         Cursor.lockState = CursorLockMode.Locked;
         playerControls = new PlayerControls();
-        playerControls.Player.RestartScene.performed += ctx => SceneReloading();
-        playerControls.Player.ToMainMenu.performed += ctx => MainSceneLoading();
+        //playerControls.Player.RestartScene.performed += ctx => SceneReloading();
+        //playerControls.Player.ToMainMenu.performed += ctx => MainSceneLoading();
         playerControls.Player.StopPlayMode.performed += ctx => StopPlayMode();
         playerControls.Player.CursorUnlock.performed += ctx => CursorUnlocking();
+
+        entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
     }
 
 
     public void SceneReloading()
     {
-        EntityManager entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
-        //entityManager.DestroyAndResetAllEntities();
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        entityManager.DestroyEntity(entityManager.UniversalQuery);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void MainSceneLoading()
     {
+        entityManager.DestroyEntity(entityManager.UniversalQuery);
         SceneManager.LoadScene(0);
     }
 #if UNITY_EDITOR

@@ -25,12 +25,6 @@ public partial class SpawnEntities : SystemBase
             .GetOrCreateSystem<EndSimulationEntityCommandBufferSystem>();
 
         _blobAssetStore = new BlobAssetStore();
-
-        var settings = GameObjectConversionSettings
-            .FromWorld(World.DefaultGameObjectInjectionWorld, _blobAssetStore);
-        _prefabEntity = GameObjectConversionUtility
-            .ConvertGameObjectHierarchy(cubePrefab, settings);
-
     }
     protected override void OnUpdate()
     {
@@ -46,23 +40,35 @@ public partial class SpawnEntities : SystemBase
             spawnTimer = 0f;
             var ecb = _ecbSystem.CreateCommandBuffer();
 
-            float3 forwardDirection = math.mul(spawnRotation, new float3(0, 0, 1));
-
-            Entity instance = ecb.Instantiate(_prefabEntity);
-            ecb.SetComponent(instance, new Translation { Value = spawnPosition });
-            ecb.SetComponent(instance, new Rotation {  Value = spawnRotation });
-            ecb.AddComponent(instance, new PhysicsVelocity
+            if(cubePrefab != null)
             {
-                Linear = forwardDirection * entityForce,
-                Angular = float3.zero
-            });
+                var settings = GameObjectConversionSettings
+            .FromWorld(World.DefaultGameObjectInjectionWorld, _blobAssetStore);
+                _prefabEntity = GameObjectConversionUtility
+                    .ConvertGameObjectHierarchy(cubePrefab, settings);
 
-            _ecbSystem.AddJobHandleForProducer(Dependency);
-            
+                float3 forwardDirection = math.mul(spawnRotation, new float3(0, 0, 1));
+
+                Entity instance = ecb.Instantiate(_prefabEntity);
+                ecb.SetComponent(instance, new Translation { Value = spawnPosition });
+                ecb.SetComponent(instance, new Rotation { Value = spawnRotation });
+                ecb.AddComponent(instance, new PhysicsVelocity
+                {
+                    Linear = forwardDirection * entityForce,
+                    Angular = float3.zero
+                });
+
+                _ecbSystem.AddJobHandleForProducer(Dependency);
+            }
+            else
+            {
+                Debug.LogError("Cube prefab is null");
+            }
         }
     }
     protected override void OnDestroy()
     {
         _blobAssetStore.Dispose();
+        cubePrefab = null;
     }
 }

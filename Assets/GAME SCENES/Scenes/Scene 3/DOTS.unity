@@ -6331,12 +6331,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'R to restart the scene
-
-    Tab to choose the scene
-
-    Esc to exit play
-    mode
+  m_text: 'Esc to exit play mode
 
     Q to unlock cursor'
   m_isRightToLeft: 0
