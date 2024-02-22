@@ -2961,12 +2961,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'R to restart the scene
 
-    Tab to choose the scene
+    Tab to Main Menu
 
-    Esc to exit play
-    mode
+    Esc to exit play mode
 
-    Q to unlock cursor'
+    Q
+    to unlock cursor'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4537,6 +4537,10 @@ PrefabInstance:
       propertyPath: scopeOverlay
       value: 
       objectReference: {fileID: 1864190258}
+    - target: {fileID: 5791527614276296120, guid: c929439ccb05979498ed042f0c08339e, type: 3}
+      propertyPath: blowWaveRadius
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 5791527614276296120, guid: c929439ccb05979498ed042f0c08339e, type: 3}
       propertyPath: bulletHolePrefab
       value: 
