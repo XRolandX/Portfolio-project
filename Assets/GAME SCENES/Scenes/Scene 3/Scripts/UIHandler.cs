@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using Unity.Entities;
 using Unity.Transforms;
 using Unity.Collections;
+using UnityEditor.SceneManagement;
 
 public class UIHandler : MonoBehaviour
 {
@@ -20,19 +21,19 @@ public class UIHandler : MonoBehaviour
 #endif
         Cursor.lockState = CursorLockMode.Locked;
         playerControls = new PlayerControls();
-        //playerControls.Player.RestartScene.performed += ctx => RestartScene();
+        playerControls.Player.RestartScene.performed += ctx => RestartScene();
         playerControls.Player.ToMainMenu.performed += ctx => MainSceneLoading();
         playerControls.Player.StopPlayMode.performed += ctx => StopPlayMode();
         playerControls.Player.CursorUnlock.performed += ctx => CursorUnlocking();
 
         entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
-        
     }
 
 
     public void RestartScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        DestroyAllEntities();
+        SceneManager.LoadScene(3);
     }
     public void MainSceneLoading()
     {
