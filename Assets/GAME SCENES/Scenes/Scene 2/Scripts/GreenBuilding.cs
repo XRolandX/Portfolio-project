@@ -51,7 +51,4 @@ public class GreenBuilding : Building
         return GameObject.FindGameObjectWithTag("Green TMP").GetComponent<TextMeshPro>();
     }
     
-
-    
-
 }
