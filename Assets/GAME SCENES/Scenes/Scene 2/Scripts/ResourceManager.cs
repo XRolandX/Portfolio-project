@@ -18,13 +18,12 @@ public class ResourceManager : MonoBehaviour
     public GameObject blueResourcePrefab;
 
     public readonly float verticalSpacing = 1f;
+    public readonly float transitionDuration = 1.0f;
     public bool RedGreenTransition;
     public bool RedBlueTransition;
     public bool GreenBlueTransition;
 
     public Transform parentObjectForResourceInstances;
-
-
 
     private void Awake()
     {
@@ -36,10 +35,7 @@ public class ResourceManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-            
     }
-    
     
     public void ResourceInstance(GameObject resPrefab, Transform spawnPoint, List<GameObject> resources)
     {
@@ -70,17 +66,15 @@ public class ResourceManager : MonoBehaviour
 
     private IEnumerator TransitionResourceToGreenBuilding(GameObject resource, Transform storePoint, List<GameObject> storeResources)
     {
-        
 
-        float duration = 1f;
         Vector3 startPosition = resource.transform.position;
         Vector3 endPosition = storePoint.position + new Vector3(0, (storeResources.Count-1) * verticalSpacing, 0);
         Quaternion startRotation = resource.transform.rotation;
         Quaternion endRotation = storePoint.rotation;
 
-        for (float t = 0f; t < duration; t += Time.deltaTime)
+        for (float t = 0f; t < transitionDuration; t += Time.deltaTime)
         {
-            float normalizedTime = t / duration;
+            float normalizedTime = t / transitionDuration;
             resource.transform.SetPositionAndRotation(Vector3.Lerp(startPosition, endPosition, normalizedTime),
                 Quaternion.Lerp(startRotation, endRotation, normalizedTime));
             yield return null;
@@ -90,5 +84,4 @@ public class ResourceManager : MonoBehaviour
         
     }
 
-    
 }

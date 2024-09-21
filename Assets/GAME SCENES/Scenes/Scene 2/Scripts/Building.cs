@@ -4,17 +4,17 @@ using System.Collections.Generic;
 
 public abstract class Building : MonoBehaviour
 {
-    [SerializeField] protected float resourceProductionRate;
+    [SerializeField] protected float productionInterval;
+    [SerializeField] protected float currentResourceCount;
+    [SerializeField] protected float maxResourceCount;
+
+    [SerializeField] protected float redWarehouseStoreageCount;
+    [SerializeField] protected float greenWarehouseStoreageCount;
+    [SerializeField] protected float maxRedWarehouseStorage;
+    [SerializeField] protected float maxGreenWarehouseStorage;
+
     [SerializeField] protected float produceTimeElapsed;
     [SerializeField] protected float gettingTimeElapsed;
-    [SerializeField] protected float productionInterval;
-
-    [SerializeField] protected float currentResourceCount;
-    [SerializeField] protected float currentStorageCount;
-    [SerializeField] protected float currentStorageCount2;
-
-    [SerializeField] protected float maxResourceCount;
-    [SerializeField] protected float maxResourceStorage;
 
     [SerializeField] protected RedBuilding redBuilding;
     [SerializeField] protected GreenBuilding greenBuilding;
@@ -25,8 +25,8 @@ public abstract class Building : MonoBehaviour
     protected string resourceType;
 
     [SerializeField] protected Transform resSpawnPoint;
-    [SerializeField] protected Transform resStorePoint;
-    [SerializeField] protected Transform resStorePoint2;
+    [SerializeField] protected Transform redResStorePoint;
+    [SerializeField] protected Transform greenResStorePoint;
 
     protected List<GameObject> displayResource;
 
@@ -38,18 +38,6 @@ public abstract class Building : MonoBehaviour
         GetResourceTimeElapse();
     }
     
-
-
-    private void Awake()
-    {
-        redBuilding = FindObjectOfType<RedBuilding>();
-        greenBuilding = FindObjectOfType<GreenBuilding>();
-        blueBuilding = FindObjectOfType<BlueBuilding>();
-        resourceDisplay = FindTMPInScene();
-    }
-
-    
-
     private void ProduceTimeElapse()
     {
         produceTimeElapsed += Time.deltaTime;
@@ -71,10 +59,6 @@ public abstract class Building : MonoBehaviour
         }
     }
 
-
-    public abstract void ProduceResource();
-
-
     private void ResourceDisplay()
     {
         if (resourceDisplay != null)
@@ -86,4 +70,5 @@ public abstract class Building : MonoBehaviour
     }
     public abstract void GetResource();
     public abstract TextMeshPro FindTMPInScene();
+    public abstract void ProduceResource();
 }

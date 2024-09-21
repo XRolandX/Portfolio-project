@@ -3,26 +3,34 @@ using UnityEngine;
 
 public class BlueBuilding : Building
 {
-    
-    
+    private readonly float blueResProdInterval = 4.77f;
+    private readonly float blueResCount = 0f;
+    private readonly float blueResMaxStore = 5f;
+
+    private readonly float redWarehouseCount = 0f;
+    private readonly float greenWarehouseCount = 0f;
+    private readonly float maxRedWarehouseCount = 5f;
+    private readonly float maxGreenWarehouseCount = 5f;
+
+    protected string blueColor = "blue";
+    protected string blueResourceType = "Blue";
 
     private void Start()
     {
-        currentStorageCount = 0f;
-        currentStorageCount2 = 0f;
-        maxResourceStorage = 5f;
-        currentStorageCount = 0f;
-        maxResourceCount = 5f;
-        resourceProductionRate = 2f;
-        productionInterval = 4.77f;
+        productionInterval = blueResProdInterval;
+        currentResourceCount = blueResCount;
+        maxResourceCount = blueResMaxStore;
+
+        redWarehouseStoreageCount = redWarehouseCount;
+        greenWarehouseStoreageCount = greenWarehouseCount;
+        maxRedWarehouseStorage = maxRedWarehouseCount;
+        maxGreenWarehouseStorage = maxGreenWarehouseCount;
+
         resourceColor = "blue";
         resourceType = "Blue";
         displayResource = ResourceManager.Instance.blueResources;
     }
 
-    
-
-    
     public override void ProduceResource()
     {
         if (ResourceManager.Instance.blueGreenWarehouse.Count > 0 && ResourceManager.Instance.blueRedWarehouse.Count > 0 && ResourceManager.Instance.blueResources.Count < maxResourceCount
@@ -42,17 +50,17 @@ public class BlueBuilding : Building
 
     public override void GetResource()
     {
-        if (ResourceManager.Instance.blueGreenWarehouse.Count < maxResourceStorage && ResourceManager.Instance.greenResources.Count > 0)
+        if (ResourceManager.Instance.blueGreenWarehouse.Count < maxGreenWarehouseStorage && ResourceManager.Instance.greenResources.Count > 0)
         {
             ResourceManager.Instance.GreenBlueTransition = true;
-            ResourceManager.Instance.GetLatestResource(resStorePoint.transform, ResourceManager.Instance.greenResources, ResourceManager.Instance.blueGreenWarehouse);
-            currentStorageCount = ResourceManager.Instance.blueGreenWarehouse.Count;
+            ResourceManager.Instance.GetLatestResource(greenResStorePoint.transform, ResourceManager.Instance.greenResources, ResourceManager.Instance.blueGreenWarehouse);
+            greenWarehouseStoreageCount = ResourceManager.Instance.blueGreenWarehouse.Count;
         }
-        if (ResourceManager.Instance.blueRedWarehouse.Count < maxResourceStorage && ResourceManager.Instance.redResources.Count > 0)
+        if (ResourceManager.Instance.blueRedWarehouse.Count < maxRedWarehouseStorage && ResourceManager.Instance.redResources.Count > 0)
         {
             ResourceManager.Instance.RedBlueTransition = true;
-            ResourceManager.Instance.GetLatestResource(resStorePoint2.transform, ResourceManager.Instance.redResources, ResourceManager.Instance.blueRedWarehouse);
-            currentStorageCount2 = ResourceManager.Instance.blueRedWarehouse.Count;
+            ResourceManager.Instance.GetLatestResource(redResStorePoint.transform, ResourceManager.Instance.redResources, ResourceManager.Instance.blueRedWarehouse);
+            redWarehouseStoreageCount = ResourceManager.Instance.blueRedWarehouse.Count;
         }
     }
 
@@ -60,9 +68,5 @@ public class BlueBuilding : Building
     {
         return GameObject.FindGameObjectWithTag("Blue TMP").GetComponent<TextMeshPro>();
     }
-
-    
-
-    
     
 }
