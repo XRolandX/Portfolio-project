@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class GreenBuilding : Building
 {
-    
     private void Start()
     {
         maxResourceStorage = 5f;
@@ -16,10 +15,6 @@ public class GreenBuilding : Building
         resourceType = "Green";
         displayResource = ResourceManager.Instance.greenResources;
     }
-
-    
-
-    
 
     public override void ProduceResource()
     {
@@ -34,6 +29,7 @@ public class GreenBuilding : Building
             currentResourceCount = ResourceManager.Instance.greenResources.Count;
         }
     }
+
     public override void GetResource()
     {
         if (ResourceManager.Instance.greenRedWarehouse.Count < maxResourceStorage && ResourceManager.Instance.redResources.Count > 0)
@@ -45,13 +41,9 @@ public class GreenBuilding : Building
         
     }
 
-
     public override TextMeshPro FindTMPInScene()
     {
         return GameObject.FindGameObjectWithTag("Green TMP").GetComponent<TextMeshPro>();
     }
-    
-
-    
 
 }

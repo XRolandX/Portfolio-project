@@ -38,8 +38,6 @@ public abstract class Building : MonoBehaviour
         GetResourceTimeElapse();
     }
     
-
-
     private void Awake()
     {
         redBuilding = FindObjectOfType<RedBuilding>();
@@ -47,9 +45,6 @@ public abstract class Building : MonoBehaviour
         blueBuilding = FindObjectOfType<BlueBuilding>();
         resourceDisplay = FindTMPInScene();
     }
-
-    
-
     private void ProduceTimeElapse()
     {
         produceTimeElapsed += Time.deltaTime;
@@ -71,10 +66,6 @@ public abstract class Building : MonoBehaviour
         }
     }
 
-
-    public abstract void ProduceResource();
-
-
     private void ResourceDisplay()
     {
         if (resourceDisplay != null)
@@ -86,4 +77,5 @@ public abstract class Building : MonoBehaviour
     }
     public abstract void GetResource();
     public abstract TextMeshPro FindTMPInScene();
+    public abstract void ProduceResource();
 }

@@ -24,8 +24,6 @@ public class ResourceManager : MonoBehaviour
 
     public Transform parentObjectForResourceInstances;
 
-
-
     private void Awake()
     {
         if(Instance == null)
@@ -36,10 +34,8 @@ public class ResourceManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-            
+        
     }
-    
     
     public void ResourceInstance(GameObject resPrefab, Transform spawnPoint, List<GameObject> resources)
     {
@@ -50,7 +46,6 @@ public class ResourceManager : MonoBehaviour
         resources.Add(newResource);
         
     }
-
     public void GetLatestResource(Transform storePoint, List<GameObject> spawnResources,
         List<GameObject> storeResources)
     {
@@ -67,7 +62,6 @@ public class ResourceManager : MonoBehaviour
 
         }
     }
-
     private IEnumerator TransitionResourceToGreenBuilding(GameObject resource, Transform storePoint, List<GameObject> storeResources)
     {
         
@@ -90,5 +84,4 @@ public class ResourceManager : MonoBehaviour
         
     }
 
-    
 }

@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class BlueBuilding : Building
 {
-    
-    
 
     private void Start()
     {
@@ -20,9 +18,6 @@ public class BlueBuilding : Building
         displayResource = ResourceManager.Instance.blueResources;
     }
 
-    
-
-    
     public override void ProduceResource()
     {
         if (ResourceManager.Instance.blueGreenWarehouse.Count > 0 && ResourceManager.Instance.blueRedWarehouse.Count > 0 && ResourceManager.Instance.blueResources.Count < maxResourceCount
@@ -60,9 +55,5 @@ public class BlueBuilding : Building
     {
         return GameObject.FindGameObjectWithTag("Blue TMP").GetComponent<TextMeshPro>();
     }
-
-    
-
-    
     
 }

@@ -14,7 +14,6 @@ public class RedBuilding : Building
         displayResource = ResourceManager.Instance.redResources;
     }
 
-
     public override void ProduceResource()
     {
         if (ResourceManager.Instance.redResources.Count < maxResourceCount)
@@ -25,18 +24,13 @@ public class RedBuilding : Building
         }
         
     }
-
-
     public override TextMeshPro FindTMPInScene()
     {
         return GameObject.FindGameObjectWithTag("Red TMP").GetComponent<TextMeshPro>();
     }
-    
-
 
     public override void GetResource()
     {
         // doesn't get any resources
     }
-
 }
