@@ -3,14 +3,20 @@ using UnityEngine;
 
 public class RedBuilding : Building
 {
+    private readonly float redResProdInterval = 1.33f;
+    private readonly float redResCount = 0f;
+    private readonly float redResMaxStore = 5f;
+
+    protected string redColor = "red";
+    protected string redResourceType = "Red";
+
     private void Start()
     {
-        resourceProductionRate = 1f;
-        productionInterval = 1.33f;
-        currentResourceCount = 0f;
-        maxResourceCount = 5f;
-        resourceColor = "red";
-        resourceType = "Red";
+        productionInterval = redResProdInterval;
+        currentResourceCount = redResCount;
+        maxResourceCount = redResMaxStore;
+        resourceColor = redColor;
+        resourceType = redResourceType;
         displayResource = ResourceManager.Instance.redResources;
     }
 

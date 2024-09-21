@@ -3,14 +3,23 @@ using UnityEngine;
 
 public class GreenBuilding : Building
 {
+    private readonly float greenResProdInterval = 2.77f;
+    private readonly float greenResCount = 0f;
+    private readonly float greenResMaxStore = 5f;
+    private readonly float redWarehouseCount = 0f;
+    private readonly float redStorageCountMax = 5f;
+
+    protected string greenColor = "green";
+    protected string greenResourceType = "Green";
+
     private void Start()
     {
-        maxResourceStorage = 5f;
-        maxResourceCount = 5f;
-        currentResourceCount = 0f;
-        currentStorageCount = 0f;
-        resourceProductionRate = 1f;
-        productionInterval = 2.77f;
+        productionInterval = greenResProdInterval;
+        currentResourceCount = greenResCount;
+        maxResourceCount = greenResMaxStore;
+        redWarehouseStoreageCount = redWarehouseCount;
+        maxRedWarehouseStorage = redStorageCountMax;
+
         resourceColor = "green";
         resourceType = "Green";
         displayResource = ResourceManager.Instance.greenResources;
@@ -32,13 +41,13 @@ public class GreenBuilding : Building
 
     public override void GetResource()
     {
-        if (ResourceManager.Instance.greenRedWarehouse.Count < maxResourceStorage && ResourceManager.Instance.redResources.Count > 0)
+        if (ResourceManager.Instance.greenRedWarehouse.Count < maxRedWarehouseStorage && ResourceManager.Instance.redResources.Count > 0)
         {
             ResourceManager.Instance.RedGreenTransition = true;
-            ResourceManager.Instance.GetLatestResource(resStorePoint.transform, ResourceManager.Instance.redResources, ResourceManager.Instance.greenRedWarehouse);
-            currentStorageCount = ResourceManager.Instance.greenRedWarehouse.Count;
+            ResourceManager.Instance.GetLatestResource(redResStorePoint.transform, ResourceManager.Instance.redResources, ResourceManager.Instance.greenRedWarehouse);
+            redWarehouseStoreageCount = ResourceManager.Instance.greenRedWarehouse.Count;
         }
-        
+
     }
 
     public override TextMeshPro FindTMPInScene()

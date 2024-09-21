@@ -268,22 +268,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7af98fe8755cea34992f71975bc839a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourceProductionRate: 0
-  produceTimeElapsed: 0
-  gettingTimeElapsed: 0
   productionInterval: 0
   currentResourceCount: 0
-  currentStorageCount: 0
-  currentStorageCount2: 0
   maxResourceCount: 0
-  maxResourceStorage: 0
+  redWarehouseStoreageCount: 0
+  greenWarehouseStoreageCount: 0
+  maxRedWarehouseStorage: 0
+  maxGreenWarehouseStorage: 0
+  produceTimeElapsed: 0
+  gettingTimeElapsed: 0
   redBuilding: {fileID: 0}
   greenBuilding: {fileID: 0}
   blueBuilding: {fileID: 0}
-  resourceDisplay: {fileID: 0}
+  resourceDisplay: {fileID: 1250917041}
   resSpawnPoint: {fileID: 1978853337}
-  resStorePoint: {fileID: 1160844290}
-  resStorePoint2: {fileID: 0}
+  redResStorePoint: {fileID: 1160844290}
+  greenResStorePoint: {fileID: 0}
 --- !u!1 &167570740
 GameObject:
   m_ObjectHideFlags: 0
@@ -1714,22 +1714,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d9fb39c18980749951ccee0c13ea39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourceProductionRate: 0
-  produceTimeElapsed: 0
-  gettingTimeElapsed: 0
   productionInterval: 0
   currentResourceCount: 0
-  currentStorageCount: 0
-  currentStorageCount2: 0
   maxResourceCount: 0
-  maxResourceStorage: 0
-  redBuilding: {fileID: 0}
-  greenBuilding: {fileID: 0}
-  blueBuilding: {fileID: 0}
-  resourceDisplay: {fileID: 0}
+  redWarehouseStoreageCount: 0
+  greenWarehouseStoreageCount: 0
+  maxRedWarehouseStorage: 0
+  maxGreenWarehouseStorage: 0
+  produceTimeElapsed: 0
+  gettingTimeElapsed: 0
+  redBuilding: {fileID: 936833246}
+  greenBuilding: {fileID: 61905666}
+  blueBuilding: {fileID: 1640792269}
+  resourceDisplay: {fileID: 272224923}
   resSpawnPoint: {fileID: 755722126}
-  resStorePoint: {fileID: 0}
-  resStorePoint2: {fileID: 0}
+  redResStorePoint: {fileID: 0}
+  greenResStorePoint: {fileID: 0}
 --- !u!1 &1011306822
 GameObject:
   m_ObjectHideFlags: 0
@@ -2753,7 +2753,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -3179,22 +3179,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81556e25caa38e54199bbe5b766d2164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourceProductionRate: 0
-  produceTimeElapsed: 0
-  gettingTimeElapsed: 0
   productionInterval: 0
   currentResourceCount: 0
-  currentStorageCount: 0
-  currentStorageCount2: 0
   maxResourceCount: 0
-  maxResourceStorage: 0
+  redWarehouseStoreageCount: 0
+  greenWarehouseStoreageCount: 0
+  maxRedWarehouseStorage: 0
+  maxGreenWarehouseStorage: 0
+  produceTimeElapsed: 0
+  gettingTimeElapsed: 0
   redBuilding: {fileID: 0}
   greenBuilding: {fileID: 0}
   blueBuilding: {fileID: 0}
-  resourceDisplay: {fileID: 0}
+  resourceDisplay: {fileID: 764506121}
   resSpawnPoint: {fileID: 1700468148}
-  resStorePoint: {fileID: 1345021520}
-  resStorePoint2: {fileID: 470148906}
+  redResStorePoint: {fileID: 470148906}
+  greenResStorePoint: {fileID: 1345021520}
 --- !u!1 &1700468147
 GameObject:
   m_ObjectHideFlags: 0
