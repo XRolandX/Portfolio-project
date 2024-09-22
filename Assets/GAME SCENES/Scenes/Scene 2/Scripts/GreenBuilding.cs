@@ -1,12 +1,7 @@
-using TMPro;
-using UnityEngine;
-
 public class GreenBuilding : Building
 {
     private readonly float greenResProdInterval = 2.77f;
-    private readonly float greenResCount = 0f;
     private readonly float greenResMaxStore = 5f;
-    private readonly float redWarehouseCount = 0f;
     private readonly float redStorageCountMax = 5f;
 
     protected string greenColor = "green";
@@ -15,14 +10,12 @@ public class GreenBuilding : Building
     private void Start()
     {
         productionInterval = greenResProdInterval;
-        currentResourceCount = greenResCount;
         maxResourceCount = greenResMaxStore;
-        redWarehouseStoreageCount = redWarehouseCount;
         maxRedWarehouseStorage = redStorageCountMax;
 
-        resourceColor = "green";
-        resourceType = "Green";
-        displayResource = ResourceManager.Instance.greenResources;
+        resourceColor = greenColor;
+        resourceType = greenResourceType;
+        resourceCountDisplay = ResourceManager.Instance.greenResources;
     }
 
     public override void ProduceResource()
@@ -34,8 +27,6 @@ public class GreenBuilding : Building
             Destroy(ResourceManager.Instance.greenRedWarehouse[^1]);
             ResourceManager.Instance.greenRedWarehouse.RemoveAt(ResourceManager.Instance.greenRedWarehouse.Count - 1);
             ResourceManager.Instance.ResourceInstance(ResourceManager.Instance.greenResourcePrefab, resSpawnPoint.transform, ResourceManager.Instance.greenResources);
-
-            currentResourceCount = ResourceManager.Instance.greenResources.Count;
         }
     }
 
@@ -45,13 +36,7 @@ public class GreenBuilding : Building
         {
             ResourceManager.Instance.RedGreenTransition = true;
             ResourceManager.Instance.GetLatestResource(redResStorePoint.transform, ResourceManager.Instance.redResources, ResourceManager.Instance.greenRedWarehouse);
-            redWarehouseStoreageCount = ResourceManager.Instance.greenRedWarehouse.Count;
         }
 
-    }
-
-    public override TextMeshPro FindTMPInScene()
-    {
-        return GameObject.FindGameObjectWithTag("Green TMP").GetComponent<TextMeshPro>();
     }
 }

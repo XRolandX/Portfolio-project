@@ -19,6 +19,7 @@ public class ResourceManager : MonoBehaviour
 
     public readonly float verticalSpacing = 1f;
     public readonly float transitionDuration = 1.0f;
+
     public bool RedGreenTransition;
     public bool RedBlueTransition;
     public bool GreenBlueTransition;
@@ -40,15 +41,14 @@ public class ResourceManager : MonoBehaviour
     public void ResourceInstance(GameObject resPrefab, Transform spawnPoint, List<GameObject> resources)
     {
         
-        Vector3 newPosition = spawnPoint.position + new Vector3(0, resources.Count * verticalSpacing, 0);
+        Vector3 newPosition = spawnPoint.position + new Vector3(0, resources.Count * verticalSpacing, 0); // позиція з врахуванням кількості ресурсів у стовбчику
         GameObject newResource = Instantiate(resPrefab, newPosition, spawnPoint.rotation);
-        newResource.transform.SetParent(parentObjectForResourceInstances, false);
+        newResource.transform.SetParent(parentObjectForResourceInstances, false); // організуємо усі нові одиниці ресурсів, як дочірні об'єкта на сцені, для зручності
         resources.Add(newResource);
         
     }
 
-    public void GetLatestResource(Transform storePoint, List<GameObject> spawnResources,
-        List<GameObject> storeResources)
+    public void GetLatestResource(Transform storePoint, List<GameObject> spawnResources, List<GameObject> storeResources)
     {
         if (spawnResources.Count > 0)
         {

@@ -5,20 +5,17 @@ using System.Collections.Generic;
 public abstract class Building : MonoBehaviour
 {
     [SerializeField] protected float productionInterval;
-    [SerializeField] protected float currentResourceCount;
     [SerializeField] protected float maxResourceCount;
 
-    [SerializeField] protected float redWarehouseStoreageCount;
-    [SerializeField] protected float greenWarehouseStoreageCount;
     [SerializeField] protected float maxRedWarehouseStorage;
     [SerializeField] protected float maxGreenWarehouseStorage;
 
     [SerializeField] protected float produceTimeElapsed;
-    [SerializeField] protected float gettingTimeElapsed;
+    [SerializeField] private float gettingTimeElapsed;
 
-    [SerializeField] protected RedBuilding redBuilding;
-    [SerializeField] protected GreenBuilding greenBuilding;
-    [SerializeField] protected BlueBuilding blueBuilding;
+    [SerializeField] private RedBuilding redBuilding;
+    [SerializeField] private GreenBuilding greenBuilding;
+    [SerializeField] private BlueBuilding blueBuilding;
     [SerializeField] protected TextMeshPro resourceDisplay;
 
     protected string resourceColor;
@@ -28,7 +25,7 @@ public abstract class Building : MonoBehaviour
     [SerializeField] protected Transform redResStorePoint;
     [SerializeField] protected Transform greenResStorePoint;
 
-    protected List<GameObject> displayResource;
+    protected List<GameObject> resourceCountDisplay;
 
     
     protected virtual void Update()
@@ -64,11 +61,15 @@ public abstract class Building : MonoBehaviour
         if (resourceDisplay != null)
         {
             resourceDisplay.text = "<color=" + resourceColor + ">" + resourceType + "</color> resource: "
-                + displayResource.Count.ToString("F2")
+                + resourceCountDisplay.Count.ToString("F0")
                 + "\nTime elapsed: " + gettingTimeElapsed.ToString("F2");
         }
+        else
+        {
+            Debug.LogError("Resource Index TMP is not set in Inspector on some Building");
+        }
     }
-    public abstract void GetResource();
-    public abstract TextMeshPro FindTMPInScene();
+
     public abstract void ProduceResource();
+    public abstract void GetResource();
 }
