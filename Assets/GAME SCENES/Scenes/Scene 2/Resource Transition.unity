@@ -268,10 +268,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7af98fe8755cea34992f71975bc839a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productionInterval: 0
-  maxResourceCount: 0
-  maxRedWarehouseStorage: 0
-  maxGreenWarehouseStorage: 0
+  productionInterval: 2
+  maxResourceCount: 5
   produceTimeElapsed: 0
   gettingTimeElapsed: 0
   redBuilding: {fileID: 0}
@@ -1711,10 +1709,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d9fb39c18980749951ccee0c13ea39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productionInterval: 0
-  maxResourceCount: 0
-  maxRedWarehouseStorage: 0
-  maxGreenWarehouseStorage: 0
+  productionInterval: 1
+  maxResourceCount: 5
   produceTimeElapsed: 0
   gettingTimeElapsed: 0
   redBuilding: {fileID: 936833246}
@@ -2304,9 +2300,6 @@ MonoBehaviour:
   redResourcePrefab: {fileID: 3655704740845861768, guid: 3b8a1fadbcff2ab49af60575b8ab2ce3, type: 3}
   greenResourcePrefab: {fileID: 560529387152768656, guid: 9e4036757c8c2644a99b992581b972e4, type: 3}
   blueResourcePrefab: {fileID: 1119199411821174077, guid: 31253400875c80146892cd3af9fc0307, type: 3}
-  RedGreenTransition: 0
-  RedBlueTransition: 0
-  GreenBlueTransition: 0
   parentObjectForResourceInstances: {fileID: 1969121755}
 --- !u!4 &1154529782
 Transform:
@@ -3173,10 +3166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81556e25caa38e54199bbe5b766d2164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productionInterval: 0
-  maxResourceCount: 0
-  maxRedWarehouseStorage: 0
-  maxGreenWarehouseStorage: 0
+  productionInterval: 3
+  maxResourceCount: 5
   produceTimeElapsed: 0
   gettingTimeElapsed: 0
   redBuilding: {fileID: 0}
@@ -3608,7 +3599,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1969121754}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.1, y: 0, z: 28.4}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

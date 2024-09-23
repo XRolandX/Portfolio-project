@@ -1,15 +1,10 @@
 public class RedBuilding : Building
 {
-    private readonly float redResProdInterval = 1.33f;
-    private readonly float redResMaxStore = 5f;
-
     protected string redColor = "red";
     protected string redResourceType = "Red";
 
     private void Start()
     {
-        productionInterval = redResProdInterval;
-        maxResourceCount = redResMaxStore;
 
         resourceColor = redColor;
         resourceType = redResourceType;

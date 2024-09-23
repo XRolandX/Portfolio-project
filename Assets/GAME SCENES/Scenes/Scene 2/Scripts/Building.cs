@@ -5,10 +5,7 @@ using System.Collections.Generic;
 public abstract class Building : MonoBehaviour
 {
     [SerializeField] protected float productionInterval;
-    [SerializeField] protected float maxResourceCount;
-
-    [SerializeField] protected float maxRedWarehouseStorage;
-    [SerializeField] protected float maxGreenWarehouseStorage;
+    [SerializeField] protected float maxResourceCount = 5.0f;
 
     [SerializeField] protected float produceTimeElapsed;
     [SerializeField] private float gettingTimeElapsed;

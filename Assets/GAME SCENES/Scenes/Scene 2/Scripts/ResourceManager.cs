@@ -20,10 +20,6 @@ public class ResourceManager : MonoBehaviour
     public readonly float verticalSpacing = 1f;
     public readonly float transitionDuration = 1.0f;
 
-    public bool RedGreenTransition;
-    public bool RedBlueTransition;
-    public bool GreenBlueTransition;
-
     public Transform parentObjectForResourceInstances;
 
     private void Awake()
@@ -83,5 +79,4 @@ public class ResourceManager : MonoBehaviour
         resource.transform.SetPositionAndRotation(endPosition, endRotation);
         
     }
-
 }
