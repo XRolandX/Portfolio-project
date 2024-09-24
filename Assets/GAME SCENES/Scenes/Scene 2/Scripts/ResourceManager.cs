@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Build.Pipeline.Utilities;
 using UnityEngine;
 
 public class ResourceManager : MonoBehaviour
@@ -18,7 +19,7 @@ public class ResourceManager : MonoBehaviour
     public GameObject blueResourcePrefab;
 
     public readonly float verticalSpacing = 1f;
-    public readonly float transitionDuration = 1.0f;
+    [SerializeField] private float transitionDuration = 0.50f; // швидкість транзакції має бути меншою ніж швидкість productionResourceInterval будівель
 
     public Transform parentObjectForResourceInstances;
 
@@ -44,20 +45,19 @@ public class ResourceManager : MonoBehaviour
 
     }
 
-    public void GetLatestResource(Transform storePoint, List<GameObject> spawnResources, List<GameObject> storeResources)
+    public void GetLatestResource(Transform storePoint, List<GameObject> spawnResources, List<GameObject> storeResources, Building building)
     {
         if (spawnResources.Count > 0)
         {
-            storeResources.Add(spawnResources[^1]);
+            StartCoroutine(TransitionResource(spawnResources[^1], storePoint, storeResources ,building));
             spawnResources.RemoveAt(spawnResources.Count - 1);
-            StartCoroutine(TransitionResource(storeResources[^1], storePoint, storeResources));
         }
     }
 
-    private IEnumerator TransitionResource(GameObject resource, Transform storePoint, List<GameObject> storeResources)
+    private IEnumerator TransitionResource(GameObject resource, Transform storePoint, List<GameObject> storeResources, Building building)
     {
         Vector3 startPosition = resource.transform.position;
-        Vector3 endPosition = storePoint.position + new Vector3(0, (storeResources.Count - 1) * verticalSpacing, 0);
+        Vector3 endPosition = storePoint.position + new Vector3(0, (storeResources.Count) * verticalSpacing, 0);
         Quaternion startRotation = resource.transform.rotation;
         Quaternion endRotation = storePoint.rotation;
 
@@ -70,6 +70,7 @@ public class ResourceManager : MonoBehaviour
         }
 
         resource.transform.SetPositionAndRotation(endPosition, endRotation);
-
+        storeResources.Add(resource);
+        building.isResourceInTransition = false;
     }
 }

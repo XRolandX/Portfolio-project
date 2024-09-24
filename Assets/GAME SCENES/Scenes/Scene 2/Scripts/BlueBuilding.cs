@@ -15,9 +15,12 @@ public class BlueBuilding : Building
 
     protected override void GetResource()
     {
-        // Використовуємо спільний метод для перенесення ресурсів з зеленого і червоного складів
-        TransferResource(greenResStorePoint, ResourceManager.Instance.greenResources, ResourceManager.Instance.blueGreenWarehouse, maxGreenWarehouseStorage);
-        TransferResource(redResStorePoint, ResourceManager.Instance.redResources, ResourceManager.Instance.blueRedWarehouse, maxRedWarehouseStorage);
+        if (!isResourceInTransition) 
+        {
+            // Використовуємо спільний метод для перенесення ресурсів з зеленого і червоного складів
+            TransferResource(greenResStorePoint, ResourceManager.Instance.greenResources, ResourceManager.Instance.blueGreenWarehouse, maxGreenWarehouseStorage, this);
+            TransferResource(redResStorePoint, ResourceManager.Instance.redResources, ResourceManager.Instance.blueRedWarehouse, maxRedWarehouseStorage, this);
+        }
     }
 
     protected override void ProduceResource()

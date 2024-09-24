@@ -20,7 +20,7 @@ public abstract class Building : MonoBehaviour
     [SerializeField] protected Transform redResStorePoint;
     [SerializeField] protected Transform greenResStorePoint;
 
-    protected bool isResourceInTransition;
+    public bool isResourceInTransition;
 
 
     protected virtual void Start()
@@ -72,11 +72,12 @@ public abstract class Building : MonoBehaviour
     }
 
     // Спільна логіка для отримання ресурсів
-    protected void TransferResource(Transform storePoint, List<GameObject> fromWarehouse, List<GameObject> toWarehouse, float maxWarehouseCapacity)
+    protected void TransferResource(Transform storePoint, List<GameObject> fromWarehouse, List<GameObject> toWarehouse, float maxWarehouseCapacity, Building building)
     {
         if (toWarehouse.Count < maxWarehouseCapacity && fromWarehouse.Count > 0)
         {
-            ResourceManager.Instance.GetLatestResource(storePoint, fromWarehouse, toWarehouse);
+            ResourceManager.Instance.GetLatestResource(storePoint, fromWarehouse, toWarehouse, building);
+            building.isResourceInTransition = true;
         }
     }
 

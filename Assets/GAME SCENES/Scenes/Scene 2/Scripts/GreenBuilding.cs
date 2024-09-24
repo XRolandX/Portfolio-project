@@ -14,13 +14,17 @@ public class GreenBuilding : Building
 
     protected override void GetResource()
     {
-        // Використовуємо спільний метод для перенесення ресурсу
-        TransferResource(redResStorePoint, ResourceManager.Instance.redResources, ResourceManager.Instance.greenRedWarehouse, maxRedWarehouseStorage);
+        if (!isResourceInTransition) 
+        {
+            // Використовуємо спільний метод для перенесення ресурсу
+            TransferResource(redResStorePoint, ResourceManager.Instance.redResources, ResourceManager.Instance.greenRedWarehouse, maxRedWarehouseStorage, this);
+        }
+        
     }
 
     protected override void ProduceResource()
     {
-        if (ResourceManager.Instance.greenResources.Count < maxResourceCount && ResourceManager.Instance.greenRedWarehouse.Count > 0 && !isResourceInTransition)
+        if (ResourceManager.Instance.greenResources.Count < maxResourceCount && ResourceManager.Instance.greenRedWarehouse.Count > 0)
         {
             // Використовуємо спільний метод для знищення одного ресурсу
             DestroyResources(ResourceManager.Instance.greenRedWarehouse, 1);

@@ -268,8 +268,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7af98fe8755cea34992f71975bc839a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productionResourceInterval: 2
-  gettingResourceInterval: 4
+  productionResourceInterval: 1
+  gettingResourceInterval: 1
   maxResourceCount: 5
   produceTimeElapsed: 0
   gettingTimeElapsed: 0
@@ -3162,8 +3162,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81556e25caa38e54199bbe5b766d2164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productionResourceInterval: 3
-  gettingResourceInterval: 6
+  productionResourceInterval: 1
+  gettingResourceInterval: 1
   maxResourceCount: 5
   produceTimeElapsed: 0
   gettingTimeElapsed: 0

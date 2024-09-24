@@ -7,7 +7,6 @@ public class RedBuilding : Building
         resourceCountDisplay = ResourceManager.Instance.redResources;
         produceTimeElapsed = productionResourceInterval;
         gettingTimeElapsed = gettingResourceInterval;
-        isResourceInTransition = false;
     }
 
     protected override void ProduceResource()
