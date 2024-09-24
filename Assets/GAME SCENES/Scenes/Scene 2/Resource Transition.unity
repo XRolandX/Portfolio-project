@@ -268,13 +268,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7af98fe8755cea34992f71975bc839a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productionInterval: 2
+  productionResourceInterval: 2
+  gettingResourceInterval: 4
   maxResourceCount: 5
   produceTimeElapsed: 0
   gettingTimeElapsed: 0
-  redBuilding: {fileID: 0}
-  greenBuilding: {fileID: 0}
-  blueBuilding: {fileID: 0}
   resourceDisplay: {fileID: 1250917041}
   resSpawnPoint: {fileID: 1978853337}
   redResStorePoint: {fileID: 1160844290}
@@ -1709,13 +1707,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d9fb39c18980749951ccee0c13ea39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productionInterval: 1
+  productionResourceInterval: 1
+  gettingResourceInterval: 0
   maxResourceCount: 5
   produceTimeElapsed: 0
   gettingTimeElapsed: 0
-  redBuilding: {fileID: 936833246}
-  greenBuilding: {fileID: 61905666}
-  blueBuilding: {fileID: 1640792269}
   resourceDisplay: {fileID: 272224923}
   resSpawnPoint: {fileID: 755722126}
   redResStorePoint: {fileID: 0}
@@ -3166,13 +3162,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81556e25caa38e54199bbe5b766d2164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productionInterval: 3
+  productionResourceInterval: 3
+  gettingResourceInterval: 6
   maxResourceCount: 5
   produceTimeElapsed: 0
   gettingTimeElapsed: 0
-  redBuilding: {fileID: 0}
-  greenBuilding: {fileID: 0}
-  blueBuilding: {fileID: 0}
   resourceDisplay: {fileID: 764506121}
   resSpawnPoint: {fileID: 1700468148}
   redResStorePoint: {fileID: 470148906}

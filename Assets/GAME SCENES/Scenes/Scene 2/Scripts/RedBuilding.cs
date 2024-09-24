@@ -1,26 +1,24 @@
 public class RedBuilding : Building
 {
-    protected string redColor = "red";
-    protected string redResourceType = "Red";
-
-    private void Start()
+    protected override void InitializeBuilding()
     {
-
-        resourceColor = redColor;
-        resourceType = redResourceType;
+        resourceColor = "red";
+        resourceType = "Red";
         resourceCountDisplay = ResourceManager.Instance.redResources;
+        produceTimeElapsed = productionResourceInterval;
+        gettingTimeElapsed = gettingResourceInterval;
+        isResourceInTransition = false;
     }
 
-    public override void ProduceResource()
+    protected override void ProduceResource()
     {
         if (ResourceManager.Instance.redResources.Count < maxResourceCount)
         {
             ResourceManager.Instance.ResourceInstance(ResourceManager.Instance.redResourcePrefab,
                 resSpawnPoint.transform, ResourceManager.Instance.redResources);
         }
-        
     }
-    public override void GetResource()
+    protected override void GetResource()
     {
         // null
     }

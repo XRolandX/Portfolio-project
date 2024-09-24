@@ -1,42 +1,34 @@
 public class BlueBuilding : Building
 {
-
     private readonly float maxRedWarehouseStorage = 5f;
     private readonly float maxGreenWarehouseStorage = 5f;
 
-    protected string blueColor = "blue";
-    protected string blueResourceType = "Blue";
-
-    private void Start()
+    protected override void InitializeBuilding()
     {
-        resourceColor = blueColor;
-        resourceType = blueResourceType;
+        resourceColor = "blue";
+        resourceType = "Blue";
         resourceCountDisplay = ResourceManager.Instance.blueResources;
+        produceTimeElapsed = productionResourceInterval;
+        gettingTimeElapsed = gettingResourceInterval;
+        isResourceInTransition = false;
     }
 
-    public override void ProduceResource()
+    protected override void GetResource()
+    {
+        // Використовуємо спільний метод для перенесення ресурсів з зеленого і червоного складів
+        TransferResource(greenResStorePoint, ResourceManager.Instance.greenResources, ResourceManager.Instance.blueGreenWarehouse, maxGreenWarehouseStorage);
+        TransferResource(redResStorePoint, ResourceManager.Instance.redResources, ResourceManager.Instance.blueRedWarehouse, maxRedWarehouseStorage);
+    }
+
+    protected override void ProduceResource()
     {
         if (ResourceManager.Instance.blueGreenWarehouse.Count > 0 && ResourceManager.Instance.blueRedWarehouse.Count > 0 && ResourceManager.Instance.blueResources.Count < maxResourceCount)
         {
-            Destroy(ResourceManager.Instance.blueGreenWarehouse[^1]);
-            Destroy(ResourceManager.Instance.blueRedWarehouse[^1]);
-
-            ResourceManager.Instance.blueGreenWarehouse.RemoveAt(ResourceManager.Instance.blueGreenWarehouse.Count - 1);
-            ResourceManager.Instance.blueRedWarehouse.RemoveAt(ResourceManager.Instance.blueRedWarehouse.Count - 1);
+            // Використовуємо спільний метод для знищення ресурсів з обох складів
+            DestroyResources(ResourceManager.Instance.blueGreenWarehouse, 1);
+            DestroyResources(ResourceManager.Instance.blueRedWarehouse, 1);
 
             ResourceManager.Instance.ResourceInstance(ResourceManager.Instance.blueResourcePrefab, resSpawnPoint.transform, ResourceManager.Instance.blueResources);
-        }
-    }
-
-    public override void GetResource()
-    {
-        if (ResourceManager.Instance.blueGreenWarehouse.Count < maxGreenWarehouseStorage && ResourceManager.Instance.greenResources.Count > 0)
-        {
-            ResourceManager.Instance.GetLatestResource(greenResStorePoint.transform, ResourceManager.Instance.greenResources, ResourceManager.Instance.blueGreenWarehouse);
-        }
-        if (ResourceManager.Instance.blueRedWarehouse.Count < maxRedWarehouseStorage && ResourceManager.Instance.redResources.Count > 0)
-        {
-            ResourceManager.Instance.GetLatestResource(redResStorePoint.transform, ResourceManager.Instance.redResources, ResourceManager.Instance.blueRedWarehouse);
         }
     }
 }

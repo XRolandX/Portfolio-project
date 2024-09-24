@@ -1,36 +1,30 @@
 public class GreenBuilding : Building
 {
-
     private readonly float maxRedWarehouseStorage = 5f;
 
-    protected string greenColor = "green";
-    protected string greenResourceType = "Green";
-
-    private void Start()
+    protected override void InitializeBuilding()
     {
-        resourceColor = greenColor;
-        resourceType = greenResourceType;
+        resourceColor = "green";
+        resourceType = "Green";
         resourceCountDisplay = ResourceManager.Instance.greenResources;
+        produceTimeElapsed = productionResourceInterval;
+        gettingTimeElapsed = gettingResourceInterval;
+        isResourceInTransition = false;
     }
 
-    public override void ProduceResource()
+    protected override void GetResource()
     {
+        // Використовуємо спільний метод для перенесення ресурсу
+        TransferResource(redResStorePoint, ResourceManager.Instance.redResources, ResourceManager.Instance.greenRedWarehouse, maxRedWarehouseStorage);
+    }
 
-        if (ResourceManager.Instance.greenResources.Count < maxResourceCount && ResourceManager.Instance.greenRedWarehouse.Count > 0)
+    protected override void ProduceResource()
+    {
+        if (ResourceManager.Instance.greenResources.Count < maxResourceCount && ResourceManager.Instance.greenRedWarehouse.Count > 0 && !isResourceInTransition)
         {
-            Destroy(ResourceManager.Instance.greenRedWarehouse[^1]);
-            ResourceManager.Instance.greenRedWarehouse.RemoveAt(ResourceManager.Instance.greenRedWarehouse.Count - 1);
+            // Використовуємо спільний метод для знищення одного ресурсу
+            DestroyResources(ResourceManager.Instance.greenRedWarehouse, 1);
             ResourceManager.Instance.ResourceInstance(ResourceManager.Instance.greenResourcePrefab, resSpawnPoint.transform, ResourceManager.Instance.greenResources);
         }
-    }
-
-    public override void GetResource()
-    {
-
-        if (ResourceManager.Instance.greenRedWarehouse.Count < maxRedWarehouseStorage && ResourceManager.Instance.redResources.Count > 0)
-        {
-            ResourceManager.Instance.GetLatestResource(redResStorePoint.transform, ResourceManager.Instance.redResources, ResourceManager.Instance.greenRedWarehouse);
-        }
-
     }
 }

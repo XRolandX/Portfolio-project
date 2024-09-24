@@ -24,47 +24,40 @@ public class ResourceManager : MonoBehaviour
 
     private void Awake()
     {
-        if(Instance == null)
+        if (Instance == null)
         {
             Instance = this;
         }
-        else if(Instance != this)
+        else if (Instance != this)
         {
             Destroy(gameObject);
         }
     }
-    
+
     public void ResourceInstance(GameObject resPrefab, Transform spawnPoint, List<GameObject> resources)
     {
-        
+
         Vector3 newPosition = spawnPoint.position + new Vector3(0, resources.Count * verticalSpacing, 0); // позиція з врахуванням кількості ресурсів у стовбчику
         GameObject newResource = Instantiate(resPrefab, newPosition, spawnPoint.rotation);
         newResource.transform.SetParent(parentObjectForResourceInstances, false); // організуємо усі нові одиниці ресурсів, як дочірні об'єкта на сцені, для зручності
         resources.Add(newResource);
-        
+
     }
 
     public void GetLatestResource(Transform storePoint, List<GameObject> spawnResources, List<GameObject> storeResources)
     {
         if (spawnResources.Count > 0)
         {
-            int lastIndex = spawnResources.Count - 1;
-
-            if (spawnResources[lastIndex] != null)
-            {
-                storeResources.Add(spawnResources[lastIndex]);
-                StartCoroutine(TransitionResourceToGreenBuilding(storeResources[^1], storePoint, storeResources));
-                spawnResources.RemoveAt(lastIndex);
-            }
-
+            storeResources.Add(spawnResources[^1]);
+            spawnResources.RemoveAt(spawnResources.Count - 1);
+            StartCoroutine(TransitionResource(storeResources[^1], storePoint, storeResources));
         }
     }
 
-    private IEnumerator TransitionResourceToGreenBuilding(GameObject resource, Transform storePoint, List<GameObject> storeResources)
+    private IEnumerator TransitionResource(GameObject resource, Transform storePoint, List<GameObject> storeResources)
     {
-
         Vector3 startPosition = resource.transform.position;
-        Vector3 endPosition = storePoint.position + new Vector3(0, (storeResources.Count-1) * verticalSpacing, 0);
+        Vector3 endPosition = storePoint.position + new Vector3(0, (storeResources.Count - 1) * verticalSpacing, 0);
         Quaternion startRotation = resource.transform.rotation;
         Quaternion endRotation = storePoint.rotation;
 
@@ -77,6 +70,6 @@ public class ResourceManager : MonoBehaviour
         }
 
         resource.transform.SetPositionAndRotation(endPosition, endRotation);
-        
+
     }
 }

@@ -4,27 +4,30 @@ using System.Collections.Generic;
 
 public abstract class Building : MonoBehaviour
 {
-    [SerializeField] protected float productionInterval;
+    [SerializeField] protected float productionResourceInterval;
+    [SerializeField] protected float gettingResourceInterval;
     [SerializeField] protected float maxResourceCount = 5.0f;
 
     [SerializeField] protected float produceTimeElapsed;
-    [SerializeField] private float gettingTimeElapsed;
-
-    [SerializeField] private RedBuilding redBuilding;
-    [SerializeField] private GreenBuilding greenBuilding;
-    [SerializeField] private BlueBuilding blueBuilding;
-    [SerializeField] protected TextMeshPro resourceDisplay;
+    [SerializeField] protected float gettingTimeElapsed;
 
     protected string resourceColor;
     protected string resourceType;
+    protected List<GameObject> resourceCountDisplay;
+    [SerializeField] protected TextMeshPro resourceDisplay;
 
     [SerializeField] protected Transform resSpawnPoint;
     [SerializeField] protected Transform redResStorePoint;
     [SerializeField] protected Transform greenResStorePoint;
 
-    protected List<GameObject> resourceCountDisplay;
+    protected bool isResourceInTransition;
 
-    
+
+    protected virtual void Start()
+    {
+        InitializeBuilding();
+    }
+
     protected virtual void Update()
     {
         ProduceTimeElapse();
@@ -34,22 +37,22 @@ public abstract class Building : MonoBehaviour
     
     private void ProduceTimeElapse()
     {
-        produceTimeElapsed += Time.deltaTime;
+        produceTimeElapsed -= Time.deltaTime;
 
-        if (produceTimeElapsed >= productionInterval)
+        if (produceTimeElapsed <= 0)
         {
             ProduceResource();
-            produceTimeElapsed = 0f;
+            produceTimeElapsed = productionResourceInterval;
         }
     }
     private void GetResourceTimeElapse()
     {
-        gettingTimeElapsed += Time.deltaTime;
+        gettingTimeElapsed -= Time.deltaTime;
 
-        if (gettingTimeElapsed >= productionInterval)
+        if (gettingTimeElapsed <= 0)
         {
             GetResource();
-            gettingTimeElapsed = 0f;
+            gettingTimeElapsed = gettingResourceInterval;
         }
     }
 
@@ -59,7 +62,8 @@ public abstract class Building : MonoBehaviour
         {
             resourceDisplay.text = "<color=" + resourceColor + ">" + resourceType + "</color> resource: "
                 + resourceCountDisplay.Count.ToString("F0")
-                + "\nTime elapsed: " + gettingTimeElapsed.ToString("F2");
+                + "\nProduction time: " + produceTimeElapsed.ToString("F3")
+                + "\nGetting time: " + gettingTimeElapsed.ToString("F3");
         }
         else
         {
@@ -67,6 +71,29 @@ public abstract class Building : MonoBehaviour
         }
     }
 
-    public abstract void ProduceResource();
-    public abstract void GetResource();
+    // Спільна логіка для отримання ресурсів
+    protected void TransferResource(Transform storePoint, List<GameObject> fromWarehouse, List<GameObject> toWarehouse, float maxWarehouseCapacity)
+    {
+        if (toWarehouse.Count < maxWarehouseCapacity && fromWarehouse.Count > 0)
+        {
+            ResourceManager.Instance.GetLatestResource(storePoint, fromWarehouse, toWarehouse);
+        }
+    }
+
+    // Спільна логіка для знищення ресурсів
+    protected void DestroyResources(List<GameObject> warehouse, int amount)
+    {
+        for (int i = 0; i < amount; i++)
+        {
+            if (warehouse.Count > 0)
+            {
+                Destroy(warehouse[^1]);
+                warehouse.RemoveAt(warehouse.Count - 1);
+            }
+        }
+    }
+
+    protected abstract void InitializeBuilding();
+    protected abstract void ProduceResource();
+    protected abstract void GetResource();
 }
