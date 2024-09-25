@@ -5,10 +5,6 @@ public class TMProFacePlayer : MonoBehaviour
     public Transform playerTransform;
     public GameObject textMeshHolder;
 
-    private void Awake()
-    {
-        playerTransform = FindObjectOfType<PlayerMovement>().transform;
-    }
     void Update()
     {
         FacePlayer();
@@ -27,6 +23,10 @@ public class TMProFacePlayer : MonoBehaviour
             transform.rotation = rotation;
 
             textMeshHolder.transform.localRotation = Quaternion.Euler(0f, rotation.y, 0f);
+        }
+        else
+        {
+            Debug.LogError("Player transform is not set in Inspector on some resource index display");
         }
     }
 }

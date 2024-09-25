@@ -1,4 +1,3 @@
-using UnityEditor.ShaderGraph;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -40,30 +39,31 @@ public class PlayerMovement : MonoBehaviour
 #endif
     }
 
-    void PlayerMove()
+    private void PlayerMove()
     {
         Vector3 move = MoveSpeed * Time.deltaTime * new Vector3(moveInput.x, 0f, moveInput.y);
         controller.transform.Translate(move);
     }
 
-    void PlayerRotation()
+    private void PlayerRotation()
     {
         Vector3 look = Time.deltaTime * mouseSensitivity * lookInput;
         transform.Rotate(0f, look.x, 0f, Space.World);
     }
-    
-    void JoystickMove()
+
+    private void JoystickMove()
     {
-        if(moveJoystick.Horizontal != 0 || moveJoystick.Vertical != 0)
+        if (moveJoystick.Horizontal != 0 || moveJoystick.Vertical != 0)
         {
             float x = moveJoystick.Horizontal;
             float y = moveJoystick.Vertical;
-            Vector3 move = new (x, 0, y);
+            Vector3 move = new(x, 0, y);
             move = controller.transform.TransformDirection(move);
             controller.Move(MoveSpeed * Time.deltaTime * move);
         }
     }
-    void JoystickRotation()
+
+    private void JoystickRotation()
     {
         float joyX = lookJoystick.Horizontal * Time.deltaTime * mouseSensitivity;
         yRotation += joyX;

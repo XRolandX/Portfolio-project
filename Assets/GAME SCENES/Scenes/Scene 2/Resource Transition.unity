@@ -268,22 +268,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7af98fe8755cea34992f71975bc839a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productionInterval: 0
-  currentResourceCount: 0
-  maxResourceCount: 0
-  redWarehouseStoreageCount: 0
-  greenWarehouseStoreageCount: 0
-  maxRedWarehouseStorage: 0
-  maxGreenWarehouseStorage: 0
-  produceTimeElapsed: 0
-  gettingTimeElapsed: 0
-  redBuilding: {fileID: 0}
-  greenBuilding: {fileID: 0}
-  blueBuilding: {fileID: 0}
+  productionResourceInterval: 0.5
+  gettingResourceInterval: 0.5
+  maxResourceCount: 5
   resourceDisplay: {fileID: 1250917041}
   resSpawnPoint: {fileID: 1978853337}
   redResStorePoint: {fileID: 1160844290}
   greenResStorePoint: {fileID: 0}
+  isResourceInTransition: 0
 --- !u!1 &167570740
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,9 +667,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272224922}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0000001, y: 1, z: 1.0000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 26334410}
@@ -685,7 +677,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.000000059604645}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &272224926
@@ -700,7 +692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67d1fdb21b0df6c42badcfbf3bb90c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 0}
+  playerTransform: {fileID: 1011306826}
   textMeshHolder: {fileID: 26334409}
 --- !u!1 &402906429
 GameObject:
@@ -1289,7 +1281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67d1fdb21b0df6c42badcfbf3bb90c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 0}
+  playerTransform: {fileID: 1011306826}
   textMeshHolder: {fileID: 167570740}
 --- !u!1 &813462655
 GameObject:
@@ -1714,22 +1706,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d9fb39c18980749951ccee0c13ea39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productionInterval: 0
-  currentResourceCount: 0
-  maxResourceCount: 0
-  redWarehouseStoreageCount: 0
-  greenWarehouseStoreageCount: 0
-  maxRedWarehouseStorage: 0
-  maxGreenWarehouseStorage: 0
-  produceTimeElapsed: 0
-  gettingTimeElapsed: 0
-  redBuilding: {fileID: 936833246}
-  greenBuilding: {fileID: 61905666}
-  blueBuilding: {fileID: 1640792269}
+  productionResourceInterval: 0.5
+  gettingResourceInterval: 0
+  maxResourceCount: 5
   resourceDisplay: {fileID: 272224923}
   resSpawnPoint: {fileID: 755722126}
   redResStorePoint: {fileID: 0}
   greenResStorePoint: {fileID: 0}
+  isResourceInTransition: 0
 --- !u!1 &1011306822
 GameObject:
   m_ObjectHideFlags: 0
@@ -2310,9 +2294,7 @@ MonoBehaviour:
   redResourcePrefab: {fileID: 3655704740845861768, guid: 3b8a1fadbcff2ab49af60575b8ab2ce3, type: 3}
   greenResourcePrefab: {fileID: 560529387152768656, guid: 9e4036757c8c2644a99b992581b972e4, type: 3}
   blueResourcePrefab: {fileID: 1119199411821174077, guid: 31253400875c80146892cd3af9fc0307, type: 3}
-  RedGreenTransition: 0
-  RedBlueTransition: 0
-  GreenBlueTransition: 0
+  transitionDuration: 0.5
   parentObjectForResourceInstances: {fileID: 1969121755}
 --- !u!4 &1154529782
 Transform:
@@ -2545,7 +2527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67d1fdb21b0df6c42badcfbf3bb90c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 0}
+  playerTransform: {fileID: 1011306826}
   textMeshHolder: {fileID: 402906429}
 --- !u!1 &1269664824
 GameObject:
@@ -3179,22 +3161,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81556e25caa38e54199bbe5b766d2164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productionInterval: 0
-  currentResourceCount: 0
-  maxResourceCount: 0
-  redWarehouseStoreageCount: 0
-  greenWarehouseStoreageCount: 0
-  maxRedWarehouseStorage: 0
-  maxGreenWarehouseStorage: 0
-  produceTimeElapsed: 0
-  gettingTimeElapsed: 0
-  redBuilding: {fileID: 0}
-  greenBuilding: {fileID: 0}
-  blueBuilding: {fileID: 0}
+  productionResourceInterval: 0.5
+  gettingResourceInterval: 0.5
+  maxResourceCount: 5
   resourceDisplay: {fileID: 764506121}
   resSpawnPoint: {fileID: 1700468148}
   redResStorePoint: {fileID: 470148906}
   greenResStorePoint: {fileID: 1345021520}
+  isResourceInTransition: 0
 --- !u!1 &1700468147
 GameObject:
   m_ObjectHideFlags: 0

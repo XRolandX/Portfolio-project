@@ -1,57 +1,33 @@
-using TMPro;
-using UnityEngine;
-
 public class GreenBuilding : Building
 {
-    private readonly float greenResProdInterval = 2.77f;
-    private readonly float greenResCount = 0f;
-    private readonly float greenResMaxStore = 5f;
-    private readonly float redWarehouseCount = 0f;
-    private readonly float redStorageCountMax = 5f;
+    private readonly float maxRedWarehouseStorage = 5f;
 
-    protected string greenColor = "green";
-    protected string greenResourceType = "Green";
-
-    private void Start()
+    protected override void InitializeBuilding()
     {
-        productionInterval = greenResProdInterval;
-        currentResourceCount = greenResCount;
-        maxResourceCount = greenResMaxStore;
-        redWarehouseStoreageCount = redWarehouseCount;
-        maxRedWarehouseStorage = redStorageCountMax;
-
         resourceColor = "green";
         resourceType = "Green";
-        displayResource = ResourceManager.Instance.greenResources;
+        resourceCountDisplay = ResourceManager.Instance.greenResources;
+        produceTimeElapsed = productionResourceInterval;
+        gettingTimeElapsed = gettingResourceInterval;
     }
 
-    public override void ProduceResource()
+    protected override void GetResource()
     {
-
-        if (ResourceManager.Instance.greenResources.Count < maxResourceCount && ResourceManager.Instance.RedGreenTransition && ResourceManager.Instance.greenRedWarehouse.Count > 0)
+        if (!isResourceInTransition) 
         {
-            ResourceManager.Instance.RedGreenTransition = false;
-            Destroy(ResourceManager.Instance.greenRedWarehouse[^1]);
-            ResourceManager.Instance.greenRedWarehouse.RemoveAt(ResourceManager.Instance.greenRedWarehouse.Count - 1);
+            // Використовуємо спільний метод для перенесення ресурсу
+            TransferResource(redResStorePoint, ResourceManager.Instance.redResources, ResourceManager.Instance.greenRedWarehouse, maxRedWarehouseStorage, this);
+        }
+        
+    }
+
+    protected override void ProduceResource()
+    {
+        if (ResourceManager.Instance.greenResources.Count < maxResourceCount && ResourceManager.Instance.greenRedWarehouse.Count > 0)
+        {
+            // Використовуємо спільний метод для знищення одного ресурсу
+            DestroyResources(ResourceManager.Instance.greenRedWarehouse, 1);
             ResourceManager.Instance.ResourceInstance(ResourceManager.Instance.greenResourcePrefab, resSpawnPoint.transform, ResourceManager.Instance.greenResources);
-
-            currentResourceCount = ResourceManager.Instance.greenResources.Count;
         }
-    }
-
-    public override void GetResource()
-    {
-        if (ResourceManager.Instance.greenRedWarehouse.Count < maxRedWarehouseStorage && ResourceManager.Instance.redResources.Count > 0)
-        {
-            ResourceManager.Instance.RedGreenTransition = true;
-            ResourceManager.Instance.GetLatestResource(redResStorePoint.transform, ResourceManager.Instance.redResources, ResourceManager.Instance.greenRedWarehouse);
-            redWarehouseStoreageCount = ResourceManager.Instance.greenRedWarehouse.Count;
-        }
-
-    }
-
-    public override TextMeshPro FindTMPInScene()
-    {
-        return GameObject.FindGameObjectWithTag("Green TMP").GetComponent<TextMeshPro>();
     }
 }

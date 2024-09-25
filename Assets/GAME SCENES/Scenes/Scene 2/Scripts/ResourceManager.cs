@@ -18,70 +18,60 @@ public class ResourceManager : MonoBehaviour
     public GameObject blueResourcePrefab;
 
     public readonly float verticalSpacing = 1f;
-    public readonly float transitionDuration = 1.0f;
-    public bool RedGreenTransition;
-    public bool RedBlueTransition;
-    public bool GreenBlueTransition;
+    [SerializeField] private float transitionDuration;
 
     public Transform parentObjectForResourceInstances;
 
     private void Awake()
     {
-        if(Instance == null)
+        if (Instance == null)
         {
             Instance = this;
         }
-        else if(Instance != this)
+        else if (Instance != this)
         {
             Destroy(gameObject);
         }
     }
-    
+
     public void ResourceInstance(GameObject resPrefab, Transform spawnPoint, List<GameObject> resources)
     {
-        
-        Vector3 newPosition = spawnPoint.position + new Vector3(0, resources.Count * verticalSpacing, 0);
+        Vector3 newPosition = spawnPoint.position + new Vector3(0, resources.Count * verticalSpacing, 0); // позиція з врахуванням кількості ресурсів у стовбчику
         GameObject newResource = Instantiate(resPrefab, newPosition, spawnPoint.rotation);
-        newResource.transform.SetParent(parentObjectForResourceInstances, false);
+        newResource.transform.SetParent(parentObjectForResourceInstances, false); // організуємо усі нові одиниці ресурсів, як дочірні об'єкта на сцені, для зручності
         resources.Add(newResource);
-        
     }
 
-    public void GetLatestResource(Transform storePoint, List<GameObject> spawnResources,
-        List<GameObject> storeResources)
+    public void GetLatestResource(Transform storePoint, List<GameObject> spawnResources, List<GameObject> storeResources, Building building)
     {
         if (spawnResources.Count > 0)
         {
-            int lastIndex = spawnResources.Count - 1;
-
-            if (spawnResources[lastIndex] != null)
-            {
-                storeResources.Add(spawnResources[lastIndex]);
-                StartCoroutine(TransitionResourceToGreenBuilding(storeResources[^1], storePoint, storeResources));
-                spawnResources.RemoveAt(lastIndex);
-            }
-
+            StartCoroutine(TransitionResource(spawnResources[^1], storePoint, storeResources ,building));
+            spawnResources.RemoveAt(spawnResources.Count - 1);
         }
     }
 
-    private IEnumerator TransitionResourceToGreenBuilding(GameObject resource, Transform storePoint, List<GameObject> storeResources)
+    private IEnumerator TransitionResource(GameObject resource, Transform storePoint, List<GameObject> storeResources, Building building)
     {
-
         Vector3 startPosition = resource.transform.position;
-        Vector3 endPosition = storePoint.position + new Vector3(0, (storeResources.Count-1) * verticalSpacing, 0);
         Quaternion startRotation = resource.transform.rotation;
-        Quaternion endRotation = storePoint.rotation;
 
-        for (float t = 0f; t < transitionDuration; t += Time.deltaTime)
+        float startTime = Time.time;  // початковий час
+
+        while (Time.time - startTime < transitionDuration) // відраховуємо рівно час transitionDuration 
         {
-            float normalizedTime = t / transitionDuration;
-            resource.transform.SetPositionAndRotation(Vector3.Lerp(startPosition, endPosition, normalizedTime),
-                Quaternion.Lerp(startRotation, endRotation, normalizedTime));
+            Vector3 endPosition = storePoint.position + new Vector3(0, storeResources.Count * verticalSpacing, 0);
+            Quaternion endRotation = storePoint.rotation;
+
+            float normalizedTime = (Time.time - startTime) / transitionDuration;
+            resource.transform.SetPositionAndRotation(
+                Vector3.Lerp(startPosition, endPosition, normalizedTime),
+                Quaternion.Lerp(startRotation, endRotation, normalizedTime)
+            );
             yield return null;
         }
 
-        resource.transform.SetPositionAndRotation(endPosition, endRotation);
-        
+        storeResources.Add(resource);
+        building.isResourceInTransition = false;  // завершення переміщення
     }
-
 }
