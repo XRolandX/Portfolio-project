@@ -29,17 +29,9 @@ public class PlayerController : MonoBehaviour
         EnsureMouseInputEntity();
         EnsureSpawnPositionEntity();
         EnsureSpawnRotationEntity();
-
         InputSystemInput();
     }
-    private void OnEnable()
-    {
-        controls.Player.Enable();
-    }
-    private void OnDisable()
-    {
-        controls.Player.Disable();
-    }
+    
     private void Update()
     {
         PlayerMovesAndLooks();
@@ -81,11 +73,21 @@ public class PlayerController : MonoBehaviour
             spawnRotationEntity = spawnRotationQuery.GetSingletonEntity();
         }
     }
+    private void InputSystemInput()
+    {
+        controls.Player.Move.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
+        controls.Player.Move.canceled += ctx => moveInput = Vector2.zero;
+        controls.Player.Look.performed += ctx => lookInput = ctx.ReadValue<Vector2>();
+        controls.Player.Look.canceled += ctx => lookInput = Vector2.zero;
+        controls.Player.MouseClick.performed += ctx => UpdateMouseInput(true);
+        controls.Player.MouseClick.canceled += ctx => UpdateMouseInput(false);
+    }
     private void UpdateMouseInput(bool leftClickPerformed)
     {
         entityManager
             .SetComponentData(mouseInputEntity, new MouseInput { LeftClickPerformed = leftClickPerformed });
     }
+
     private void PlayerMovesAndLooks()
     {
         Vector3 move = moveSpeed * Time.deltaTime * new Vector3(moveInput.x, 0f, moveInput.y);
@@ -97,14 +99,10 @@ public class PlayerController : MonoBehaviour
         cameraPitch = Mathf.Clamp(cameraPitch, -85f, 85f);
         playerCamera.transform.localEulerAngles = new Vector3(cameraPitch, playerCamera.transform.localEulerAngles.y, 0f);
     }
-    private void InputSystemInput()
+    private void SpawnTransformUpdate()
     {
-        controls.Player.Move.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
-        controls.Player.Move.canceled += ctx => moveInput = Vector2.zero;
-        controls.Player.Look.performed += ctx => lookInput = ctx.ReadValue<Vector2>();
-        controls.Player.Look.canceled += ctx => lookInput = Vector2.zero;
-        controls.Player.MouseClick.performed += ctx => UpdateMouseInput(true);
-        controls.Player.MouseClick.canceled += ctx => UpdateMouseInput(false);
+        SpawnPositionUpdate();
+        SpawnRotationUpdate();
     }
     private void SpawnPositionUpdate()
     {
@@ -132,9 +130,13 @@ public class PlayerController : MonoBehaviour
             Debug.LogError("Spawn Point object doesn't assigned to PlayerController script");
         }
     }
-    private void SpawnTransformUpdate()
+
+    private void OnEnable()
     {
-        SpawnPositionUpdate();
-        SpawnRotationUpdate();
+        controls.Player.Enable();
+    }
+    private void OnDisable()
+    {
+        controls.Player.Disable();
     }
 }

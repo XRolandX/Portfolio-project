@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -1266680591911356999}
   - component: {fileID: 4532944813992704327}
   m_Layer: 0
-  m_Name: New Prefab
+  m_Name: projectilePrafab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

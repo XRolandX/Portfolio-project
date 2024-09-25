@@ -9,24 +9,29 @@ public partial class SpawnEntities : SystemBase
     private EndSimulationEntityCommandBufferSystem _ecbSystem;
     private BlobAssetStore _blobAssetStore;
     private Entity _prefabEntity;
-    private GameObject cubePrefab;
-    public PlayerControls controls;
+    private GameObject projectilePrefab;
     private float spawnTimer = 0f;
     private readonly float entityForce = 100f;
 
     protected override void OnCreate()
     {
-        controls = new PlayerControls();
-        controls.Enable();
-
-        cubePrefab = Resources.Load<GameObject>("New Prefab");
+        Initialize();
+    }
+    private void Initialize()
+    {
+        projectilePrefab = Resources.Load<GameObject>("projectilePrafab");
 
         _ecbSystem = World
             .GetOrCreateSystem<EndSimulationEntityCommandBufferSystem>();
 
         _blobAssetStore = new BlobAssetStore();
     }
+
     protected override void OnUpdate()
+    {
+        CreateEntitiesByClick();
+    }
+    private void CreateEntitiesByClick()
     {
         var deltaTime = Time.DeltaTime;
         spawnTimer += deltaTime;
@@ -40,12 +45,10 @@ public partial class SpawnEntities : SystemBase
             spawnTimer = 0f;
             var ecb = _ecbSystem.CreateCommandBuffer();
 
-            if(cubePrefab != null)
+            if (projectilePrefab != null)
             {
-                var settings = GameObjectConversionSettings
-            .FromWorld(World.DefaultGameObjectInjectionWorld, _blobAssetStore);
-                _prefabEntity = GameObjectConversionUtility
-                    .ConvertGameObjectHierarchy(cubePrefab, settings);
+                var settings = GameObjectConversionSettings.FromWorld(World.DefaultGameObjectInjectionWorld, _blobAssetStore);
+                _prefabEntity = GameObjectConversionUtility.ConvertGameObjectHierarchy(projectilePrefab, settings);
 
                 float3 forwardDirection = math.mul(spawnRotation, new float3(0, 0, 1));
 
@@ -66,9 +69,10 @@ public partial class SpawnEntities : SystemBase
             }
         }
     }
+
     protected override void OnDestroy()
     {
         _blobAssetStore.Dispose();
-        cubePrefab = null;
+        projectilePrefab = null;
     }
 }
