@@ -29,7 +29,6 @@ public class CharacterMovement : MonoBehaviour
     }
     private void Awake()
     {
-
         PlayerControlsInitialisation();
     }
     void Update()

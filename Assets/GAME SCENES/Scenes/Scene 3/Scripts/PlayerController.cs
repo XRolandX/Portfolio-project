@@ -15,21 +15,23 @@ public class PlayerController : MonoBehaviour
     private Entity spawnTransformEntity;
     private Entity spawnRotationEntity;
     
-    public PlayerControls controls;
+    public PlayerControls playerControls;
     private Camera playerCamera;
     public Transform spawnPoint;
+
+    public Joystick moveJoystick;
 
     private void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked;
         entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
-        controls = new PlayerControls();
+        playerControls = new PlayerControls();
         playerCamera = Camera.main;
 
         EnsureMouseInputEntity();
         EnsureSpawnPositionEntity();
         EnsureSpawnRotationEntity();
-        InputSystemInput();
+        InputSystemSetting();
     }
     
     private void Update()
@@ -73,14 +75,14 @@ public class PlayerController : MonoBehaviour
             spawnRotationEntity = spawnRotationQuery.GetSingletonEntity();
         }
     }
-    private void InputSystemInput()
+    private void InputSystemSetting()
     {
-        controls.Player.Move.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
-        controls.Player.Move.canceled += ctx => moveInput = Vector2.zero;
-        controls.Player.Look.performed += ctx => lookInput = ctx.ReadValue<Vector2>();
-        controls.Player.Look.canceled += ctx => lookInput = Vector2.zero;
-        controls.Player.MouseClick.performed += ctx => UpdateMouseInput(true);
-        controls.Player.MouseClick.canceled += ctx => UpdateMouseInput(false);
+        playerControls.Player.Move.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
+        playerControls.Player.Move.canceled += ctx => moveInput = Vector2.zero;
+        playerControls.Player.Look.performed += ctx => lookInput = ctx.ReadValue<Vector2>();
+        playerControls.Player.Look.canceled += ctx => lookInput = Vector2.zero;
+        playerControls.Player.MouseClick.performed += ctx => UpdateMouseInput(true);
+        playerControls.Player.MouseClick.canceled += ctx => UpdateMouseInput(false);
     }
     private void UpdateMouseInput(bool leftClickPerformed)
     {
@@ -133,10 +135,11 @@ public class PlayerController : MonoBehaviour
 
     private void OnEnable()
     {
-        controls.Player.Enable();
+        playerControls.Player.Enable();
     }
     private void OnDisable()
     {
-        controls.Player.Disable();
+        playerControls.Player.Disable();
     }
+
 }
