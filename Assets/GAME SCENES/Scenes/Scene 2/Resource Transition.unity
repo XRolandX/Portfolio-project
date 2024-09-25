@@ -268,15 +268,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7af98fe8755cea34992f71975bc839a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productionResourceInterval: 1
-  gettingResourceInterval: 1
+  productionResourceInterval: 0.5
+  gettingResourceInterval: 0.5
   maxResourceCount: 5
-  produceTimeElapsed: 0
-  gettingTimeElapsed: 0
   resourceDisplay: {fileID: 1250917041}
   resSpawnPoint: {fileID: 1978853337}
   redResStorePoint: {fileID: 1160844290}
   greenResStorePoint: {fileID: 0}
+  isResourceInTransition: 0
 --- !u!1 &167570740
 GameObject:
   m_ObjectHideFlags: 0
@@ -1707,15 +1706,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d9fb39c18980749951ccee0c13ea39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productionResourceInterval: 1
+  productionResourceInterval: 0.5
   gettingResourceInterval: 0
   maxResourceCount: 5
-  produceTimeElapsed: 0
-  gettingTimeElapsed: 0
   resourceDisplay: {fileID: 272224923}
   resSpawnPoint: {fileID: 755722126}
   redResStorePoint: {fileID: 0}
   greenResStorePoint: {fileID: 0}
+  isResourceInTransition: 0
 --- !u!1 &1011306822
 GameObject:
   m_ObjectHideFlags: 0
@@ -2296,6 +2294,7 @@ MonoBehaviour:
   redResourcePrefab: {fileID: 3655704740845861768, guid: 3b8a1fadbcff2ab49af60575b8ab2ce3, type: 3}
   greenResourcePrefab: {fileID: 560529387152768656, guid: 9e4036757c8c2644a99b992581b972e4, type: 3}
   blueResourcePrefab: {fileID: 1119199411821174077, guid: 31253400875c80146892cd3af9fc0307, type: 3}
+  transitionDuration: 0.5
   parentObjectForResourceInstances: {fileID: 1969121755}
 --- !u!4 &1154529782
 Transform:
@@ -3162,15 +3161,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81556e25caa38e54199bbe5b766d2164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productionResourceInterval: 1
-  gettingResourceInterval: 1
+  productionResourceInterval: 0.5
+  gettingResourceInterval: 0.5
   maxResourceCount: 5
-  produceTimeElapsed: 0
-  gettingTimeElapsed: 0
   resourceDisplay: {fileID: 764506121}
   resSpawnPoint: {fileID: 1700468148}
   redResStorePoint: {fileID: 470148906}
   greenResStorePoint: {fileID: 1345021520}
+  isResourceInTransition: 0
 --- !u!1 &1700468147
 GameObject:
   m_ObjectHideFlags: 0

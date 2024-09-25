@@ -17,4 +17,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/GAME SCENES/Scenes/Scene 3/DOTS.unity
     guid: 39fb7e12d671f014b8d862b04d5c6f3f
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 19ababc91218afc42ada527f7ad5d355, type: 2}

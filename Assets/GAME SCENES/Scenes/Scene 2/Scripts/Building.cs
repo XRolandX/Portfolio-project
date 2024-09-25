@@ -8,8 +8,8 @@ public abstract class Building : MonoBehaviour
     [SerializeField] protected float gettingResourceInterval;
     [SerializeField] protected float maxResourceCount = 5.0f;
 
-    [SerializeField] protected float produceTimeElapsed;
-    [SerializeField] protected float gettingTimeElapsed;
+    protected float produceTimeElapsed;
+    protected float gettingTimeElapsed;
 
     protected string resourceColor;
     protected string resourceType;
@@ -20,14 +20,11 @@ public abstract class Building : MonoBehaviour
     [SerializeField] protected Transform redResStorePoint;
     [SerializeField] protected Transform greenResStorePoint;
 
-    public bool isResourceInTransition;
-
-
+    public bool isResourceInTransition = false;
     protected virtual void Start()
     {
         InitializeBuilding();
     }
-
     protected virtual void Update()
     {
         ProduceTimeElapse();
@@ -45,6 +42,7 @@ public abstract class Building : MonoBehaviour
             produceTimeElapsed = productionResourceInterval;
         }
     }
+
     private void GetResourceTimeElapse()
     {
         gettingTimeElapsed -= Time.deltaTime;

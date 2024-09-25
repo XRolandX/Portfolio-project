@@ -9,7 +9,6 @@ public class GreenBuilding : Building
         resourceCountDisplay = ResourceManager.Instance.greenResources;
         produceTimeElapsed = productionResourceInterval;
         gettingTimeElapsed = gettingResourceInterval;
-        isResourceInTransition = false;
     }
 
     protected override void GetResource()

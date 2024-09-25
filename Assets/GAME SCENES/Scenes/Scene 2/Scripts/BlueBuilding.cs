@@ -10,7 +10,6 @@ public class BlueBuilding : Building
         resourceCountDisplay = ResourceManager.Instance.blueResources;
         produceTimeElapsed = productionResourceInterval;
         gettingTimeElapsed = gettingResourceInterval;
-        isResourceInTransition = false;
     }
 
     protected override void GetResource()

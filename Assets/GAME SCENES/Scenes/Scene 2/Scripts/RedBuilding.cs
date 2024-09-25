@@ -17,6 +17,7 @@ public class RedBuilding : Building
                 resSpawnPoint.transform, ResourceManager.Instance.redResources);
         }
     }
+
     protected override void GetResource()
     {
         // null
