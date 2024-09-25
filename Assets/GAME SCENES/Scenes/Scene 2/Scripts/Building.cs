@@ -6,7 +6,8 @@ public abstract class Building : MonoBehaviour
 {
     [SerializeField] protected float productionResourceInterval;
     [SerializeField] protected float gettingResourceInterval;
-    [SerializeField] protected float maxResourceCount = 5.0f;
+    private const float DefaultMaxResourceCount = 5.0f;
+    [SerializeField] protected float maxResourceCount = DefaultMaxResourceCount;
 
     protected float produceTimeElapsed;
     protected float gettingTimeElapsed;
@@ -21,6 +22,7 @@ public abstract class Building : MonoBehaviour
     [SerializeField] protected Transform greenResStorePoint;
 
     public bool isResourceInTransition = false;
+
     protected virtual void Start()
     {
         InitializeBuilding();
@@ -39,7 +41,7 @@ public abstract class Building : MonoBehaviour
         if (produceTimeElapsed <= 0)
         {
             ProduceResource();
-            produceTimeElapsed = productionResourceInterval;
+            produceTimeElapsed += productionResourceInterval;
         }
     }
 
@@ -50,11 +52,11 @@ public abstract class Building : MonoBehaviour
         if (gettingTimeElapsed <= 0)
         {
             GetResource();
-            gettingTimeElapsed = gettingResourceInterval;
+            gettingTimeElapsed += gettingResourceInterval;
         }
     }
 
-    private void ResourceDisplay()
+    protected virtual void ResourceDisplay()
     {
         if (resourceDisplay != null)
         {

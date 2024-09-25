@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class RedBuilding : Building
 {
     protected override void InitializeBuilding()
@@ -21,5 +23,19 @@ public class RedBuilding : Building
     protected override void GetResource()
     {
         // null
+    }
+
+    protected override void ResourceDisplay()
+    {
+        if (resourceDisplay != null)
+        {
+            resourceDisplay.text = "<color=" + resourceColor + ">" + resourceType + "</color> resource: "
+                + resourceCountDisplay.Count.ToString("F0")
+                + "\nProduction time: " + produceTimeElapsed.ToString("F3");
+        }
+        else
+        {
+            Debug.LogError("Resource Index TMP is not set in Inspector on some Building");
+        }
     }
 }

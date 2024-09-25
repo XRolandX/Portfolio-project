@@ -1706,7 +1706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d9fb39c18980749951ccee0c13ea39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productionResourceInterval: 0.5
+  productionResourceInterval: 1
   gettingResourceInterval: 0
   maxResourceCount: 5
   resourceDisplay: {fileID: 272224923}
@@ -1806,7 +1806,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1011306822}
-  m_LocalRotation: {x: -0, y: -0.4914224, z: -0, w: 0.8709214}
+  m_LocalRotation: {x: -0, y: -0.71028364, z: -0, w: 0.70391566}
   m_LocalPosition: {x: 8.76, y: 3.17, z: -26.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1814,7 +1814,7 @@ Transform:
   - {fileID: 1029159515}
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: -58.868, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90.516, z: 0}
 --- !u!114 &1011306827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3162,7 +3162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   productionResourceInterval: 0.5
-  gettingResourceInterval: 0.5
+  gettingResourceInterval: 2
   maxResourceCount: 5
   resourceDisplay: {fileID: 764506121}
   resSpawnPoint: {fileID: 1700468148}

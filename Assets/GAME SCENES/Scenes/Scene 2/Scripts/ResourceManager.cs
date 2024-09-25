@@ -55,22 +55,35 @@ public class ResourceManager : MonoBehaviour
     {
         Vector3 startPosition = resource.transform.position;
         Quaternion startRotation = resource.transform.rotation;
+        
 
         float startTime = Time.time;  // початковий час
+        int steps = Mathf.CeilToInt(transitionDuration / Time.deltaTime); // Кількість кроків залежить від тривалості та Time.deltaTime
 
-        while (Time.time - startTime < transitionDuration) // відраховуємо рівно час transitionDuration 
+        for (int i = 0; i < steps; i++)
         {
+            float elapsedTime = (Time.time - startTime); // Скільки часу пройшло
+            float normalizedTime = elapsedTime / transitionDuration; // Нормалізований час (від 0 до 1)
+
             Vector3 endPosition = storePoint.position + new Vector3(0, storeResources.Count * verticalSpacing, 0);
             Quaternion endRotation = storePoint.rotation;
 
-            float normalizedTime = (Time.time - startTime) / transitionDuration;
+            // Лінійна інтерполяція позиції та ротації
             resource.transform.SetPositionAndRotation(
                 Vector3.Lerp(startPosition, endPosition, normalizedTime),
                 Quaternion.Lerp(startRotation, endRotation, normalizedTime)
             );
-            yield return null;
+
+            yield return null; // Повертаємо управління до наступного кадру
+
+            if (normalizedTime >= 1f) // Якщо досягли кінця тривалості
+                break;
         }
 
+        Vector3 finalPos = storePoint.position + new Vector3(0, storeResources.Count * verticalSpacing, 0);
+        Quaternion finalRot = storePoint.rotation;
+
+        resource.transform.SetPositionAndRotation(finalPos, finalRot);
         storeResources.Add(resource);
         building.isResourceInTransition = false;  // завершення переміщення
     }
