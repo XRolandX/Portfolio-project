@@ -1,13 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.ShaderGraph;
 using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
     private PlayerControls playerControls;
     private Vector2 lookInput;
-    private float cameraPitch = 0;
+    private float xRotation = 0;
     public Transform weaponHolderTransform;
 
     public Joystick lookJoystick;
@@ -78,7 +75,7 @@ public class MouseLook : MonoBehaviour
             xRotation -= mouseY;
             xRotation = Mathf.Clamp(xRotation, -85f, 85f);
 
-            weaponHolder.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+            weaponHolderTransform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         }
 
         #endregion

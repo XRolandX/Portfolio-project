@@ -3,28 +3,29 @@ using UnityEngine.SceneManagement;
 using Unity.Entities;
 using Unity.Transforms;
 using Unity.Collections;
-using UnityEditor.SceneManagement;
 
 public class UIHandler : MonoBehaviour
 {
-    //[SerializeField] GameObject androidOverlay;
+    [SerializeField] GameObject androidOverlay;
     private PlayerControls playerControls;
     public EntityManager entityManager;
     private void Awake()
     {
 
-#if PLATFORM_STANDALONE_WIN
-        //androidOverlay.SetActive(false);
-#endif
-#if UNITY_ANDROID
-        //androidOverlay.SetActive(true);
-#endif
+        #if PLATFORM_STANDALONE_WIN
+        androidOverlay.SetActive(false);
+        #endif
+        #if UNITY_ANDROID
+        androidOverlay.SetActive(true);
+        #endif
         Cursor.lockState = CursorLockMode.Locked;
         playerControls = new PlayerControls();
         playerControls.Player.RestartScene.performed += ctx => RestartScene();
         playerControls.Player.ToMainMenu.performed += ctx => MainSceneLoading();
+        #if PLATFORM_STANDALONE_WIN
         playerControls.Player.StopPlayMode.performed += ctx => StopPlayMode();
         playerControls.Player.CursorUnlock.performed += ctx => CursorUnlocking();
+        #endif
 
         entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
     }
@@ -40,7 +41,7 @@ public class UIHandler : MonoBehaviour
         DestroyAllEntities();
         SceneManager.LoadScene(0);
     }
-#if UNITY_EDITOR
+    #if PLATFORM_STANDALONE_WIN
     void StopPlayMode()
     {
         UnityEditor.EditorApplication.isPlaying = false;
@@ -49,7 +50,7 @@ public class UIHandler : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
     }
-#endif
+    #endif
     void DestroyAllEntities()
     {
         EntityQuery query = entityManager.CreateEntityQuery(ComponentType.ReadOnly<Translation>());

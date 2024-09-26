@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 50f;
-    public float sensitivity = 50f;
-    private float cameraPitch = 0f;
+    [SerializeField] private float moveSpeed = 50f;
+    [SerializeField] private float sensitivity = 50f;
+    [SerializeField] private float lookPitch = 0f;
     
     private Vector2 moveInput;
     private Vector2 lookInput;
@@ -16,17 +16,14 @@ public class PlayerController : MonoBehaviour
     private Entity spawnRotationEntity;
     
     public PlayerControls playerControls;
-    private Camera playerCamera;
     public Transform spawnPoint;
 
-    public Joystick moveJoystick;
 
     private void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked;
         entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
         playerControls = new PlayerControls();
-        playerCamera = Camera.main;
 
         EnsureMouseInputEntity();
         EnsureSpawnPositionEntity();
@@ -36,9 +33,12 @@ public class PlayerController : MonoBehaviour
     
     private void Update()
     {
+#if PLATFORM_STANDALONE_WIN
         PlayerMovesAndLooks();
+#endif
         SpawnTransformUpdate();
     }
+
     private void EnsureMouseInputEntity()
     {
         var mouseInputQuery = entityManager.CreateEntityQuery(typeof(MouseInput));
@@ -97,9 +97,9 @@ public class PlayerController : MonoBehaviour
 
         Vector2 look = sensitivity * Time.deltaTime * lookInput;
         transform.Rotate(0, look.x, 0, Space.World);
-        cameraPitch -= look.y;
-        cameraPitch = Mathf.Clamp(cameraPitch, -85f, 85f);
-        playerCamera.transform.localEulerAngles = new Vector3(cameraPitch, playerCamera.transform.localEulerAngles.y, 0f);
+        lookPitch -= look.y;
+        lookPitch = Mathf.Clamp(lookPitch, -85f, 85f);
+        transform.localEulerAngles = new Vector3(lookPitch, transform.localEulerAngles.y, 0f);
     }
     private void SpawnTransformUpdate()
     {

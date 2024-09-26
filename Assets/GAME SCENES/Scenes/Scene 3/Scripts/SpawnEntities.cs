@@ -31,7 +31,7 @@ public partial class SpawnEntities : SystemBase
     {
         CreateEntitiesByClick();
     }
-    private void CreateEntitiesByClick()
+    public void CreateEntitiesByClick()
     {
         var deltaTime = Time.DeltaTime;
         spawnTimer += deltaTime;
