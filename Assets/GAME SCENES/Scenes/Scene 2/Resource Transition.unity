@@ -1853,9 +1853,8 @@ GameObject:
   - component: {fileID: 1011306826}
   - component: {fileID: 1011306825}
   - component: {fileID: 1011306824}
-  - component: {fileID: 1011306823}
-  - component: {fileID: 1011306827}
   - component: {fileID: 1011306828}
+  - component: {fileID: 1011306827}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1863,20 +1862,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &1011306823
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1011306822}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &1011306824
 MeshRenderer:
   m_ObjectHideFlags: 0
