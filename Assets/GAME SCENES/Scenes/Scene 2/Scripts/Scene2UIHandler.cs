@@ -14,15 +14,19 @@ public class Scene2UIHandler : MonoBehaviour
 #if UNITY_ANDROID
         androidOverlay.SetActive(true);
 #endif
+
+
         Cursor.lockState = CursorLockMode.Locked;
         playerControls = new PlayerControls();
+        #if PLATFORM_STANDALONE_WIN
         playerControls.Player.RestartScene.performed += ctx => SceneReloading();
         playerControls.Player.ToMainMenu.performed += ctx => MainSceneLoading();
         playerControls.Player.StopPlayMode.performed += ctx => StopPlayMode();
         playerControls.Player.CursorUnlock.performed += ctx => CursorUnlocking();
+        #endif
     }
 
-
+    #if PLATFORM_STANDALONE_WIN
     public void SceneReloading()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -31,7 +35,7 @@ public class Scene2UIHandler : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
-#if UNITY_EDITOR
+
     void StopPlayMode()
     {
         UnityEditor.EditorApplication.isPlaying = false;
@@ -40,7 +44,7 @@ public class Scene2UIHandler : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
     }
-#endif
+    #endif
     private void OnEnable()
     {
         playerControls.Player.Enable();
@@ -49,5 +53,4 @@ public class Scene2UIHandler : MonoBehaviour
     {
         playerControls.Player.Disable();
     }
-
 }
