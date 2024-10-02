@@ -3,21 +3,20 @@ using UnityEngine.SceneManagement;
 using Unity.Entities;
 using Unity.Transforms;
 using Unity.Collections;
-using UnityEditor.SceneManagement;
 
 public class UIHandler : MonoBehaviour
 {
-    //[SerializeField] GameObject androidOverlay;
+    [SerializeField] GameObject androidOverlay;
     private PlayerControls playerControls;
     public EntityManager entityManager;
     private void Awake()
     {
 
 #if PLATFORM_STANDALONE_WIN
-        //androidOverlay.SetActive(false);
+        androidOverlay.SetActive(false);
 #endif
 #if UNITY_ANDROID
-        //androidOverlay.SetActive(true);
+        androidOverlay.SetActive(true);
 #endif
         Cursor.lockState = CursorLockMode.Locked;
         playerControls = new PlayerControls();
@@ -47,7 +46,12 @@ public class UIHandler : MonoBehaviour
     }
     void CursorUnlocking()
     {
-        Cursor.lockState = CursorLockMode.None;
+        if (Cursor.lockState == CursorLockMode.Locked)
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else { Cursor.lockState = CursorLockMode.Locked; }
+        
     }
 #endif
     void DestroyAllEntities()
