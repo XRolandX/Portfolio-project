@@ -1,31 +1,37 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEditor.ShaderGraph;
 using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
-    public Transform weaponHolderTransform;
     private PlayerControls playerControls;
-    public Transform characterBody;
-    public Joystick lookJoystick;
-    
     private Vector2 lookInput;
-    
+    private float cameraPitch = 0;
+    public Transform weaponHolderTransform;
+
+    public Joystick lookJoystick;
+    public Transform characterBody;
+
+    [SerializeField] private float mouseSensitivity = 0f;
     public float unscopeSensitivity = 150f;
     public float scopeSensitivity = 100f;
     public float scope2xSensitivity = 50;
-    private float cameraPitch = 0;
-
-    [SerializeField] private float mouseSensitivity = 0f;
     public float MouseSensitivity
     {
         get { return mouseSensitivity; }
         set { mouseSensitivity = value; }
     }
-    
-    private void Awake()
+
+    private void PlayerControlsInstantiation()
     {
         playerControls = new PlayerControls();
         playerControls.Player.Look.performed += ctx => lookInput = ctx.ReadValue<Vector2>();
         playerControls.Player.Look.canceled += ctx => lookInput = Vector2.zero;
+    }
+    private void Awake()
+    {
+        PlayerControlsInstantiation();
 
 #if UNITY_STANDALONE_WIN
         Cursor.lockState = CursorLockMode.Locked;
@@ -78,7 +84,6 @@ public class MouseLook : MonoBehaviour
         #endregion
 #endif
     }
-
     private void OnEnable()
     {
         playerControls.Player.Enable();
@@ -87,4 +92,5 @@ public class MouseLook : MonoBehaviour
     {
         playerControls.Player.Disable();
     }
+
 }

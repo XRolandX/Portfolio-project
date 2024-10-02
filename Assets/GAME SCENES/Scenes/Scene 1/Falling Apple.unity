@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: aeab33f69c199e54794f516d31450ec4, type: 2}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45260847, g: 0.50199455, b: 0.58189815, a: 1}
+  m_IndirectSpecularColor: {r: 0.17276807, g: 0.21589197, b: 0.29782572, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1578,24 +1578,6 @@ Transform:
   m_Father: {fileID: 1356984431}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &882002356 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6591073157417035536, guid: 37718dc2471ddf445970a14ff139fb31, type: 3}
-  m_PrefabInstance: {fileID: 1786072474}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &882002360
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 882002356}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 30.000017, y: 0.000006636081, z: 32.00002}
-  m_Center: {x: 0.0000009536743, y: 0.00050066947, z: 0.0000038146973}
 --- !u!1001 &893714918
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2036,11 +2018,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 942291855}
   m_CullTransparentMesh: 1
---- !u!4 &972434821 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5791527615347953468, guid: c929439ccb05979498ed042f0c08339e, type: 3}
-  m_PrefabInstance: {fileID: 5791527614910968967}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1008579875
 GameObject:
   m_ObjectHideFlags: 0
@@ -2281,7 +2258,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8521b32b7fcd7ae41acc48012ada9ec0, type: 2}
+  - {fileID: 2100000, guid: f6298605825d7154f8923c76872aa46e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3478,7 +3455,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a5d6b716305e07343b04163bfd717edc, type: 2}
+  - {fileID: 2100000, guid: f904fac889ccd8d42b60ac1c11dc5f91, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3737,7 +3714,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 981abf7a53e6a964fba6bc48555ec31a, type: 2}
+  - {fileID: 2100000, guid: f904fac889ccd8d42b60ac1c11dc5f91, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3959,6 +3936,7 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 3639643530606574021, guid: 37718dc2471ddf445970a14ff139fb31, type: 3}
       propertyPath: m_TagString
       value: Untagged
@@ -3994,6 +3972,9 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1995746959088547406, guid: 37718dc2471ddf445970a14ff139fb31, type: 3}
     - {fileID: 9088100296387760479, guid: 37718dc2471ddf445970a14ff139fb31, type: 3}
+=======
+    m_RemovedComponents: []
+>>>>>>> parent of 84c6216 (minor improvements scene 2)
   m_SourcePrefab: {fileID: 100100000, guid: 37718dc2471ddf445970a14ff139fb31, type: 3}
 --- !u!1 &1864190258
 GameObject:
@@ -4639,6 +4620,7 @@ PrefabInstance:
       propertyPath: far clip plane
       value: 2.16
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 5791527613846117562, guid: c929439ccb05979498ed042f0c08339e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -4647,6 +4629,8 @@ PrefabInstance:
       propertyPath: rb
       value: 
       objectReference: {fileID: 0}
+=======
+>>>>>>> parent of 84c6216 (minor improvements scene 2)
     - target: {fileID: 5791527614052912573, guid: c929439ccb05979498ed042f0c08339e, type: 3}
       propertyPath: joystick
       value: 
@@ -4660,17 +4644,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5791527614052912573, guid: c929439ccb05979498ed042f0c08339e, type: 3}
-      propertyPath: isGrounded
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5791527614052912573, guid: c929439ccb05979498ed042f0c08339e, type: 3}
-      propertyPath: jumpButton
-      value: 
-      objectReference: {fileID: 942291857}
-    - target: {fileID: 5791527614052912573, guid: c929439ccb05979498ed042f0c08339e, type: 3}
       propertyPath: moveJoystick
       value: 
       objectReference: {fileID: 1422214096}
+<<<<<<< HEAD
     - target: {fileID: 5791527614052912573, guid: c929439ccb05979498ed042f0c08339e, type: 3}
       propertyPath: groundChecker
       value: 
@@ -4679,6 +4656,8 @@ PrefabInstance:
       propertyPath: characterController
       value: 
       objectReference: {fileID: 1552018446}
+=======
+>>>>>>> parent of 84c6216 (minor improvements scene 2)
     - target: {fileID: 5791527614052912574, guid: c929439ccb05979498ed042f0c08339e, type: 3}
       propertyPath: m_Name
       value: Character
@@ -4753,7 +4732,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5791527614718822522, guid: c929439ccb05979498ed042f0c08339e, type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
       value: 2.54
+=======
+      value: 2.36
+>>>>>>> parent of 84c6216 (minor improvements scene 2)
       objectReference: {fileID: 0}
     - target: {fileID: 5791527614718822522, guid: c929439ccb05979498ed042f0c08339e, type: 3}
       propertyPath: m_LocalPosition.z
