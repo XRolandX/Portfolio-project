@@ -6,7 +6,7 @@ using Unity.Collections;
 
 public class UIHandler : MonoBehaviour
 {
-    [SerializeField] GameObject androidOverlay;
+    [SerializeField] private GameObject androidOverlay;
     private PlayerControls playerControls;
     public EntityManager entityManager;
     private void Awake()
@@ -52,7 +52,11 @@ public class UIHandler : MonoBehaviour
     }
     void CursorUnlocking()
     {
-        Cursor.lockState = CursorLockMode.None;
+        if (Cursor.lockState == CursorLockMode.Locked)
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else { Cursor.lockState = CursorLockMode.Locked; }
     }
     #endif
 
@@ -66,6 +70,7 @@ public class UIHandler : MonoBehaviour
         }
         entities.Dispose();
     }
+
     private void OnEnable()
     {
         playerControls.Player.Enable();
@@ -74,5 +79,4 @@ public class UIHandler : MonoBehaviour
     {
         playerControls.Player.Disable();
     }
-
 }

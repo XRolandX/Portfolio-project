@@ -4,7 +4,7 @@ public class MouseLook : MonoBehaviour
 {
     private PlayerControls playerControls;
     private Vector2 lookInput;
-    private float xRotation = 0;
+    private float cameraPitch = 0;
     public Transform weaponHolderTransform;
 
     public Joystick lookJoystick;

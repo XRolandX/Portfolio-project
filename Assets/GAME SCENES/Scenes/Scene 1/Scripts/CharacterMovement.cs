@@ -1,57 +1,75 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class CharacterMovement : MonoBehaviour
 {
-    public Joystick moveJoystick;
-    public CharacterController controller;
-    public Transform groundCheker;
-    public Button jumpButton;
-    public LayerMask groundMask;
-    public float gravity = -9.81f;
-
+    public CharacterController characterController;
     private PlayerControls playerControls;
+    public Transform groundCheker;
+    public Joystick moveJoystick;
+
+    private Vector3 gravityVelocity;
+    public LayerMask groundMask;
     private Vector2 moveInput;
-
-    readonly float groundDistance = 0.4f;
-    readonly float speed = 12f;
-    readonly float jumpHeight = 1f;
-
-    Vector3 velocity; // gravity target for CharacterController.Move()
-
+    
+    private readonly float gravity = -9.81f * 4.0f;
+    private readonly float groundDistance = 0.1f;
+    [SerializeField] private float jumpHeight = 1f;
+    [SerializeField] private float speed = 12f;
     [SerializeField] bool isGrounded;
 
-    private void PlayerControlsInitialisation()
+    private void Awake()
     {
         playerControls = new PlayerControls();
         playerControls.Player.Move.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
         playerControls.Player.Move.canceled += ctx => moveInput = Vector2.zero;
     }
-    private void Awake()
-    {
-        PlayerControlsInitialisation();
-    }
+
     void Update()
     {
-        MoveWithJoystick();
         Gravity();
+
 #if UNITY_STANDALONE_WIN
         MoveWithKeyboard();
         JumpKeyboardButton();
 #endif
+
+#if UNITY_ANDROID
+        MoveWithJoystick();
+#endif
     }
     public void Gravity()
     {
-        isGrounded = Physics.CheckSphere(groundCheker.position, groundDistance, groundMask); // ground checker job
-        velocity.y += gravity * Time.deltaTime; // strength down
+        isGrounded = Physics.CheckSphere(groundCheker.position, groundDistance, groundMask);
 
-        if (isGrounded && velocity.y < 0)
+        if (isGrounded && gravityVelocity.y < 0)
         {
-            velocity.y = -10f;
+            gravityVelocity.y = -2f;
+        }
+        else
+        {
+            gravityVelocity.y += gravity * Time.deltaTime;
         }
 
-        controller.Move(2 * Time.deltaTime * velocity); // two times time.deltaTime because the acceleration
+        characterController.Move(Time.deltaTime * gravityVelocity);
     }
+
+    private void JumpKeyboardButton()
+    {
+        if (playerControls.Player.Jump.triggered && isGrounded)
+        {
+            gravityVelocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
+        }
+    }
+
+    private void MoveWithKeyboard()
+    {
+        _ = new Vector3(moveInput.x, 0f, moveInput.y);
+        Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.y;
+
+        characterController.Move(speed * Time.deltaTime * move);
+    }
+
+    #region ANDROID CONTROL
     private void MoveWithJoystick()
     {
 
@@ -60,7 +78,7 @@ public class CharacterMovement : MonoBehaviour
             float x = moveJoystick.Horizontal;
             float z = moveJoystick.Vertical;
             Vector3 move = transform.right * x + transform.forward * z;
-            controller.Move(speed * Time.deltaTime * move);
+            characterController.Move(speed * Time.deltaTime * move);
         }
 
     }
@@ -68,21 +86,11 @@ public class CharacterMovement : MonoBehaviour
     {
         if (isGrounded)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
-        }
-    }                
-    private void JumpKeyboardButton()
-    {
-        if (playerControls.Player.Jump.triggered && isGrounded)
-        {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity); // formula of jump square root of height * -2 * gravity
+            gravityVelocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
         }
     }
-    private void MoveWithKeyboard()
-    {
-        Vector3 move = new(moveInput.x, 0f, moveInput.y);
-        controller.transform.Translate(speed * Time.deltaTime * move);
-    }
+    #endregion
+
     private void OnEnable()
     {
         playerControls.Player.Enable();
