@@ -167,7 +167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5791527614718822522}
-  - component: {fileID: 5791527614052912572}
+  - component: {fileID: 6892644422534041105}
   - component: {fileID: 5791527614052912573}
   m_Layer: 0
   m_Name: Apple FPS
@@ -194,7 +194,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 25.923, z: 0}
---- !u!143 &5791527614052912572
+--- !u!143 &6892644422534041105
 CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -205,10 +205,10 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 4
+  m_Height: 2
   m_Radius: 0.5
   m_SlopeLimit: 45
-  m_StepOffset: 0.4
+  m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
@@ -224,14 +224,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 213f829c959d66f4085630052884bf00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundChecker: {fileID: 0}
   moveJoystick: {fileID: 0}
-  controller: {fileID: 5791527614052912572}
-  groundCheker: {fileID: 5791527615347953468}
-  jumpButton: {fileID: 0}
   groundMask:
     serializedVersion: 2
     m_Bits: 200
-  gravity: -19.62
   isGrounded: 0
 --- !u!1 &5791527614276296122
 GameObject:
@@ -604,6 +601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35b1dfc8729c2d4488d7e4b6739a24c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponHolderTransform: {fileID: 0}
   lookJoystick: {fileID: 0}
   characterBody: {fileID: 5791527614718822522}
   mouseSensitivity: 150
