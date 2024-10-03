@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "M:\\GitHub\\Portfolio-project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CF704FD0-00D6-7709-D773-A19AC0E91D1E}|Assembly-CSharp.csproj|m:\\github\\portfolio-project\\assets\\game scenes\\scenes\\scene 1\\scripts\\soundhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF704FD0-00D6-7709-D773-A19AC0E91D1E}|Assembly-CSharp.csproj|solutionrelative:assets\\game scenes\\scenes\\scene 1\\scripts\\soundhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF704FD0-00D6-7709-D773-A19AC0E91D1E}|Assembly-CSharp.csproj|m:\\github\\portfolio-project\\assets\\game scenes\\scenes\\scene 2\\scripts\\scene2uihandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF704FD0-00D6-7709-D773-A19AC0E91D1E}|Assembly-CSharp.csproj|solutionrelative:assets\\game scenes\\scenes\\scene 2\\scripts\\scene2uihandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CF704FD0-00D6-7709-D773-A19AC0E91D1E}|Assembly-CSharp.csproj|M:\\GitHub\\Portfolio-project\\assets\\game scenes\\scenes\\scene 1\\scripts\\shootingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CF704FD0-00D6-7709-D773-A19AC0E91D1E}|Assembly-CSharp.csproj|solutionrelative:assets\\game scenes\\scenes\\scene 1\\scripts\\shootingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF704FD0-00D6-7709-D773-A19AC0E91D1E}|Assembly-CSharp.csproj|m:\\github\\portfolio-project\\assets\\game scenes\\scenes\\scene 1\\scripts\\charactermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CF704FD0-00D6-7709-D773-A19AC0E91D1E}|Assembly-CSharp.csproj|M:\\GitHub\\Portfolio-project\\assets\\game scenes\\scenes\\scene 1\\scripts\\charactermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CF704FD0-00D6-7709-D773-A19AC0E91D1E}|Assembly-CSharp.csproj|solutionrelative:assets\\game scenes\\scenes\\scene 1\\scripts\\charactermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF704FD0-00D6-7709-D773-A19AC0E91D1E}|Assembly-CSharp.csproj|m:\\github\\portfolio-project\\assets\\game scenes\\scenes\\scene 1\\scripts\\soundhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF704FD0-00D6-7709-D773-A19AC0E91D1E}|Assembly-CSharp.csproj|solutionrelative:assets\\game scenes\\scenes\\scene 1\\scripts\\soundhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF704FD0-00D6-7709-D773-A19AC0E91D1E}|Assembly-CSharp.csproj|m:\\github\\portfolio-project\\assets\\game scenes\\scenes\\scene 1\\scripts\\manuallightupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF704FD0-00D6-7709-D773-A19AC0E91D1E}|Assembly-CSharp.csproj|solutionrelative:assets\\game scenes\\scenes\\scene 1\\scripts\\manuallightupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF704FD0-00D6-7709-D773-A19AC0E91D1E}|Assembly-CSharp.csproj|M:\\GitHub\\Portfolio-project\\assets\\game scenes\\scenes\\scene 2\\scripts\\scene2uihandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF704FD0-00D6-7709-D773-A19AC0E91D1E}|Assembly-CSharp.csproj|solutionrelative:assets\\game scenes\\scenes\\scene 2\\scripts\\scene2uihandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,11 +30,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "ManualLightUpdate.cs",
+              "DocumentMoniker": "M:\\GitHub\\Portfolio-project\\Assets\\GAME SCENES\\Scenes\\Scene 1\\Scripts\\ManualLightUpdate.cs",
+              "RelativeDocumentMoniker": "Assets\\GAME SCENES\\Scenes\\Scene 1\\Scripts\\ManualLightUpdate.cs",
+              "ToolTip": "M:\\GitHub\\Portfolio-project\\Assets\\GAME SCENES\\Scenes\\Scene 1\\Scripts\\ManualLightUpdate.cs",
+              "RelativeToolTip": "Assets\\GAME SCENES\\Scenes\\Scene 1\\Scripts\\ManualLightUpdate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T13:09:47.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "SoundHandler.cs",
               "DocumentMoniker": "M:\\GitHub\\Portfolio-project\\Assets\\GAME SCENES\\Scenes\\Scene 1\\Scripts\\SoundHandler.cs",
               "RelativeDocumentMoniker": "Assets\\GAME SCENES\\Scenes\\Scene 1\\Scripts\\SoundHandler.cs",
@@ -43,39 +60,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "CharacterMovement.cs",
               "DocumentMoniker": "M:\\GitHub\\Portfolio-project\\Assets\\GAME SCENES\\Scenes\\Scene 1\\Scripts\\CharacterMovement.cs",
               "RelativeDocumentMoniker": "Assets\\GAME SCENES\\Scenes\\Scene 1\\Scripts\\CharacterMovement.cs",
               "ToolTip": "M:\\GitHub\\Portfolio-project\\Assets\\GAME SCENES\\Scenes\\Scene 1\\Scripts\\CharacterMovement.cs",
               "RelativeToolTip": "Assets\\GAME SCENES\\Scenes\\Scene 1\\Scripts\\CharacterMovement.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAswBIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwBIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-03T12:52:55.75Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Scene2UIHandler.cs",
               "DocumentMoniker": "M:\\GitHub\\Portfolio-project\\Assets\\GAME SCENES\\Scenes\\Scene 2\\Scripts\\Scene2UIHandler.cs",
               "RelativeDocumentMoniker": "Assets\\GAME SCENES\\Scenes\\Scene 2\\Scripts\\Scene2UIHandler.cs",
               "ToolTip": "M:\\GitHub\\Portfolio-project\\Assets\\GAME SCENES\\Scenes\\Scene 2\\Scripts\\Scene2UIHandler.cs",
               "RelativeToolTip": "Assets\\GAME SCENES\\Scenes\\Scene 2\\Scripts\\Scene2UIHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-03T12:39:49.832Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "ShootingManager.cs",
               "DocumentMoniker": "M:\\GitHub\\Portfolio-project\\Assets\\GAME SCENES\\Scenes\\Scene 1\\Scripts\\ShootingManager.cs",
               "RelativeDocumentMoniker": "Assets\\GAME SCENES\\Scenes\\Scene 1\\Scripts\\ShootingManager.cs",
               "ToolTip": "M:\\GitHub\\Portfolio-project\\Assets\\GAME SCENES\\Scenes\\Scene 1\\Scripts\\ShootingManager.cs",
               "RelativeToolTip": "Assets\\GAME SCENES\\Scenes\\Scene 1\\Scripts\\ShootingManager.cs",
-              "ViewState": "AgIAALwAAAAAAAAAAAAwwMIAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAAQwLYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-02T13:20:50.626Z",
               "EditorCaption": ""

@@ -166,7 +166,6 @@ public class ShootingManager : MonoBehaviour
 
         Physics.OverlapSphereNonAlloc(transform.position, blowWaveRadius, applesCollider, appleMask);
 
-        
         for (int i = 0; i < applesCollider.Length; i++)
         {
             if(applesCollider[i] != null)
