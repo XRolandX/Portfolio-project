@@ -13,7 +13,7 @@ public class CharacterMovement : MonoBehaviour
     
     private readonly float gravity = -9.81f * 4.0f;
     private readonly float groundDistance = 0.1f;
-    [SerializeField] private float jumpHeight = 1f;
+    [SerializeField] private float jumpHeight = 3f;
     [SerializeField] private float speed = 12f;
     [SerializeField] bool isGrounded;
 
@@ -37,6 +37,7 @@ public class CharacterMovement : MonoBehaviour
         MoveWithJoystick();
 #endif
     }
+
     public void Gravity()
     {
         isGrounded = Physics.CheckSphere(groundCheker.position, groundDistance, groundMask);
@@ -60,7 +61,6 @@ public class CharacterMovement : MonoBehaviour
             gravityVelocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
         }
     }
-
     private void MoveWithKeyboard()
     {
         _ = new Vector3(moveInput.x, 0f, moveInput.y);

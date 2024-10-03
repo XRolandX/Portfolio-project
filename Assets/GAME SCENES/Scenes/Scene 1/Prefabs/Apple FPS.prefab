@@ -168,7 +168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5791527614718822522}
   - component: {fileID: 6892644422534041105}
-  - component: {fileID: 5791527614052912573}
+  - component: {fileID: 8664549412315525572}
   m_Layer: 0
   m_Name: Apple FPS
   m_TagString: Player
@@ -212,7 +212,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5791527614052912573
+--- !u!114 &8664549412315525572
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -221,14 +221,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 5791527614052912574}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 213f829c959d66f4085630052884bf00, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b29e66dbde619140a776409794dcbde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundChecker: {fileID: 0}
+  characterController: {fileID: 6892644422534041105}
+  groundCheker: {fileID: 5791527615347953468}
   moveJoystick: {fileID: 0}
   groundMask:
     serializedVersion: 2
-    m_Bits: 200
+    m_Bits: 0
+  jumpHeight: 1
+  speed: 12
   isGrounded: 0
 --- !u!1 &5791527614276296122
 GameObject:

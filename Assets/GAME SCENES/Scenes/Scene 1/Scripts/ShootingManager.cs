@@ -1,43 +1,46 @@
 using System.Collections;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class ShootingManager : MonoBehaviour
 {
-    [SerializeField] AudioSource shoot; // shoot sound
     [SerializeField] GameObject bulletHolePrefab;
     [SerializeField] TextMeshProUGUI scopeText;
+    [SerializeField] AudioSource shoot;
+    
     private PlayerControls playerControls;
 
     #region C A M E R A    S H A K E    V A R I A B L E S
     [SerializeField] Transform mainCameraTransform;
 
+    #region Shake frequency variables
     [SerializeField] float shakeFrequency;
-    public float ShakeFrequency{ get { return shakeFrequency; } set { shakeFrequency = value; }} // if i need access to shakeFrequency from other classes
+    public float ShakeFrequency { get { return shakeFrequency; } set { shakeFrequency = value; } }
 
     readonly float unScopedShakeFrequency = 0.01f;
-    readonly float scopedShakeFrequency = 0.2f;
-    readonly float scoped2xShakeFrequency = 0.5f;
+    readonly float scopedShakeFrequency = 0.15f;
+    readonly float scoped2xShakeFrequency = 0.3f;
+    #endregion
 
+    #region Shake time variables
     [SerializeField] float shakeTime;
     readonly float unscopedShakeTime = .01f;
-    readonly float scopedShakeTime = .005f;
-    readonly float scoped2xShakeTime = .001f;
+    readonly float scopedShakeTime = .025f;
+    readonly float scoped2xShakeTime = .05f;
+    #endregion
 
     [SerializeField] bool thisIsAShot = false;
     #endregion
 
-    #region A P P L E    F A L L    V A R I A B L E S
+    #region A P P L E S   F A L L I N G   V A R I A B L E S
     [SerializeField] float blowWaveRadius = default;
-    [SerializeField] LayerMask apple;
-    Collider[] apples;
+    [SerializeField] LayerMask appleMask;
+    Collider[] applesCollider;
     #endregion
 
     #region S C O P E    V A R I A B L E S
     private MouseLook mouseLookScript;
-    [SerializeField] Animator mainCamAnim; // scope animation
+    [SerializeField] Animator mainCamAnim;
     [SerializeField] GameObject weaponCamera;
     [SerializeField] GameObject scopeOverlay;
     [SerializeField] Camera mainCamera;
@@ -49,46 +52,16 @@ public class ShootingManager : MonoBehaviour
     #endregion
 
 
-    #region P C   C O N T R O L
-    private void PCControl()
+    #region S H O O T   A N D   S C O P E
+    private void ShootAndScopeInit()
     {
-#if UNITY_STANDALONE_WIN
-        if (playerControls.Player.MouseClick.triggered)
-        {
-            Shoot();
-        }
-        else if (playerControls.Player.RightMouseClick.triggered)
-        {
-            Scope();
-        }
-        else if (playerControls.Player.RestartScene.triggered)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-        else if (playerControls.Player.ToMainMenu.triggered)
-        {
-            SceneManager.LoadScene(0);
-        }
-        #if UNITY_EDITOR
-        else if (playerControls.Player.StopPlayMode.triggered)
-        {
-            
-            UnityEditor.EditorApplication.isPlaying = false;
-        }
-        else if (playerControls.Player.CursorUnlock.triggered)
-        {
-            Cursor.lockState = CursorLockMode.None;
-        }
-        #endif
-#endif
+        playerControls.Player.MouseClick.performed += ctx => Shoot();
+        playerControls.Player.RightMouseClick.performed += ctx => Scope();
     }
-    #endregion
-
-    #region U I   B U T T O N S   C O N T R O L   (A N D R O I D)
     public void Shoot()
     {
         thisIsAShot = true;
-        StartCoroutine(ShakeTimeControl()); // camera shake time control
+        StartCoroutine(ShakeTimeControl());
 
         shoot.Play();
         BlowWave();
@@ -109,7 +82,7 @@ public class ShootingManager : MonoBehaviour
             case 2:
                 mainCamera.fieldOfView = scoped2xFieldOfView;
                 mouseLookScript.MouseSensitivity = mouseLookScript.scope2xSensitivity;
-                ShakeFrequency = scoped2xShakeFrequency; // shakeFrequency property
+                ShakeFrequency = scoped2xShakeFrequency;
                 shakeTime = scoped2xShakeTime;
                 scopeText.text = "4x";
                 break;
@@ -121,6 +94,8 @@ public class ShootingManager : MonoBehaviour
         }
 
     }
+
+
     #endregion
 
     #region S C O P E D - U N S C O P E D
@@ -130,9 +105,9 @@ public class ShootingManager : MonoBehaviour
         scopeOverlay.SetActive(true);
         weaponCamera.SetActive(false);
         shakeTime = scopedShakeTime;
-        ShakeFrequency = scopedShakeFrequency; // shakeFrequency property
+        ShakeFrequency = scopedShakeFrequency;
         mainCamera.fieldOfView = scopedFieldOfView;
-        mouseLookScript.MouseSensitivity = mouseLookScript.scopeSensitivity; // mouse look script variables from main camera game object
+        mouseLookScript.MouseSensitivity = mouseLookScript.scopeSensitivity;
         mouseLookScript.lookJoystick.DeadZone = 0f;
     }
     void UnScoped()
@@ -140,9 +115,9 @@ public class ShootingManager : MonoBehaviour
         scopeOverlay.SetActive(false);
         weaponCamera.SetActive(true);
         shakeTime = unscopedShakeTime;
-        ShakeFrequency = unScopedShakeFrequency; // shakeFrequency property
+        ShakeFrequency = unScopedShakeFrequency;
         mainCamera.fieldOfView = unscopedFieldOfView;
-        mouseLookScript.MouseSensitivity = mouseLookScript.unscopeSensitivity; // mouse look script variables from main camera game object
+        mouseLookScript.MouseSensitivity = mouseLookScript.unscopeSensitivity;
         mouseLookScript.lookJoystick.DeadZone = 0.05f;
         mainCamAnim.SetBool("isScoped", false);
     }
@@ -160,22 +135,21 @@ public class ShootingManager : MonoBehaviour
         {
             mainCameraTransform.localPosition += Random.insideUnitSphere * shakeFrequency;
         }
-        
+
     }
     #endregion
 
     #region B U L L E T    H O L E S
-    private void RaycastShot()     //      ------->     in Shoot() in UI BUTTONS CONTROL
+    private void RaycastShot()
     {
-        Vector3 screenCenter = new(Screen.width / 2, Screen.height / 2, 0); 
+        Vector3 screenCenter = new(Screen.width / 2, Screen.height / 2, 0);
 
         if (Physics.Raycast(Camera.main.ScreenPointToRay(screenCenter), out RaycastHit hit, 500f))
         {
             SpawnBulletHole(hit.point, hit.normal);
         }
     }
-
-    private void SpawnBulletHole(Vector3 hitPoint, Vector3 hitNormal)     //         ---------> in RaycastShot() in BULLET HOLES
+    private void SpawnBulletHole(Vector3 hitPoint, Vector3 hitNormal)
     {
         Quaternion randomRotation = Quaternion.LookRotation(hitNormal) * Quaternion.Euler(0, 0, Random.Range(0f, 360f));
 
@@ -190,33 +164,41 @@ public class ShootingManager : MonoBehaviour
     }
     #endregion
 
-    #region A P P L E   F A L L I N G
-    private void BlowWave()  // -----> in Shoot() in UI BUTTONS CONTROL
+    #region A P P L E S   F A L L I N G   T R I G G E R I N G
+    private void BlowWave()
     {
-#pragma warning disable UNT0028 
-        apples = Physics.OverlapSphere(transform.position, blowWaveRadius, apple);
-#pragma warning restore UNT0028 
+        applesCollider = new Collider[10];
 
-        foreach (Collider apple in apples)
+        Physics.OverlapSphereNonAlloc(transform.position, blowWaveRadius, applesCollider, appleMask);
+
+        StartCoroutine(ActivateGravity(applesCollider));
+    }
+    private IEnumerator ActivateGravity(Collider[] applesCollider)
+    {
+        for (int i = 0; i < applesCollider.Length; i++)
         {
-            apple.GetComponent<Rigidbody>().useGravity = true;
+            applesCollider[i].GetComponent<Rigidbody>().isKinematic = false;
+            applesCollider[i].GetComponent<Rigidbody>().useGravity = true;
         }
+        yield return null;
     }
     #endregion
 
     void Awake()
     {
-        shakeTime = unscopedShakeTime; 
-        shakeFrequency = unScopedShakeFrequency;
-        shoot = GetComponent<AudioSource>();
         mouseLookScript = mainCamera.gameObject.GetComponent<MouseLook>();
-
         playerControls = new PlayerControls();
+        shoot = GetComponent<AudioSource>();
+        shakeFrequency = unScopedShakeFrequency;
+        shakeTime = unscopedShakeTime;
+
+#if UNITY_STANDALONE_WIN
+        ShootAndScopeInit();
+#endif
     }
 
     void LateUpdate()
     {
-        PCControl();
         CameraShake();
     }
 

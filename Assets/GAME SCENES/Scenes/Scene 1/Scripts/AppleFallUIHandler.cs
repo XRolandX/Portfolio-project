@@ -3,17 +3,31 @@ using UnityEngine.SceneManagement;
 public class AppleFallUIHandler : MonoBehaviour
 {
     [SerializeField] GameObject androidOverlay;
+    private PlayerControls playerControls;
 
     private void Awake()
     {
-#if PLATFORM_STANDALONE_WIN
+        playerControls = new PlayerControls();
+        Cursor.lockState = CursorLockMode.Locked;
+
+#if UNITY_EDITOR
+        playerControls.Player.CursorUnlock.performed += ctx => Cursor.lockState = CursorLockMode.None;
+#endif
+
+#if UNITY_STANDALONE_WIN
+        playerControls.Player.RestartScene.performed += ctx => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        playerControls.Player.ToMainMenu.performed += ctx => SceneManager.LoadScene(0);
+        playerControls.Player.StopPlayMode.performed += ctx => UnityEditor.EditorApplication.isPlaying = false;
+
         androidOverlay.SetActive(false);
 #endif
+
 #if UNITY_ANDROID
         androidOverlay.SetActive(true);
 #endif
     }
 
+    #region A N D R O I D   B U T T O N S   M E T H O D S
     public void RestartScene()
     {
         SceneManager.LoadScene(1);
@@ -25,6 +39,7 @@ public class AppleFallUIHandler : MonoBehaviour
 
     private void LateUpdate()
     {
+#if UNITY_ANDROID
         if (Input.deviceOrientation == DeviceOrientation.LandscapeLeft)
         {
             Screen.orientation = ScreenOrientation.LandscapeLeft;
@@ -34,6 +49,17 @@ public class AppleFallUIHandler : MonoBehaviour
             Screen.orientation = ScreenOrientation.LandscapeRight;
         }
         else Screen.orientation = ScreenOrientation.LandscapeRight;
+#endif
+    }
+    #endregion
+
+    private void OnEnable()
+    {
+        playerControls.Player.Enable();
+    }
+    private void OnDisable()
+    {
+        playerControls.Player.Disable();
     }
 }
 
