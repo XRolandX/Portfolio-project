@@ -17,13 +17,6 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private float speed = 12f;
     [SerializeField] bool isGrounded;
 
-    private void Awake()
-    {
-        playerControls = new PlayerControls();
-        playerControls.Player.Move.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
-        playerControls.Player.Move.canceled += ctx => moveInput = Vector2.zero;
-    }
-
     void Update()
     {
         Gravity();
@@ -93,7 +86,10 @@ public class CharacterMovement : MonoBehaviour
 
     private void OnEnable()
     {
+        playerControls = new PlayerControls();
         playerControls.Player.Enable();
+        playerControls.Player.Move.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
+        playerControls.Player.Move.canceled += ctx => moveInput = Vector2.zero;
     }
     private void OnDisable()
     {

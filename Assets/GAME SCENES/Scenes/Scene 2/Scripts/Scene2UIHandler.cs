@@ -15,39 +15,19 @@ public class Scene2UIHandler : MonoBehaviour
         androidOverlay.SetActive(true);
 #endif
 
-
         Cursor.lockState = CursorLockMode.Locked;
-        playerControls = new PlayerControls();
-        #if PLATFORM_STANDALONE_WIN
-        playerControls.Player.RestartScene.performed += ctx => SceneReloading();
-        playerControls.Player.ToMainMenu.performed += ctx => MainSceneLoading();
-        playerControls.Player.StopPlayMode.performed += ctx => StopPlayMode();
-        playerControls.Player.CursorUnlock.performed += ctx => CursorUnlocking();
-        #endif
     }
 
-    #if PLATFORM_STANDALONE_WIN
-    public void SceneReloading()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-    public void MainSceneLoading()
-    {
-        SceneManager.LoadScene(0);
-    }
-
-    void StopPlayMode()
-    {
-        UnityEditor.EditorApplication.isPlaying = false;
-    }
-    void CursorUnlocking()
-    {
-        Cursor.lockState = CursorLockMode.None;
-    }
-    #endif
     private void OnEnable()
     {
+        playerControls = new PlayerControls();
         playerControls.Player.Enable();
+        playerControls.Player.RestartScene.performed += ctx => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        playerControls.Player.ToMainMenu.performed += ctx => SceneManager.LoadScene(0);
+#if UNITY_EDITOR
+        playerControls.Player.StopPlayMode.performed += ctx => UnityEditor.EditorApplication.isPlaying = false;
+#endif
+        playerControls.Player.CursorUnlock.performed += ctx => Cursor.lockState = CursorLockMode.None;
     }
     private void OnDisable()
     {

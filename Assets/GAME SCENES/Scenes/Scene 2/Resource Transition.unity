@@ -2014,7 +2014,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 45
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -2289,10 +2289,8 @@ MonoBehaviour:
 
     Tab to Main Menu
 
-    Esc to exit play mode
-
-    Q
-    to unlock cursor'
+    To Exit, Main Menu -
+    Exit'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

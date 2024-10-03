@@ -53,11 +53,6 @@ public class ShootingManager : MonoBehaviour
 
 
     #region S H O O T   A N D   S C O P E
-    private void ShootAndScopeInit()
-    {
-        playerControls.Player.MouseClick.performed += ctx => Shoot();
-        playerControls.Player.RightMouseClick.performed += ctx => Scope();
-    }
     public void Shoot()
     {
         thisIsAShot = true;
@@ -171,30 +166,25 @@ public class ShootingManager : MonoBehaviour
 
         Physics.OverlapSphereNonAlloc(transform.position, blowWaveRadius, applesCollider, appleMask);
 
-        StartCoroutine(ActivateGravity(applesCollider));
-    }
-    private IEnumerator ActivateGravity(Collider[] applesCollider)
-    {
+        
         for (int i = 0; i < applesCollider.Length; i++)
         {
-            applesCollider[i].GetComponent<Rigidbody>().isKinematic = false;
-            applesCollider[i].GetComponent<Rigidbody>().useGravity = true;
+            if(applesCollider[i] != null)
+            {
+                applesCollider[i].GetComponent<Rigidbody>().isKinematic = false;
+                applesCollider[i].GetComponent<Rigidbody>().useGravity = true;
+                applesCollider[i].gameObject.layer = 3;
+            }
         }
-        yield return null;
     }
     #endregion
 
     void Awake()
     {
         mouseLookScript = mainCamera.gameObject.GetComponent<MouseLook>();
-        playerControls = new PlayerControls();
         shoot = GetComponent<AudioSource>();
         shakeFrequency = unScopedShakeFrequency;
         shakeTime = unscopedShakeTime;
-
-#if UNITY_STANDALONE_WIN
-        ShootAndScopeInit();
-#endif
     }
 
     void LateUpdate()
@@ -204,7 +194,10 @@ public class ShootingManager : MonoBehaviour
 
     private void OnEnable()
     {
+        playerControls = new PlayerControls();
         playerControls.Player.Enable();
+        playerControls.Player.MouseClick.performed += ctx => Shoot();
+        playerControls.Player.RightMouseClick.performed += ctx => Scope();
     }
     private void OnDisable()
     {

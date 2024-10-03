@@ -4,7 +4,7 @@ public class SoundHandler : MonoBehaviour
 {
     public AudioClip sceneAmbientSound;
 
-    void Awake()
+    private void Awake()
     {
         if (TryGetComponent<AudioSource>(out var audioSource))
         {

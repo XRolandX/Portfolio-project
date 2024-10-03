@@ -12,13 +12,13 @@ public class AppleFallUIHandler : MonoBehaviour
 
 #if UNITY_EDITOR
         playerControls.Player.CursorUnlock.performed += ctx => Cursor.lockState = CursorLockMode.None;
+        playerControls.Player.StopPlayMode.performed += ctx => UnityEditor.EditorApplication.isPlaying = false;
 #endif
 
 #if UNITY_STANDALONE_WIN
         playerControls.Player.RestartScene.performed += ctx => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         playerControls.Player.ToMainMenu.performed += ctx => SceneManager.LoadScene(0);
-        playerControls.Player.StopPlayMode.performed += ctx => UnityEditor.EditorApplication.isPlaying = false;
-
+        
         androidOverlay.SetActive(false);
 #endif
 
