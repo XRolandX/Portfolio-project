@@ -808,7 +808,9 @@ PlayerSettings:
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    Android: DISABLE_BURST_COMPILATION
+    Standalone: DISABLE_BURST_COMPILATION
   additionalCompilerArguments: {}
   platformArchitecture:
     Android: 1
