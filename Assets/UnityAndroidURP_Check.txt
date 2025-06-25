@@ -1,0 +1,1234 @@
+=== UNITY URP ANDROID VALIDATOR ===
+Date: 6/24/2025 4:34:07 PM
+------------------------------------
+
+--- Render Pipeline Asset ---
+✅ URP is correctly assigned.
+
+--- Graphics Settings ---
+⚠️ Graphics Tier Tier1 — not accessible in Unity 2021.3.10f1 directly.
+⚠️ Graphics Tier Tier2 — not accessible in Unity 2021.3.10f1 directly.
+⚠️ Graphics Tier Tier3 — not accessible in Unity 2021.3.10f1 directly.
+⚠️ Graphics Jobs disabled.
+✅ Multithreaded Rendering enabled.
+
+--- Scenes in Build Settings ---
+✅ Assets/GAME SCENES/Scenes/Main Menu Scene 0/MainMenu.unity
+✅ Assets/GAME SCENES/Scenes/Scene 1/Falling Apple.unity
+✅ Assets/GAME SCENES/Scenes/Scene 2/Resource Transition.unity
+✅ Assets/GAME SCENES/Scenes/Scene 3/DOTS.unity
+
+--- Shader Check ---
+✅ URP Lit shader is present.
+
+--- Texture Import Settings ---
+⚠️ Texture Assets/Asset Store/Buttons/buttons.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/buttons.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/buttons_Back.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/1button_green_middle.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/2button_blue_middle.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/3button_green_middle.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/4button_green_middle.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/5button_blue_middle.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/6button_green_middle.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/7button_green_middle.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/8Button_Midl_Red.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/9Button_Midl_Green.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/10Button_Midl_Yellow.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/11Button_Midl_Blue.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/12Button_Long_Blue.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/13Button_Long_Green.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/14Button_Long_Red.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/15Button_Long_Yellow.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/16bttn-little.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/17bttn-little.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/18bttn-little.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/19bttn-midl.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/20bttn-midl.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/21bttn-midl.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/22Button_Midl_Green.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/23Button_Midl_Red.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/24Button_Midl_Blue.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/25Button_Long_Green.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/26Button_Long_Blue.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/27Button_Long_Red.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/28button_green.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/29button_blue.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Buttons/PNG/30button_red.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_0_empty_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_1_anvil_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_1_arrow_empty_up_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_1_bottle_empty_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_1_column_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_1_cursor_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_1_cursor_al.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_1_eye_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_1_fire_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_1_head_samurai_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_1_letter_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_1_magnifier_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_1_magnifier_al_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_1_moon_full_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_1_scroll_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_1_shield_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_1_sword90_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_2_+_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_2_arrow_empty_down_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_2_bottle_half_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_2_coin_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_2_column_cross_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_2_cursor_+_al_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_2_eye_light_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_2_head_gladiator_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_2_letter_open_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_2_lighthing_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_2_magnifier_+_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_2_magnifier_+_al_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_2_moon_empty_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_2_scroll_open_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_2_shield_eye_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_2_sword45_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_3_-_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_3_arrow_empty_left_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_3_bottle_full_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_3_coins_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_3_column_double_cross_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_3_cursor_-_al_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_3_eye_bored_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_3_head_wiking_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_3_letter_eye_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_3_magic_fire_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_3_magnifier_-_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_3_magnifier_-_al_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_3_scroll_open_cut_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_3_shield_magic_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_3_sun_full_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_3_sword_cut_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_4_=_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_4_arrow_empty_right_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_4_bottle_small_empty_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_4_coin_bag1_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_4_column_sound1_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_4_cursor_=_al_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_4_eye_bleed_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_4_frost_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_4_head_knignt_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_4_letter_+_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_4_magnifier_eye_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_4_magnifier_eye_al_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_4_scroll_+_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_4_shield_bezel_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_4_sun_half_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_4_sword_saw_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_5_arrow_up_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_5_bottle_small_half_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_5_coin_bag2_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_5_column_sound2_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_5_cursor_x_al_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_5_drop_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_5_eye_cross_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_5_head_rogure_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_5_letter_-_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_5_magnifier_eye_crossed_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_5_magnifier_eye_crossed_al_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_5_scroll_-_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_5_sun_empty_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_5_sword_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_5_x_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_6_arrow_down_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_6_barrel_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_6_bottle_small_full_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_6_cloud_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_6_continue_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_6_cursor_devide_al_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_6_devide_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_6_head_king_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_6_head_scull_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_6_mace_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_6_scroll_eye_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_6_stone_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_7_arrow_left_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_7_book_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_7_bottle_heal_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_7_cloud&sun_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_7_continue_mirror_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_7_cursor_question_al_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_7_head_scull_enemy_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_7_plant1_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_7_question_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_7_waraxe_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_8_arrow_right_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_8_bottle_magic_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_8_cloud_up_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_8_cursor_heart_al_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_8_heart_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_8_pause_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_8_plant2_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_8_silhouette_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_8_staff_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_8_tab_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_9_arrow_rounded_up_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_9_bottle_eye_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_9_cloud_down_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_9_cursor_eye_al_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_9_eye_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_9_flag_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_9_kunai_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_9_next_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_9_plant3_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_9_silhouette_+_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_10_!_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_10_arrow_rounded_down_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_10_cursor_!_al_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_10_flag_destroyed_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_10_hammer_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_10_hand_fire_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_10_previoust_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_10_rain_cloud_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_10_silhouette_-_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_11_arrow_rounded_left_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_11_cursor_star_al_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_11_home_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_11_no_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_11_pickaxe_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_11_silhouette_heart_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_11_star_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_12_arrow_rounded_right_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_12_arrow_up_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_12_cursor_arrow_up_al_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_12_ok_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_12_spit_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_12_tent_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_13_arrow_down_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_13_axe_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_13_campfire_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_13_cursor_arrow_down_al_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_13_points_ver_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_14_key_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_14_points_hor_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_14_wrench_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_15_beer_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_15_list_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_16_crown_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_16_message_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_17_medal_star_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_17_message_points_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_18_medal_first_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_18_next2_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_19_medal_second_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_19_previoust2_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_20_medal_third_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_20_stop_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_21_doorlock_close_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_22_doorlock_open_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_23_gear_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_24_diamond_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_25_compas_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_26_clock_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_27_grave_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/T_28_bread_.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/Update/bonus_01.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/Update/bonus_02.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/Update/bonus_03.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/Update/bonus_04.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/Update/bonus_05.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/Update/bonus_06.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/Update/bonus_07.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/Update/Bonus_Confused.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/Update/Bonus_coughing.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/Update/Bonus_Handshake.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/Update/Bonus_Laughing.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/Update/Bonus_PokerFace.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/Update/Bonus_Sad.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/Update/Bonus_Sneezing.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Clean Vector Icons/Update/Bonus_Yell.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Environment/Art/Textures/Grid_01_BaseMap.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Environment/Art/Textures/Grid_01_Emissive.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Environment/Art/Textures/Grid_01_Normal.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Environment/Art/Textures/Grid_02_BaseMap.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Gridbox Prototype Materials/Template/prototype_texture_512x512.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Gridbox Prototype Materials/Textures/prototype_512x512_blue1.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Gridbox Prototype Materials/Textures/prototype_512x512_blue2.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Gridbox Prototype Materials/Textures/prototype_512x512_blue3.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Gridbox Prototype Materials/Textures/prototype_512x512_brown.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Gridbox Prototype Materials/Textures/prototype_512x512_cyan.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Gridbox Prototype Materials/Textures/prototype_512x512_green1.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Gridbox Prototype Materials/Textures/prototype_512x512_green2.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Gridbox Prototype Materials/Textures/prototype_512x512_green3.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Gridbox Prototype Materials/Textures/prototype_512x512_grey1.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Gridbox Prototype Materials/Textures/prototype_512x512_grey2.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Gridbox Prototype Materials/Textures/prototype_512x512_grey3.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Gridbox Prototype Materials/Textures/prototype_512x512_grey4.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Gridbox Prototype Materials/Textures/prototype_512x512_magenta.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Gridbox Prototype Materials/Textures/prototype_512x512_normal.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Gridbox Prototype Materials/Textures/prototype_512x512_olive.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Gridbox Prototype Materials/Textures/prototype_512x512_orange.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Gridbox Prototype Materials/Textures/prototype_512x512_pink.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Gridbox Prototype Materials/Textures/prototype_512x512_purple.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Gridbox Prototype Materials/Textures/prototype_512x512_red.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Gridbox Prototype Materials/Textures/prototype_512x512_white.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Gridbox Prototype Materials/Textures/prototype_512x512_yellow.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Outline.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Outline_Arrows.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Plain.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Plain_Arrows.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Ridged.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Ridged_Arrows.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Joystick Pack/Sprites/Handles/Handle_Outline.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Joystick Pack/Sprites/Handles/Handle_Outline_Arrows.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Joystick Pack/Sprites/Handles/Handle_Plain.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Joystick Pack/Sprites/Handles/Handle_Plain_Arrows.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Joystick Pack/Sprites/Handles/Handle_Ridged.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Joystick Pack/Sprites/Handles/Handle_Ridged_Arrows.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Outline.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Outline_Arrows.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Plain.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Plain_Arrows.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Ridged.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Ridged_Arrows.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Outline.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Outline_Arrows.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Plain.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Plain_Arrows.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Ridged.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Ridged_Arrows.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Lighting Data/ReflectionProbe-0.exr is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Targets vol pack/Textures/Target vol 1/AO_map.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Targets vol pack/Textures/Target vol 1/lp_exp__deer_AlbedoTransparency.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Targets vol pack/Textures/Target vol 1/lp_exp_mater_MetallicSmoothness.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Targets vol pack/Textures/Target vol 1/lp_exp_mater_Normal.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Targets vol pack/Textures/Target vol 2/AO_map.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Targets vol pack/Textures/Target vol 2/lp_exp__bear_AlbedoTransparency.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Targets vol pack/Textures/Target vol 2/lp_exp_mater_MetallicSmoothness.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Targets vol pack/Textures/Target vol 2/lp_exp_mater_Normal.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Targets vol pack/Textures/Target vol 3/AO_map.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Targets vol pack/Textures/Target vol 3/lp_exp__rabbit_AlbedoTransparency.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Targets vol pack/Textures/Target vol 3/lp_exp_mater_MetallicSmoothness.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Targets vol pack/Textures/Target vol 3/lp_exp_mater_Normal.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Targets vol pack/Textures/Target vol 4/AO_map.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Targets vol pack/Textures/Target vol 4/lp_exp__wolf_AlbedoTransparency.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Targets vol pack/Textures/Target vol 4/lp_exp_mater_MetallicSmoothness.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/Asset Store/Targets vol pack/Textures/Target vol 4/lp_exp_mater_Normal.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/GAME SCENES/Scenes/Scene 1/Decales/bullet hole.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/GAME SCENES/Scenes/Scene 1/Objects/Apple/Textures/Apple_Albedo.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/GAME SCENES/Scenes/Scene 1/Objects/Apple/Textures/Apple_ao.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/GAME SCENES/Scenes/Scene 1/Objects/Apple/Textures/Apple_Normal.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/GAME SCENES/Scenes/Scene 1/Objects/M40A3 Rifle/Textures/M40A3_LOD1_01 - Default_AlbedoTransparency.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/GAME SCENES/Scenes/Scene 1/Objects/M40A3 Rifle/Textures/M40A3_LOD1_01 - Default_MetallicSmoothness.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/GAME SCENES/Scenes/Scene 1/Objects/M40A3 Rifle/Textures/M40A3_LOD1_01 - Default_Normal.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/GAME SCENES/Scenes/Scene 1/Objects/Scope/scope.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Assets/TextMesh Pro/Sprites/EmojiOne.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.cinemachine/Editor/EditorResources/Cinemachine_header.tif is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.cinemachine/Editor/EditorResources/cm_logo_sm.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.cinemachine/Editor/EditorResources/PostProcessLayer.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.cinemachine/Gizmos/cm_logo.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/Advanced_Pressed_mini.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/Advanced_UnPressed_mini.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/DownSnatch.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/DownSnatchFocused.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/HorizontalGradient.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/IESProfile.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightAnchor_Icon.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/BlueSky.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/BlueSky@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/BrightSky.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/BrightSky@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/Candlelight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/Candlelight@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/ClearSky.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/ClearSky@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/CloudySky.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/CloudySky@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_BlueSky.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_BlueSky@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_BrightSky.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_BrightSky@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_Candlelight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_Candlelight@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_ClearSky.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_ClearSky@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_CloudySky.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_CloudySky@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_DecorativeLight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_DecorativeLight@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_DirectSunlight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_DirectSunlight@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_ExteriorLight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_ExteriorLight@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_Fluorescent.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_Fluorescent@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_IntenseAreaLight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_IntenseAreaLight@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_InteriorLight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_InteriorLight@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_MediumAreaLight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_MediumAreaLight@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_MoonlessNight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_MoonlessNight@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_Moonlight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_Moonlight@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_Overcast.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_Overcast@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_Shade.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_Shade@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_SoftAreaLight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_SoftAreaLight@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_SunriseSunset.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_SunriseSunset@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_VeryBrightSun.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/d_VeryBrightSun@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/DecorativeLight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/DecorativeLight@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/DirectSunlight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/DirectSunlight@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/ExteriorLight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/ExteriorLight@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/Fluorescent.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/Fluorescent@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/IntenseAreaLight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/IntenseAreaLight@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/InteriorLight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/InteriorLight@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/MediumAreaLight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/MediumAreaLight@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/MoonlessNight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/MoonlessNight@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/Moonlight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/Moonlight@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/Overcast.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/Overcast@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/Shade.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/Shade@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/SoftAreaLight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/SoftAreaLight@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/SunriseSunset.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/SunriseSunset@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/VeryBrightSun.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/LightUnitIcons/VeryBrightSun@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/PresetBounce_Left.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/PresetBounce_Right.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/PresetFill_Left.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/PresetFill_Right.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/PresetHair.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/PresetKick_Left.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/PresetKick_Right.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/PresetRim_Left.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/PresetRim_Right.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/UpSnatch.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/UpSnatchFocused.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/Add.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/Add@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/Camera1.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/Camera1@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/Camera2.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/Camera2@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/CenterLight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/CenterLight@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_Add.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_Add@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_Camera1.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_Camera1@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_Camera2.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_Camera2@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_CenterLight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_CenterLight@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_Duplicate.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_Duplicate@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_Environment.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_Environment@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_Layout1.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_Layout1@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_Layout2.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_Layout2@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_LayoutCustom.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_LayoutCustom@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_LayoutHorizontal.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_LayoutHorizontal@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_LayoutVertical.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_LayoutVertical@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_LeftArrow.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_LeftArrow@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_Link.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_Link@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_LookDev.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_LookDev@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_Remove.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_Remove@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_renderdoc.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_RenderDoc@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_RightArrow.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_RightArrow@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_Rotation.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_Rotation@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_SunPosition.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/d_SunPosition@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/Duplicate.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/Duplicate@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/Environment.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/Environment@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/Layout1.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/Layout1@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/Layout2.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/Layout2@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/LayoutCustom.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/LayoutCustom@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/LayoutHorizontal.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/LayoutHorizontal@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/LayoutVertical.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/LayoutVertical@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/LeftArrow.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/LeftArrow@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/Link.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/Link@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/LookDev.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/LookDev@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/Remove.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/Remove@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/renderdoc.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/RenderDoc@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/RightArrow.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/RightArrow@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/Rotation.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/Rotation@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/SunPosition.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/SunPosition@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/PostProcessing/LensFlareResource/CircleFlareThumbnail.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/PostProcessing/LensFlareResource/CircleFlareThumbnail@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/PostProcessing/LensFlareResource/Flare128.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/PostProcessing/LensFlareResource/PolygonFlareThumbnail.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/PostProcessing/LensFlareResource/PolygonFlareThumbnail@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Volume/Icons/Volume.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Editor/Volume/Icons/VolumeProfileAsset.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Textures/UIArrowDown.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Textures/UICheckMark.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Textures/UIElement8px.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Textures/UIFoldoutClosed.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Textures/UIFoldoutOpened.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Textures/White1px.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/ActiveBuildConfiguration/search_icon.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/ActiveBuildConfiguration/search_icon@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Archetype/Archetype.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Archetype/Archetype@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/BeginCommandBuffer/BeginCommandBuffer-32.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/BeginCommandBuffer/BeginCommandBuffer-32@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/BeginCommandBuffer/BeginCommandBuffer.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/BeginCommandBuffer/BeginCommandBuffer@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Component/Component.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Component/Component@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Components/Buffer Component.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Components/Buffer Component@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Components/Chunk Component.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Components/Chunk Component@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Components/Component-32.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Components/Component-32@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Components/Component.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Components/Component@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Components/Managed Component.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Components/Managed Component@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Components/Shared Component.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Components/Shared Component@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Components/Tag Component.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Components/Tag Component@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Convert/Convert.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Convert/Convert@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/ConvertActive/ConvertActive.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/ConvertActive/ConvertActive@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/EndCommandBuffer/EndCommandBuffer-32.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/EndCommandBuffer/EndCommandBuffer-32@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/EndCommandBuffer/EndCommandBuffer.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/EndCommandBuffer/EndCommandBuffer@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Entity/Entity.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Entity/Entity@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Entity/EntityPrefab.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Entity/EntityPrefab@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/EntityGroup/EntityGroup.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/EntityGroup/EntityGroup@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Go To/Go to.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Go To/Go to@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Go To Entities/Go to Entities.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Go To Entities/Go to Entities@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Go To Systems/Go to Systems.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Go To Systems/Go to Systems@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Group/Group-32.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Group/Group-32@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Group/Group.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Group/Group@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Query/Query-32.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Query/Query-32@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Query/Query.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Query/Query@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Remove/Remove.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Remove/Remove@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/RoundedCorners/RoundedCorners.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/RoundedCorners/RoundedCorners@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/RuntimeComponent/RuntimeComponent.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/RuntimeComponent/RuntimeComponent@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Search/Search.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Search/Search@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Segment/Segment.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Segment/Segment@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Settings/Settings.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Settings/Settings@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Spinner/Spinner00.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Spinner/Spinner01.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Spinner/Spinner02.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Spinner/Spinner03.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Spinner/Spinner04.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Spinner/Spinner05.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Spinner/Spinner06.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Spinner/Spinner07.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Spinner/Spinner08.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Spinner/Spinner09.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Spinner/Spinner10.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/Spinner/Spinner11.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/System/System-32.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/System/System-32@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/System/System.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/System/System@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/SystemDisabled/SystemDisabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/SystemDisabled/SystemDisabled@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/SystemEnabled/SystemEnabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/SystemEnabled/SystemEnabled@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/SystemMixed/SystemMixed.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/SystemMixed/SystemMixed@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/UnmanagedSystem/UnmanagedSystem.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/UnmanagedSystem/UnmanagedSystem@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/WindowInstance/WindowInstance.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/dark/WindowInstance/WindowInstance@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/ActiveBuildConfiguration/search_icon.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/ActiveBuildConfiguration/search_icon@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Archetype/Archetype.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Archetype/Archetype@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/BeginCommandBuffer/BeginCommandBuffer-32.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/BeginCommandBuffer/BeginCommandBuffer-32@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/BeginCommandBuffer/BeginCommandBuffer.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/BeginCommandBuffer/BeginCommandBuffer@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Component/Component.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Component/Component@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Components/Buffer Component.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Components/Buffer Component@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Components/Chunk Component.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Components/Chunk Component@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Components/Component-32.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Components/Component-32@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Components/Component.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Components/Component@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Components/Managed Component.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Components/Managed Component@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Components/Shared Component.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Components/Shared Component@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Components/Tag Component.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Components/Tag Component@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Convert/Convert.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Convert/Convert@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/ConvertActive/ConvertActive.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/ConvertActive/ConvertActive@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/EndCommandBuffer/EndCommandBuffer-32.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/EndCommandBuffer/EndCommandBuffer-32@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/EndCommandBuffer/EndCommandBuffer.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/EndCommandBuffer/EndCommandBuffer@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Entity/Entity.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Entity/Entity@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Entity/EntityPrefab.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Entity/EntityPrefab@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/EntityGroup/EntityGroup.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/EntityGroup/EntityGroup@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Go To/Go to.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Go To/Go to@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Go To Entities/Go to Entities.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Go To Entities/Go to Entities@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Go To Systems/Go to Systems.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Go To Systems/Go to Systems@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Group/Group-32.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Group/Group-32@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Group/Group.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Group/Group@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Query/Query-32.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Query/Query-32@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Query/Query.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Query/Query@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Remove/Remove.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Remove/Remove@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/RoundedCorners/RoundedCorners.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/RoundedCorners/RoundedCorners@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/RuntimeComponent/RuntimeComponent.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/RuntimeComponent/RuntimeComponent@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Search/Search.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Search/Search@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Segment/Segment.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Segment/Segment@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Settings/Settings.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Settings/Settings@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Spinner/Spinner00.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Spinner/Spinner01.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Spinner/Spinner02.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Spinner/Spinner03.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Spinner/Spinner04.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Spinner/Spinner05.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Spinner/Spinner06.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Spinner/Spinner07.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Spinner/Spinner08.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Spinner/Spinner09.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Spinner/Spinner10.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/Spinner/Spinner11.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/System/System-32.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/System/System-32@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/System/System.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/System/System@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/SystemDisabled/SystemDisabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/SystemDisabled/SystemDisabled@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/SystemEnabled/SystemEnabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/SystemEnabled/SystemEnabled@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/SystemMixed/SystemMixed.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/SystemMixed/SystemMixed@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/UnmanagedSystem/UnmanagedSystem.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/UnmanagedSystem/UnmanagedSystem@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/WindowInstance/WindowInstance.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/light/WindowInstance/WindowInstance@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/selected/BeginCommandBuffer/BeginCommandBuffer.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/selected/BeginCommandBuffer/BeginCommandBuffer@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/selected/EndCommandBuffer/EndCommandBuffer.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/selected/EndCommandBuffer/EndCommandBuffer@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/selected/Entity/EntityPrefab.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/selected/Entity/EntityPrefab@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/selected/Go To Entities/Go to Entities.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/selected/Go To Entities/Go to Entities@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/selected/Go To Systems/Go to Systems.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/selected/Go To Systems/Go to Systems@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/selected/Group/Group.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/selected/Group/Group@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/selected/Query/Query.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/selected/Query/Query@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/selected/Search/Search.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/selected/Search/Search@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/selected/Settings/Settings.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/selected/Settings/Settings@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/selected/System/System.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/selected/System/System@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/selected/UnmanagedSystem/UnmanagedSystem.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/selected/UnmanagedSystem/UnmanagedSystem@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/selected/WindowInstance/WindowInstance.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Editor Default Resources/icons/selected/WindowInstance/WindowInstance@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/ContentProvider/Selection/icons/dark/WaitSpin/WaitSpin00.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/ContentProvider/Selection/icons/dark/WaitSpin/WaitSpin01.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/ContentProvider/Selection/icons/dark/WaitSpin/WaitSpin02.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/ContentProvider/Selection/icons/dark/WaitSpin/WaitSpin03.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/ContentProvider/Selection/icons/dark/WaitSpin/WaitSpin04.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/ContentProvider/Selection/icons/dark/WaitSpin/WaitSpin05.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/ContentProvider/Selection/icons/dark/WaitSpin/WaitSpin06.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/ContentProvider/Selection/icons/dark/WaitSpin/WaitSpin07.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/ContentProvider/Selection/icons/dark/WaitSpin/WaitSpin08.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/ContentProvider/Selection/icons/dark/WaitSpin/WaitSpin09.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/ContentProvider/Selection/icons/dark/WaitSpin/WaitSpin10.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/ContentProvider/Selection/icons/dark/WaitSpin/WaitSpin11.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/ContentProvider/Selection/icons/light/WaitSpin/WaitSpin00.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/ContentProvider/Selection/icons/light/WaitSpin/WaitSpin01.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/ContentProvider/Selection/icons/light/WaitSpin/WaitSpin02.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/ContentProvider/Selection/icons/light/WaitSpin/WaitSpin03.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/ContentProvider/Selection/icons/light/WaitSpin/WaitSpin04.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/ContentProvider/Selection/icons/light/WaitSpin/WaitSpin05.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/ContentProvider/Selection/icons/light/WaitSpin/WaitSpin06.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/ContentProvider/Selection/icons/light/WaitSpin/WaitSpin07.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/ContentProvider/Selection/icons/light/WaitSpin/WaitSpin08.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/ContentProvider/Selection/icons/light/WaitSpin/WaitSpin09.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/ContentProvider/Selection/icons/light/WaitSpin/WaitSpin10.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/ContentProvider/Selection/icons/light/WaitSpin/WaitSpin11.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/Styles/ReadOnly.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/Styles/ReadOnly@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/Styles/ReadWrite.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/Styles/ReadWrite@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/Styles/Required.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/Styles/Required@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/Styles/Subtractive.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.entities/Unity.Entities.Editor/Styles/Subtractive@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/AssetEditor/Resources/blue.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/AssetEditor/Resources/green.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/AssetEditor/Resources/personal/actionTreeBackground.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/AssetEditor/Resources/personal/actionTreeBackgroundWithoutBorder.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/AssetEditor/Resources/personal/foldoutBackground.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/AssetEditor/Resources/personal/propertiesBackground.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/AssetEditor/Resources/pink.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/AssetEditor/Resources/pro/actionTreeBackground.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/AssetEditor/Resources/pro/actionTreeBackgroundWithoutBorder.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/AssetEditor/Resources/pro/foldoutBackground.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/AssetEditor/Resources/pro/propertiesBackground.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/AssetEditor/Resources/yellow.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Add Binding.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Add Binding@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Add Binding@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Add Binding@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Axis.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Axis@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Axis@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Axis@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Button.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Button@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Button@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/ChevronDown.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/ChevronDown@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/ChevronDown@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/ChevronDown@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/ChevronUp.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/ChevronUp@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/ChevronUp@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/ChevronUp@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Add Binding.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Add Binding@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Add Binding@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Add Binding@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Axis.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Axis@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Axis@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Axis@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Button.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Button@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Button@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_ChevronDown.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_ChevronDown@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_ChevronDown@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_ChevronDown@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_ChevronUp.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_ChevronUp@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_ChevronUp@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_ChevronUp@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Dpad.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Dpad@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Dpad@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Dpad@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Gamepad.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Gamepad@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Gamepad@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Gamepad@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_InputControl.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_InputControl@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_InputControl@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Interactive Binding.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Interactive Binding@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Interactive Binding@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Interactive Binding@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Joystick.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Joystick@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Joystick@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Joystick@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Keyboard.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Keyboard@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Keyboard@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Keyboard@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Mouse.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Mouse@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Mouse@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Mouse@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Orientation.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Orientation@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Orientation@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Orientation@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Pen.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Pen@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Pen@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Pen@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Position.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Position@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Position@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Position@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Stick.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Stick@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Stick@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Stick@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Touch.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Touch@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Touch@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/d_Touch@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Dpad.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Dpad@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Dpad@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Dpad@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Gamepad.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Gamepad@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Gamepad@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Gamepad@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/InputAction.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/InputActionAsset.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/InputControl.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/InputControl@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/InputControl@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/InputSystemUIInputModule@64.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Interactive Binding.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Interactive Binding@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Interactive Binding@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Interactive Binding@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Joystick.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Joystick@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Joystick@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Joystick@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Keyboard.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Keyboard@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Keyboard@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Keyboard@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Mouse.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Mouse@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Mouse@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Mouse@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/MultiplayerEventSystem@64.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Orientation.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Orientation@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Orientation@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Orientation@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Pen.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Pen@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Pen@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Pen@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Position.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Position@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Position@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Position@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Stick.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Stick@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Stick@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Stick@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Touch.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Touch@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Touch@3x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Touch@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/TrackedPoseDriver.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/TrackedPoseDriver@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.inputsystem/InputSystem/Editor/Icons/TrackedPoseDriver@4x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.platforms/Editor/Unity.Build.Editor/SearchWindow/Resources/Icons/baseline_clear_black_18dp.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.platforms/Editor/Unity.Build.Editor/SearchWindow/Resources/Icons/search_icon.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.platforms/Editor Default Resources/icons/component.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.platforms/Editor Default Resources/icons/component@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.platforms/Editor Default Resources/icons/d_component.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.platforms/Editor Default Resources/icons/d_component@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/dark/Add.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/dark/Add@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/dark/CircularReference.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/dark/CircularReference@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/dark/Close S.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/dark/Close S@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/dark/Error.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/dark/Error@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/dark/NextButton.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/dark/NextButton@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/dark/PreviousButton.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/dark/PreviousButton@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/light/Add.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/light/Add@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/light/CircularReference.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/light/CircularReference@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/light/Close S.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/light/Close S@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/light/Error.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/light/Error@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/light/NextButton.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/light/NextButton@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/light/PreviousButton.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/light/PreviousButton@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/selected/Add.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/selected/Add@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/selected/NextButton.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/selected/NextButton@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/selected/PreviousButton.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.properties.ui/Editor Default Resources/icons/selected/PreviousButton@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.searcher/Editor/Resources/FlatSkin/SearchSmallDownOff.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.searcher/Editor/Resources/FlatSkin/SearchSmallDownOff@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.searcher/Editor/Resources/FlatSkin/SearchSmallDownOn.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.searcher/Editor/Resources/FlatSkin/SearchSmallDownOn@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.settings-manager/Content/Options.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.shadergraph/Editor/Resources/GraphView/Nodes/BlackboardFieldExposed.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.shadergraph/Editor/Resources/GraphView/Nodes/BlackboardFieldPillBackground.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.shadergraph/Editor/Resources/GraphView/Nodes/NodeChevronDown.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.shadergraph/Editor/Resources/GraphView/Nodes/NodeChevronDown@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.shadergraph/Editor/Resources/GraphView/Nodes/NodeChevronLeft.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.shadergraph/Editor/Resources/GraphView/Nodes/NodeChevronLeft@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.shadergraph/Editor/Resources/GraphView/Nodes/NodeChevronRight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.shadergraph/Editor/Resources/GraphView/Nodes/NodeChevronRight@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.shadergraph/Editor/Resources/GraphView/Nodes/NodeChevronUp.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.shadergraph/Editor/Resources/GraphView/Nodes/NodeChevronUp@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.shadergraph/Editor/Resources/GraphView/Nodes/PreviewCollapse.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.shadergraph/Editor/Resources/GraphView/Nodes/PreviewCollapse@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.shadergraph/Editor/Resources/GraphView/Nodes/PreviewExpand.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.shadergraph/Editor/Resources/GraphView/Nodes/PreviewExpand@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.shadergraph/Editor/Resources/Icons/settings_button.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.shadergraph/Editor/Resources/Icons/Settings_Flyout_9slice.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.shadergraph/Editor/Resources/Icons/Settings_Flyout_9slice@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.shadergraph/Editor/Resources/Icons/settingsbutton.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.shadergraph/Editor/Resources/Icons/SettingsIcons.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.shadergraph/Editor/Resources/Icons/SettingsIcons@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.shadergraph/Editor/Resources/Icons/SettingsIcons_hover.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.shadergraph/Editor/Resources/Icons/SettingsIcons_hover@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.shadergraph/Editor/Resources/Icons/sg_graph_icon.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.shadergraph/Editor/Resources/Icons/sg_graph_icon_gray_dark.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.shadergraph/Editor/Resources/Icons/sg_graph_icon_gray_light.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.shadergraph/Editor/Resources/Icons/sg_subgraph_icon.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.shadergraph/Editor/Resources/Icons/sg_subgraph_icon_gray_dark.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.shadergraph/Editor/Resources/Icons/sg_subgraph_icon_gray_light.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Dropdown Icon.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Font Asset Icon.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Input Field Icon.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Sprite Asset Icon.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Gizmos/TMP - Text Component Icon.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignBaseLine.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignBaseLine_Light.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignBottom.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignBottom_Light.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignCapLine.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignCapLine_Light.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignCenter.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignCenter_Light.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignCenterGeo.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignCenterGeo_Light.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignFlush.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignFlush_Light.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignJustified.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignJustified_Light.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignLeft.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignLeft_Light.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignMiddle.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignMiddle_Light.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignMidLine.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignMidline_Light.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignRight.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignRight_Light.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignTop.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignTop_Light.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Textures/SectionHeader_Dark.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.textmeshpro/Editor Resources/Textures/SectionHeader_Light.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineActivation.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineAutokey.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineAutokey@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineAutokey_active.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineAutokey_active@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineContinue.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineDisabledBackground.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineEndPlayback.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineHold.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineIconClipIn.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineIconClipOut.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineInfiniteTrackNoShadow.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineKeyframe.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineLoop.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineMarkerItem.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineMarkerItemCollapsed.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineMarkerItemSelected.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelinePingPong.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelinePlayRange.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineSignalCollapsed.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineSignalSelected.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineStartPlayback.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/DarkSkin/TimelineTimeCursor.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TimelineCollapseMarkerButtonDisabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TimelineCollapseMarkerButtonEnabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TimelineDigIn.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TimelineEditModeMixOFF.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TimelineEditModeMixON.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TimelineEditModeReplaceOFF.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TimelineEditModeReplaceON.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TimelineEditModeRippleOFF.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TimelineEditModeRippleON.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TimelineHeaderMarkerIcon.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TimelineSelector.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TimelineSignal.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackAvatarButtonDisabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackAvatarButtonDisabled@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackAvatarButtonEnabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackAvatarButtonEnabled@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackCurvesButtonDisabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackCurvesButtonDisabled@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackCurvesButtonEnabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackCurvesButtonEnabled@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackLockButtonDisabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackLockButtonDisabled@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackLockButtonEnabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackLockButtonEnabled@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackMarkerButtonDisabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackMarkerButtonDisabled@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackMarkerButtonEnabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackMarkerButtonEnabled@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackMuteButtonDisabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackMuteButtonDisabled@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackMuteButtonEnabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackMuteButtonEnabled@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackRecordButtonDisabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackRecordButtonDisabled@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackRecordButtonEnabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/d_TrackRecordButtonEnabled@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/Timeline-Marker-Warning-Overlay.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TimelineClipBG.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TimelineClipFG.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TimelineCollapseMarkerButtonDisabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TimelineCollapseMarkerButtonEnabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TimelineDigIn.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TimelineEditModeMixOFF.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TimelineEditModeMixON.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TimelineEditModeReplaceOFF.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TimelineEditModeReplaceON.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TimelineEditModeRippleOFF.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TimelineEditModeRippleON.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TimelineHeaderMarkerIcon.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TimelineSelector.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TimelineSignal.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackAvatarButtonDisabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackAvatarButtonDisabled@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackAvatarButtonEnabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackAvatarButtonEnabled@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackCurvesButtonDisabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackCurvesButtonDisabled@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackCurvesButtonEnabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackCurvesButtonEnabled@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackLockButtonDisabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackLockButtonDisabled@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackLockButtonEnabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackLockButtonEnabled@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackMarkerButtonDisabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackMarkerButtonDisabled@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackMarkerButtonEnabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackMarkerButtonEnabled@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackMuteButtonDisabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackMuteButtonDisabled@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackMuteButtonEnabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackMuteButtonEnabled@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackRecordButtonDisabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackRecordButtonDisabled@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackRecordButtonEnabled.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Icons/TrackRecordButtonEnabled@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineActivation.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineAutokey.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineAutokey@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineAutokey_active.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineAutokey_active@2x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineContinue.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineDisabledBackground.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineEndPlayback.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineHold.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineIconClipIn.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineIconClipOut.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineInfiniteTrackNoShadow.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineKeyframe.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineLoop.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineMarkerItem.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineMarkerItemCollapsed.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineMarkerItemSelected.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelinePingPong.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelinePlayRange.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineSignalCollapsed.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineSignalSelected.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineStartPlayback.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/LightSkin/TimelineTimeCursor.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Shared/Timeline-Marker-Multi-Overlay.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Shared/TimelineBottomShadow.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Shared/TimelineConnector.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Shared/TimelineDisplay.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Shared/TimelineGroupBackground.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Shared/TimelineOutline.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Shared/TimelineSeqEnd.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Shared/TimelineSwatch.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.timeline/Editor/StyleSheets/Images/Shared/TimelineWarning.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.physics/Unity.Physics.Editor/Editor Default Resources/CustomPhysicsBodyTagNames Icon.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.physics/Unity.Physics.Editor/Editor Default Resources/CustomPhysicsMaterialTagNames Icon.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.physics/Unity.Physics.Editor/Editor Default Resources/PhysicsCategoryNames Icon.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.physics/Unity.Physics.Editor/Editor Default Resources/PhysicsMaterialTemplate Icon.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.physics/Unity.Physics.Hybrid/Assets/DebugDisplay/DebugDisplayResources/encoded.bmp is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/Resources/Cinemachine.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/Resources/InspectorIcons/FreeformLight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/Resources/InspectorIcons/GlobalLight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/Resources/InspectorIcons/ParametricLight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/Resources/InspectorIcons/PointLight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/Resources/InspectorIcons/SpriteLight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/Resources/LightCapBottomLeft.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/Resources/LightCapBottomRight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/Resources/LightCapDown.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/Resources/LightCapTopLeft.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/Resources/LightCapTopRight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/Resources/LightCapUp.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/Resources/PixelPerfectCamera.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/Resources/SceneViewIcons/FreeformLight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/Resources/SceneViewIcons/GlobalLight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/Resources/SceneViewIcons/ParametricLight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/Resources/SceneViewIcons/PointLight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/Resources/SceneViewIcons/SpriteLight.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/Resources/Sparkle.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/ShapeEditor/Resources/Path/pointHovered.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/ShapeEditor/Resources/Path/pointNormal.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/ShapeEditor/Resources/Path/pointPreview.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/ShapeEditor/Resources/Path/pointRemovePreview.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/ShapeEditor/Resources/Path/pointSelected.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/ShapeEditor/Resources/Path/tangentNormal.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/ShapeEditor/Resources/ShapeTool.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/ShapeEditor/Resources/ShapeToolPro.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/ShapeEditor/Resources/TangentBroken.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/ShapeEditor/Resources/TangentBrokenPro.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/ShapeEditor/Resources/TangentContinuous.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/ShapeEditor/Resources/TangentContinuousPro.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/ShapeEditor/Resources/TangentLinear.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/2D/ShapeEditor/Resources/TangentLinearPro.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/Decal/Resources/DecalGizmo.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/Gizmos/Camera_Base.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/Gizmos/Camera_Offscreen.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/Gizmos/Camera_Overlay.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/Gizmos/Camera_PostProcessing.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Editor/Gizmos/Camera_UI.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Runtime/2D/Data/Textures/FalloffLookupTexture.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/2D/Sparkle.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_0.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_1.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_2.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_3.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_4.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_5.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_6.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_7.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_8.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_9.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_10.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_11.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_12.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_13.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_14.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_15.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_16.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_17.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_18.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_19.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_20.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_21.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_22.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_23.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_24.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_25.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_26.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_27.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_28.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_29.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_30.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_31.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Large01.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Large02.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Medium01.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Medium02.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Medium03.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Medium04.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Medium05.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Medium06.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin01.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin02.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/SMAA/AreaTex.tga is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.render-pipelines.universal/Textures/SMAA/SearchTex.tga is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.visualscripting/Editor/VisualScripting.Core/IconMap/AnimatorMessageListener@32x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.visualscripting/Editor/VisualScripting.Core/IconMap/FlowGraph@32x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.visualscripting/Editor/VisualScripting.Core/IconMap/FlowMachine@32x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.visualscripting/Editor/VisualScripting.Core/IconMap/GlobalMessageListener@32x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.visualscripting/Editor/VisualScripting.Core/IconMap/SceneVariables.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.visualscripting/Editor/VisualScripting.Core/IconMap/State@32x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.visualscripting/Editor/VisualScripting.Core/IconMap/StateMachine@32x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.visualscripting/Editor/VisualScripting.Core/IconMap/UnityMessageListener@32x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.visualscripting/Editor/VisualScripting.Core/IconMap/Variables@32x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.visualscripting/Editor/VisualScripting.Core/IconMap/VariablesAsset@32.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.visualscripting/Editor/VisualScripting.Core/IconMap/VariablesSaver@32x.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.visualscripting/Editor/VisualScripting.Shared/EditorAssetResources/SplitButtonArrow.png is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.visualscripting/Graphics/FlowPorts_12x.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.visualscripting/Graphics/FlowPorts_24x.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.visualscripting/Graphics/GraphGroup.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.visualscripting/Graphics/Icons_16x_72dpi.psd is not readable (may cause issues with runtime processing).
+⚠️ Texture Packages/com.unity.visualscripting/Graphics/Icons_32x_72dpi.psd is not readable (may cause issues with runtime processing).
+
+--- Material Checks ---
+Validation complete.

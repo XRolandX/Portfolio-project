@@ -11,7 +11,13 @@ public class MouseLook : MonoBehaviour
     public float unscopeSensitivity = 150f;
     public float scopeSensitivity = 100f;
     public float scope2xSensitivity = 50;
+#if UNITY_STANDALONE_WIN
     private float cameraPitch = 0;
+#endif
+
+#if PLATFORM_ANDROID
+    private float xRotation = 0f;
+#endif
 
     [SerializeField] private float mouseSensitivity = 0f;
 

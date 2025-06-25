@@ -8,7 +8,6 @@ public class AppleFallUIHandler : MonoBehaviour
     private void Awake()
     {
         playerControls = new PlayerControls();
-        Cursor.lockState = CursorLockMode.Locked;
 
 #if UNITY_EDITOR
         playerControls.Player.CursorUnlock.performed += ctx => Cursor.lockState = CursorLockMode.None;
@@ -24,6 +23,7 @@ public class AppleFallUIHandler : MonoBehaviour
 
 #if UNITY_ANDROID
         androidOverlay.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
 #endif
     }
 
