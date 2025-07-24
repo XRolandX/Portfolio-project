@@ -1,3 +1,6 @@
+// 7/24/2025 AI-Tag
+// This was created with assistance from Muse, a Unity Artificial Intelligence product
+
 using Unity.Entities;
 using Unity.Transforms;
 using Unity.Physics;
@@ -7,9 +10,7 @@ using Unity.Mathematics;
 public partial class SpawnEntities : SystemBase
 {
     private EndSimulationEntityCommandBufferSystem _ecbSystem;
-    private BlobAssetStore _blobAssetStore;
     private Entity _prefabEntity;
-    private GameObject projectilePrefab;
     private float spawnTimer = 0f;
     private readonly float entityForce = 100f;
 
@@ -17,23 +18,25 @@ public partial class SpawnEntities : SystemBase
     {
         Initialize();
     }
+
     private void Initialize()
     {
-        projectilePrefab = Resources.Load<GameObject>("projectilePrafab");
+        // Initialize the EndSimulationEntityCommandBufferSystem
+        _ecbSystem = World.GetExistingSystemManaged<EndSimulationEntityCommandBufferSystem>();
 
-        _ecbSystem = World
-            .GetOrCreateSystem<EndSimulationEntityCommandBufferSystem>();
-
-        _blobAssetStore = new BlobAssetStore();
+        // Load the prefab entity from the SubScene
+        _prefabEntity = GetEntityPrefab("projectilePrefab");
     }
 
     protected override void OnUpdate()
     {
         CreateEntitiesByClick();
     }
+
     public void CreateEntitiesByClick()
     {
-        var deltaTime = Time.DeltaTime;
+        // Use SystemAPI.Time for DeltaTime
+        var deltaTime = SystemAPI.Time.DeltaTime;
         spawnTimer += deltaTime;
 
         var mouseInput = GetSingleton<MouseInput>();
@@ -45,16 +48,16 @@ public partial class SpawnEntities : SystemBase
             spawnTimer = 0f;
             var ecb = _ecbSystem.CreateCommandBuffer();
 
-            if (projectilePrefab != null)
+            if (_prefabEntity != Entity.Null)
             {
-                var settings = GameObjectConversionSettings.FromWorld(World.DefaultGameObjectInjectionWorld, _blobAssetStore);
-                _prefabEntity = GameObjectConversionUtility.ConvertGameObjectHierarchy(projectilePrefab, settings);
-
                 float3 forwardDirection = math.mul(spawnRotation, new float3(0, 0, 1));
 
+                // Instantiate the entity prefab and set its components
                 Entity instance = ecb.Instantiate(_prefabEntity);
-                ecb.SetComponent(instance, new Translation { Value = spawnPosition });
-                ecb.SetComponent(instance, new Rotation { Value = spawnRotation });
+
+                // Set the LocalTransform component (replaces Translation and Rotation)
+                ecb.SetComponent(instance, LocalTransform.FromPositionRotation(spawnPosition, spawnRotation));
+
                 ecb.AddComponent(instance, new PhysicsVelocity
                 {
                     Linear = forwardDirection * entityForce,
@@ -65,14 +68,21 @@ public partial class SpawnEntities : SystemBase
             }
             else
             {
-                Debug.LogError("Cube prefab is null");
+                Debug.LogError("The prefab entity is null. Ensure the prefab was successfully converted.");
             }
         }
     }
 
+    private Entity GetEntityPrefab(string prefabName)
+    {
+        // Replace this with your logic to get the prefab from the SubScene
+        // For example, if the prefab was baked, use EntityManager queries or prefab references
+        Debug.Log("Load prefab entity from SubScene here");
+        return Entity.Null; // Placeholder
+    }
+
     protected override void OnDestroy()
     {
-        _blobAssetStore.Dispose();
-        projectilePrefab = null;
+        // Cleanup (if necessary)
     }
 }

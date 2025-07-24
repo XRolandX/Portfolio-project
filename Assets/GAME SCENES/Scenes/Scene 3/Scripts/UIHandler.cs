@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Unity.Entities;
-using Unity.Transforms;
+using Unity.Transforms; // Correct namespace
 using Unity.Collections;
 
 public class UIHandler : MonoBehaviour
@@ -9,9 +9,9 @@ public class UIHandler : MonoBehaviour
     [SerializeField] private GameObject androidOverlay;
     private PlayerControls playerControls;
     public EntityManager entityManager;
+
     private void Awake()
     {
-
         #if PLATFORM_STANDALONE_WIN
         androidOverlay.SetActive(false);
         #endif
@@ -24,7 +24,7 @@ public class UIHandler : MonoBehaviour
         playerControls = new PlayerControls();
         playerControls.Player.RestartScene.performed += ctx => RestartScene();
         playerControls.Player.ToMainMenu.performed += ctx => MainSceneLoading();
-        
+
         #if UNITY_EDITOR
         playerControls.Player.StopPlayMode.performed += ctx => StopPlayMode();
         playerControls.Player.CursorUnlock.performed += ctx => CursorUnlocking();
@@ -33,12 +33,12 @@ public class UIHandler : MonoBehaviour
         entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
     }
 
-
     public void RestartScene()
     {
         DestroyAllEntities();
         SceneManager.LoadScene(3);
     }
+
     public void MainSceneLoading()
     {
         DestroyAllEntities();
@@ -50,31 +50,40 @@ public class UIHandler : MonoBehaviour
     {
         UnityEditor.EditorApplication.isPlaying = false;
     }
+
     void CursorUnlocking()
     {
         if (Cursor.lockState == CursorLockMode.Locked)
         {
             Cursor.lockState = CursorLockMode.None;
         }
-        else { Cursor.lockState = CursorLockMode.Locked; }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
     #endif
 
     void DestroyAllEntities()
     {
-        EntityQuery query = entityManager.CreateEntityQuery(ComponentType.ReadOnly<Translation>());
-        NativeArray<Entity> entities = query.ToEntityArray(Allocator.TempJob);
-        for (int i = 0; i < entities.Length; i++)
+        // Query all entities that have the LocalTransform component
+        EntityQuery query = entityManager.CreateEntityQuery(ComponentType.ReadOnly<LocalTransform>());
+
+        // Use a `using` statement for safe disposal of the NativeArray
+        using (NativeArray<Entity> entities = query.ToEntityArray(Allocator.TempJob))
         {
-            entityManager.DestroyEntity(entities[i]);
+            foreach (var entity in entities)
+            {
+                entityManager.DestroyEntity(entity);
+            }
         }
-        entities.Dispose();
     }
 
     private void OnEnable()
     {
         playerControls.Player.Enable();
     }
+
     private void OnDisable()
     {
         playerControls.Player.Disable();

@@ -1,4 +1,5 @@
+
 using Unity.Entities;
 
 [UpdateInGroup(typeof(SimulationSystemGroup))]
-public class EndSimulationEntityCommandBufferSystem : EntityCommandBufferSystem { }
+public partial class EndSimulationEntityCommandBufferSystem : EntityCommandBufferSystem { }
