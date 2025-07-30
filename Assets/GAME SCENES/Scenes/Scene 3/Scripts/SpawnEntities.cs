@@ -1,88 +1,66 @@
-// 7/24/2025 AI-Tag
-// This was created with assistance from Muse, a Unity Artificial Intelligence product
-
+using UnityEngine;
 using Unity.Entities;
 using Unity.Transforms;
 using Unity.Physics;
-using UnityEngine;
 using Unity.Mathematics;
+using Unity.Collections;
 
 public partial class SpawnEntities : SystemBase
 {
     private EndSimulationEntityCommandBufferSystem _ecbSystem;
-    private Entity _prefabEntity;
-    private float spawnTimer = 0f;
-    private readonly float entityForce = 100f;
+    private Entity _prefabEntity = Entity.Null;
+    private bool _lastClick = false;
+    private const float EntityForce = 100f;
 
     protected override void OnCreate()
     {
-        Initialize();
+        // Система чекатиме, поки в світі з’явиться саме один singleton-компонент ProjectilePrefab
+        RequireForUpdate<ProjectilePrefab>();
+        _ecbSystem = World.GetOrCreateSystemManaged<EndSimulationEntityCommandBufferSystem>();
     }
 
-    private void Initialize()
+    protected override void OnStartRunning()
     {
-        // Initialize the EndSimulationEntityCommandBufferSystem
-        _ecbSystem = World.GetExistingSystemManaged<EndSimulationEntityCommandBufferSystem>();
-
-        // Load the prefab entity from the SubScene
-        _prefabEntity = GetEntityPrefab("projectilePrefab");
+        // Тут гарантовано існує єдиний singleton—компонент ProjectilePrefab
+        var prefabData = SystemAPI.GetSingleton<ProjectilePrefab>();
+        _prefabEntity = prefabData.Value;
+        Debug.Log($"✅ ProjectilePrefab acquired: {_prefabEntity}");
     }
 
     protected override void OnUpdate()
     {
-        CreateEntitiesByClick();
-    }
+        // 1) Чи взагалі система оновлюється?
+        Debug.Log("[SpawnEntities] OnUpdate");
 
-    public void CreateEntitiesByClick()
-    {
-        // Use SystemAPI.Time for DeltaTime
-        var deltaTime = SystemAPI.Time.DeltaTime;
-        spawnTimer += deltaTime;
+        // 2) Скільки у світі префабів з нашим тегом?
+        int count = EntityManager
+            .CreateEntityQuery(ComponentType.ReadOnly<Prefab>(),
+                            ComponentType.ReadOnly<ProjectileTag>())
+            .CalculateEntityCount();
+        Debug.Log($"[SpawnEntities] PrefabTag count = {count}");
 
-        var mouseInput = GetSingleton<MouseInput>();
-        var spawnPosition = GetSingleton<SpawnPosition>().Position;
-        var spawnRotation = GetSingleton<SpawnRotation>().Rotation;
+        // 3) Якщо count==0 — далі нема сенсу перевіряти кліки
+        if (count == 0)
+            return;
 
-        if (mouseInput.LeftClickPerformed && spawnTimer >= 0.1f)
+        // 4) Якщо вперше знайшли, збережімо в _prefabEntity
+        if (_prefabEntity == Entity.Null)
         {
-            spawnTimer = 0f;
-            var ecb = _ecbSystem.CreateCommandBuffer();
+            using var arr = EntityManager
+                .CreateEntityQuery(ComponentType.ReadOnly<Prefab>(), ComponentType.ReadOnly<ProjectileTag>())
+                .ToEntityArray(Allocator.Temp);
+            _prefabEntity = arr[0];
+            Debug.Log("[SpawnEntities] Cached _prefabEntity = " + _prefabEntity);
+        }
 
-            if (_prefabEntity != Entity.Null)
-            {
-                float3 forwardDirection = math.mul(spawnRotation, new float3(0, 0, 1));
-
-                // Instantiate the entity prefab and set its components
-                Entity instance = ecb.Instantiate(_prefabEntity);
-
-                // Set the LocalTransform component (replaces Translation and Rotation)
-                ecb.SetComponent(instance, LocalTransform.FromPositionRotation(spawnPosition, spawnRotation));
-
-                ecb.AddComponent(instance, new PhysicsVelocity
-                {
-                    Linear = forwardDirection * entityForce,
-                    Angular = float3.zero
-                });
-
-                _ecbSystem.AddJobHandleForProducer(Dependency);
-            }
-            else
-            {
-                Debug.LogError("The prefab entity is null. Ensure the prefab was successfully converted.");
-            }
+        // 5) Тепер перевіримо клік і спавнимо
+        bool click = SystemAPI.GetSingleton<MouseInput>().LeftClickPerformed;
+        Debug.Log($"[SpawnEntities] click={click}");
+        if (click)
+        {
+            Debug.Log("[SpawnEntities] SPAWNING!");
+            // … тут твій ecb.Instantiate() …
         }
     }
 
-    private Entity GetEntityPrefab(string prefabName)
-    {
-        // Replace this with your logic to get the prefab from the SubScene
-        // For example, if the prefab was baked, use EntityManager queries or prefab references
-        Debug.Log("Load prefab entity from SubScene here");
-        return Entity.Null; // Placeholder
-    }
-
-    protected override void OnDestroy()
-    {
-        // Cleanup (if necessary)
-    }
 }

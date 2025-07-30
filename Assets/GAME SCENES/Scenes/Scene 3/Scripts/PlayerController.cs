@@ -86,6 +86,7 @@ public class PlayerController : MonoBehaviour
     }
     private void UpdateMouseInput(bool leftClickPerformed)
     {
+
         entityManager
             .SetComponentData(mouseInputEntity, new MouseInput { LeftClickPerformed = leftClickPerformed });
     }
